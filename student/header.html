@@ -1,152 +1,150 @@
-<style>
-    .ticker-wrap {
-        overflow: hidden;
-    }
-
-    .ticker {
-        display: flex;
-        animation: ticker-slide 10s linear infinite;
-    }
-
-    @keyframes ticker-slide {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-</style>
-
-<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
-    <!-- header start here  -->
-
-
-    <header class="main-header">
-        <div class="d-flex align-items-center logo-box justify-content-start">
-            <a href="#" class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent" data-toggle="push-menu" role="button">
-                <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-            </a>
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-                <!-- logo-->
-                <div class="logo-lg">
-                    <span class="light-logo"><img src="../images/logo-dark-text.png" alt="logo"></span>
-                    <span class="dark-logo"><img src="../images/logo-light-text.png" alt="logo"></span>
-                </div>
-            </a>
-        </div>
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top p-0">
-            <!-- Sidebar toggle button-->
-
-            <div class="row bg-primary" style="height: 60px; width: 800px; margin-left: 5px; border-radius: 10px;">
-                <div class="col-lg-10 col-sm-12 col-md-10">
-                    <div class="ticker-wrap" style=" overflow: hidden;">
-                        <div class="ticker">
-                            <a href="#">
-                                <p class="text-white mt-3 link-hover ticker__item" style="margin-left:50px; font-size: 24px; text-align: center;">Notification 1</p>
-                            </a>
-                            <!-- Add more notifications here -->
-                            <a href="#">
-                                <p class="text-white mt-3 link-hover ticker__item" style="margin-left:50px; font-size: 24px; text-align: center;">Notification 2</p>
-                            </a>
-                            <a href="#">
-                                <p class="text-white mt-3 link-hover ticker__item" style="margin-left:50px; font-size: 24px; text-align: center;">Notification 3</p>
-                            </a>
-                            <!-- Add more notifications as needed -->
-                        </div>
-                    </div>
-                </div>
+<header class="main-header">
+    <div class="d-flex align-items-center logo-box justify-content-start">
+        <a href="#"
+            class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
+            data-toggle="push-menu" role="button">
+            <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
+                    class="path3"></span></span>
+        </a>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <!-- logo-->
+            <div class="logo-lg">
+                <span class="light-logo"><img src="../images/logo-dark-text.png" alt="logo"></span>
+                <span class="dark-logo"><img src="../images/logo-light-text.png" alt="logo"></span>
             </div>
-            <div class="navbar-custom-menu r-side">
-                <ul class="nav navbar-nav">
-                    <li class="btn-group nav-item d-lg-inline-flex d-none">
-                        <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen" title="Full Screen">
-                            <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
-                        </a>
-                    </li>
+        </a>
+    </div>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <div class="app-menu">
+            <ul class="header-megamenu nav">
+                <li class="btn-group nav-item d-md-none">
+                    <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu"
+                        role="button">
+                        <span class="icon-Align-left"><span class="path1"></span><span
+                                class="path2"></span><span class="path3"></span></span>
+                    </a>
+                </li>
+                <li class="btn-group nav-item d-none d-xl-inline-block">
+                    <a href="#" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
+                        <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                </li>
+                <li class="btn-group nav-item d-none d-xl-inline-block">
+                    <a href="#" class="waves-effect waves-light nav-link svg-bt-icon" title="Mailbox">
+                        <i class="icon-Mailbox"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                </li>
+                <li class="btn-group nav-item d-none d-xl-inline-block">
+                    <a href="#" class="waves-effect waves-light nav-link svg-bt-icon" title="Taskboard">
+                        <i class="icon-Clipboard-check"><span class="path1"></span><span
+                                class="path2"></span><span class="path3"></span></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-                    <!-- Notifications -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="Notifications">
-                            <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
-                        </a>
-                        <ul class="dropdown-menu animated bounceIn">
+        <div class="navbar-custom-menu r-side">
+            <ul class="nav navbar-nav">
+                <li class="btn-group nav-item d-lg-inline-flex d-none">
+                    <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
+                        title="Full Screen">
+                        <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                </li>
 
-                            <li class="header">
-                                <div class="p-20">
-                                    <div class="flexbox">
-                                        <div>
-                                            <h4 class="mb-0 mt-0">Notifications</h4>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="text-danger">Clear All</a>
-                                        </div>
+                <!-- Notifications -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                        title="Notifications">
+                        <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                    <ul class="dropdown-menu animated bounceIn">
+
+                        <li class="header">
+                            <div class="p-20">
+                                <div class="flexbox">
+                                    <div>
+                                        <h4 class="mb-0 mt-0">Notifications</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-danger">Clear All</a>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
+                        </li>
 
-                            <li>
-                                <ul class="menu sm-scrol">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all</a>
-                            </li>
-                        </ul>
-                    </li>
+                        <li>
+                            <ul class="menu sm-scrol">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
+                                        suscipit blandit.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
+                                        sapien elementum, in semper diam posuere.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
+                                        commodo porttitor pretium a erat.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
+                                        nisi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
+                                        dictum fermentum.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
+                                        interdum, at scelerisque ipsum imperdiet.
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">View all</a>
+                        </li>
+                    </ul>
+                </li>
 
-                    <!-- User Account-->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="User">
-                            <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
-                        </a>
-                        <ul class="dropdown-menu animated flipInX">
-                            <li class="user-body">
-                                <a class="dropdown-item" href="user-profile.html"><i class="ti-user text-muted mr-2"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> Change Password</a>
-                                <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                <!-- User Account-->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                        title="User">
+                        <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                    <ul class="dropdown-menu animated flipInX">
+                        <li class="user-body">
+                            <a class="dropdown-item" href="user-profile.html"><i
+                                    class="ti-user text-muted mr-2"></i>
+                                Profile</a>
+                            <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> Change
+                                Password</a>
+                            <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

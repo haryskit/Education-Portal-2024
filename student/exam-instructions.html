@@ -164,8 +164,8 @@
                             <div class="row">
                                 <div class="col-lg-6 mb-2">
                                     <div class="text-center">
-                                        <a href="#" id="removeItem" class="btn  btn-rounded btn-danger d-inline-block" style="width: 120px;">
-                                            Leave Exam
+                                        <a href="#" id="editItem" class="btn  btn-rounded btn-danger d-inline-block" style="width: 120px;">
+                                            Back
                                         </a>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         // Function to handle remove item modal
-        function handleRemoveItem(event) {
+        function handleeditItem(event) {
             event.preventDefault(); // Prevent the default action of the link
 
             Swal.fire({
@@ -206,7 +206,7 @@
         }
 
         // Remove Item Click Handler
-        document.getElementById("removeItem").addEventListener("click", handleRemoveItem);
+        document.getElementById("editItem").addEventListener("click", handleeditItem);
     </script>
 </body>
 

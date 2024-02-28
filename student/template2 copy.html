@@ -17,6 +17,65 @@
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
+    <!-- <link rel="stylesheet" href="css/template2.css "> -->
+
+    <style>
+        .timeline__group {
+            padding-top: 20px;
+        }
+
+        .timeline5:before {
+            height: 110%;
+        }
+
+        .timeline__box:not(:last-of-type) {
+            margin-bottom: 59px;
+        }
+
+        .timeline__group:not(:first-of-type) {
+            margin-top: 3rem;
+        }
+
+        .timeline__date {
+            margin-top: -26px;
+        }
+
+        .timeline__box {
+            padding-bottom: 3px;
+        }
+
+        .box-footer {
+            display: none;
+        }
+
+        .box {
+            margin-bottom: -16px;
+            box-shadow: none !important;
+            
+        }
+
+        .box-header {
+            padding: 0px;
+            border-bottom: none;
+            border-bottom-style:none !important ;
+        }
+
+        .box-header>.box-controls {
+            top: 0rem;
+        }
+        .hText{
+            margin-top: 18px;
+        }
+        .litext{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #spanText{
+            margin-top: 10px;
+        }
+        
+    </style>
 
 </head>
 
@@ -187,16 +246,16 @@
                                     <span>Dashboard</span>
                                 </a>
                             </li>
-                            <li class="treeview">
+
+                            <li class="treeview menu">
                                 <a href="#">
-                                    <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
-                                        class="path2"></span></i>
-                                    <span>My Course</span>
+                                    <i class="mdi mdi-cards-outline"></i>
+                                    <span>My Courses</span>
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-right pull-right"></i>
                                     </span>
                                 </a>
-                                <ul class="treeview-menu">
+                                <ul class="treeview-menu" style="display: block;">
                                     <li><a href="my-courses.html"><i class="icon-Commit"><span
                                                     class="path1"></span><span class="path2"></span></i>My Course 1</a>
                                     </li>
@@ -255,182 +314,178 @@
         <div class="content-wrapper">
             <div class="container-full">
                 <section class="content">
-                    <div class="row">
-                        <!-- card start  -->
+                    <div class="box-body" style="background-color: #fff;">
+                        <div class="timeline5">
+                            <div class="timeline__group">
+                                <!-- <span class="timeline__year">2008</span> -->
+                                <div class="timeline__box">
+                                    <div class="timeline__date">
+                                        <span class="timeline__day">1</span>
+                                        <span class="timeline__month"></span>
+                                    </div>
+                                    <div class="timeline__post">
+                                        <div class="timeline__content">
 
-                        <div class="col-md-12 col-12">
-                            <div class="box">
-                                <div class="box-body ribbon-box">
-                                    <div class="ribbon ribbon-primary">Course Name</div>
-                                    <p><strong>Question : </strong>Explain the process of photosynthesis and its
-                                        significance in the ecosystem.</p>
-                                    <p><strong>Answer : </strong>Photosynthesis is the biochemical process by which
-                                        green plants, algae, and some bacteria convert light energy, typically from the
-                                        sun, into chemical energy stored in glucose molecules. This process occurs in
-                                        the chloroplasts of plant cells and involves several stages, including
-                                        light-dependent reactions and light-independent reactions (Calvin cycle).</p>
+                                            <!-- pace content  -->
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Biology</h3>
 
-                                    <ul class="list-inline mt-5">
+                                                    <ul class="box-controls pull-right">
+                                                        <li><a class="box-btn-slide" href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box-body" style="display: none;">
+                                                    <!-- Write your content here  -->
+                                                    <ul style="list-style-type: none;">
+                                                        <li class="litext">
+                                                            <span id="spanText" class="badge badge-xl badge-dot badge-dark"></span>
+                                                            <h6 class="hText">Cell structure and functions.</h6> 
+                                                        
+                                                        </li>
 
-                                        <li class="pull-right">
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Edit"><i
-                                                    class="fa fa-pencil"></i></button>
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Delete"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </li>
-                                    </ul>
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Genetics and molecular biology.</h6></li>
 
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Evolution.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Ecology.</h6></li>
+
+                                                      </ul>
+
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <!-- pace content -->
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline__box">
+                                    <div class="timeline__date">
+                                        <span class="timeline__day">2</span>
+                                        <!-- <span class="timeline__month">Sept</span> -->
+                                    </div>
+                                    <div class="timeline__post">
+                                        <div class="timeline__content">
+                                            <!-- pace content  -->
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Mathematics</h3>
+
+                                                    <ul class="box-controls pull-right">
+                                                        <li><a class="box-btn-slide" href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box-body" style="display: none;">
+                                                    <!-- Write your content here  -->
+                                                    <ul style="list-style-type: none;">
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Advanced algebra.</h6> </li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Geometry.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Calculus.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Linear programming.</h6></li>
+
+                                                      </ul>
+
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <!-- pace content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline__group">
+                                <!-- <span class="timeline__year">2014</span> -->
+                                <div class="timeline__box">
+                                    <div class="timeline__date">
+                                        <span class="timeline__day">3</span>
+                                        <!-- <span class="timeline__month">Jul</span> -->
+                                    </div>
+                                    <div class="timeline__post">
+                                        <div class="timeline__content">
+                                            <!-- pace content  -->
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Physics</h3>
+
+                                                    <ul class="box-controls pull-right">
+                                                        <li><a class="box-btn-slide" href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box-body" style="display: none;">
+                                                    <!-- Write your content here  -->
+                                                    <ul style="list-style-type: none;">
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Mechanics.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Electricity and magnetism.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Optics.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Thermodynamics.</h6></li>
+
+                                                      </ul>
+
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <!-- pace content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline__group">
+                                <!-- <span class="timeline__year">2016</span> -->
+                                <div class="timeline__box">
+                                    <div class="timeline__date">
+                                        <span class="timeline__day">4</span>
+                                        <!-- <span class="timeline__month">Aug</span> -->
+                                    </div>
+                                    <div class="timeline__post">
+                                        <div class="timeline__content">
+                                            <!-- pace content  -->
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Chemistry</h3>
+
+                                                    <ul class="box-controls pull-right">
+                                                        <li><a class="box-btn-slide" href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box-body" style="display: none;">
+                                                    <!-- Write your content here  -->
+                                                    
+                                                        
+                                                    <ul style="list-style-type: none;">
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Solid State.</h6> </li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Solutions.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Electrochemistry.</h6></li>
+
+                                                        <li class="litext"><span id="spanText" class="badge badge-xl badge-dot badge-dark"></span><h6 class="hText">Chemical Kinetics.</h6></li>
+
+                                                      </ul>
+                                                        
+                                                    
+                                                    <!-- <span class="badge badge-xl badge-dot badge-dark"></span> -->
+                                                    
+
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <!-- pace content -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- card 1 end  -->
-                        <!-- card start  -->
-                        <div class="col-md-12 col-12">
-                            <div class="box">
-                                <div class="box-body ribbon-box">
-                                    <div class="ribbon ribbon-primary">Course Name</div>
-                                    <p><strong>Question : </strong>Explain the process of photosynthesis and its
-                                        significance in the ecosystem.</p>
-                                    <p><strong>Answer : </strong>Photosynthesis is the biochemical process by which
-                                        green plants, algae, and some bacteria convert light energy, typically from the
-                                        sun, into chemical energy stored in glucose molecules. This process occurs in
-                                        the chloroplasts of plant cells and involves several stages, including
-                                        light-dependent reactions and light-independent reactions (Calvin cycle).</p>
+                    </div>
 
-                                    <ul class="list-inline mt-5">
-
-                                        <li class="pull-right">
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Edit"><i
-                                                    class="fa fa-pencil"></i></button>
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Delete"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card end  -->
-                        <!-- card start  -->
-                        <div class="col-md-12 col-12">
-                            <div class="box">
-                                <div class="box-body ribbon-box">
-                                    <div class="ribbon ribbon-primary">Course Name</div>
-                                    <p><strong>Question : </strong>Explain the process of photosynthesis and its
-                                        significance in the ecosystem.</p>
-                                    <p><strong>Answer : </strong>Photosynthesis is the biochemical process by which
-                                        green plants, algae, and some bacteria convert light energy, typically from the
-                                        sun, into chemical energy stored in glucose molecules. This process occurs in
-                                        the chloroplasts of plant cells and involves several stages, including
-                                        light-dependent reactions and light-independent reactions (Calvin cycle).</p>
-
-                                    <ul class="list-inline mt-5">
-
-                                        <li class="pull-right">
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Edit"><i
-                                                    class="fa fa-pencil"></i></button>
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Delete"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card end  -->
-                        <!-- card start  -->
-                        <div class="col-md-12 col-12">
-                            <div class="box">
-                                <div class="box-body ribbon-box">
-                                    <div class="ribbon ribbon-primary">Course Name</div>
-                                    <p><strong>Question : </strong>Explain the process of photosynthesis and its
-                                        significance in the ecosystem.</p>
-                                    <p><strong>Answer : </strong>Photosynthesis is the biochemical process by which
-                                        green plants, algae, and some bacteria convert light energy, typically from the
-                                        sun, into chemical energy stored in glucose molecules. This process occurs in
-                                        the chloroplasts of plant cells and involves several stages, including
-                                        light-dependent reactions and light-independent reactions (Calvin cycle).</p>
-
-                                    <ul class="list-inline mt-5">
-
-                                        <li class="pull-right">
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Edit"><i
-                                                    class="fa fa-pencil"></i></button>
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Delete"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card end  -->
-                        <!-- card start  -->
-                        <div class="col-md-12 col-12">
-                            <div class="box">
-                                <div class="box-body ribbon-box">
-                                    <div class="ribbon ribbon-primary">Course Name</div>
-                                    <p><strong>Question : </strong>Explain the process of photosynthesis and its
-                                        significance in the ecosystem.</p>
-                                    <p><strong>Answer : </strong>Photosynthesis is the biochemical process by which
-                                        green plants, algae, and some bacteria convert light energy, typically from the
-                                        sun, into chemical energy stored in glucose molecules. This process occurs in
-                                        the chloroplasts of plant cells and involves several stages, including
-                                        light-dependent reactions and light-independent reactions (Calvin cycle).</p>
-
-                                    <ul class="list-inline mt-5">
-
-                                        <li class="pull-right">
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Edit"><i
-                                                    class="fa fa-pencil"></i></button>
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Delete"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card end  -->
-                        <!-- card start  -->
-                        <div class="col-md-12 col-12">
-                            <div class="box">
-                                <div class="box-body ribbon-box">
-                                    <div class="ribbon ribbon-primary">Course Name</div>
-                                    <p><strong>Question : </strong>Explain the process of photosynthesis and its
-                                        significance in the ecosystem.</p>
-                                    <p><strong>Answer : </strong>Photosynthesis is the biochemical process by which
-                                        green plants, algae, and some bacteria convert light energy, typically from the
-                                        sun, into chemical energy stored in glucose molecules. This process occurs in
-                                        the chloroplasts of plant cells and involves several stages, including
-                                        light-dependent reactions and light-independent reactions (Calvin cycle).</p>
-
-                                    <ul class="list-inline mt-5">
-
-                                        <li class="pull-right">
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Edit"><i
-                                                    class="fa fa-pencil"></i></button>
-                                            <button type="button" class="btn btn-box-tool btn-sm btn-rounded"
-                                                data-toggle="tooltip" title="" data-original-title="Delete"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card end  -->
                 </section>
             </div>
         </div>

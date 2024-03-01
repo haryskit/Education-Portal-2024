@@ -53,6 +53,25 @@
             /* Adjust margin as needed */
             margin-top: 18px;
         }
+
+        .sub-video-links {
+            width: 100%;
+            /* Make the iframe width 100% of its container */
+            height: 0;
+            /* Set initial height to 0 to maintain aspect ratio */
+            padding-bottom: 56.25%;
+            /* Aspect ratio (height:width = 9:16, 16:9 = 56.25%) */
+        }
+
+        /* Additional styles to make iframe responsive at smaller screen sizes */
+        @media (max-width: 767px) {
+            .sub-video-links {
+                height: auto;
+                /* Reset height to auto for smaller screens */
+                padding-bottom: 0;
+                /* Reset padding */
+            }
+        }
     </style>
 
 </head>
@@ -224,16 +243,16 @@
                                     <span>Dashboard</span>
                                 </a>
                             </li>
-
-                            <li class="treeview menu">
+                            <li class="treeview">
                                 <a href="#">
-                                    <i class="mdi mdi-cards-outline"></i>
-                                    <span>My Courses</span>
+                                    <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
+                                        class="path2"></span></i>
+                                    <span>My Course</span>
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-right pull-right"></i>
                                     </span>
                                 </a>
-                                <ul class="treeview-menu" style="display: block;">
+                                <ul class="treeview-menu">
                                     <li><a href="my-courses.html"><i class="icon-Commit"><span
                                                     class="path1"></span><span class="path2"></span></i>My Course 1</a>
                                     </li>
@@ -250,8 +269,15 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="live-classes.html">
+                                    <i class="mdi mdi-youtube-play"></i>
+                                    <span>Live Classes</span>
+
+                                </a>
+                            </li>
+                            <li>
                                 <a href="bookmark-ques.html">
-                                    <i class="mdi mdi-bookmark-plus-outline"></i>
+                                    <i class="mdi mdi-bookmark-outline"></i>
                                     <span>Bookmarked Ques.</span>
 
                                 </a>
@@ -368,7 +394,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div id="navpills-2" class="tab-pane">
 
@@ -550,7 +575,7 @@
                         <div class="row fx-element-overlay">
                         </div>
                     </section> -->
-                    
+
                     <div class="col-md-5 col-lg-5 col-sm-12">
                         <div class="card btn-light mt-4">
                             <div class="card-header d-flex align-items-center">
@@ -651,42 +676,79 @@
 
 
                     <!-- sidebar end here  -->
-                    <div class="container">
-                        <!-- <div class="row">
-                            <div class="col-8"> -->
-                        <div class="box">
-                            <div class="box-body p-4">
-                                <h4 class="media-heading mt-15 mb-0 px-30"><a href="#">Exploring the transformative
-                                        power of education in shaping individuals and societies.</a></h4>
-                                <div class="media">
-                                    <!-- YouTube video embedded using iframe -->
-                                    <iframe width="200" height="100" src="https://www.youtube.com/embed/8Q0NuYOa6B0"
-                                        frameborder="0" allowfullscreen></iframe>
-                                    <div class="media-body">
-                                        <p>Exploring the transformative power of education in shaping individuals and
-                                            societies.Exploring the transformative power of education in shaping
-                                            individuals and societies.</p>
-                                        <a class="btn btn-sm btn-bold btn-primary mt-15" href="#">View More</a>
+                    <!-- <div class="container"> -->
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <div class="box">
+                                <!-- <div class="box-body p-4"> -->
+                                    <h4 class="media-heading mt-15 mb-0 px-30"><a href="#">Exploring the transformative
+                                            power of education in shaping individuals and societies.</a></h4>
+                                    <div class="media">
+                                        <div class="row-element">
+                                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                                <div class="timeline-item mt-4">
+
+                                                    <div class="timeline-event">
+
+                                                        <div class="timeline-heading">
+                                                            <h4 class="timeline-title"><a href="#">Khan Sir </a><small>
+                                                                    shared a video</small></h4>
+                                                        </div>
+                                                        <div class="timeline-body">
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe width="854" height="480"
+                                                                    src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                    frameborder="0" allowfullscreen></iframe>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-body">
+                                                            <h4><a class="hover-primary" href="#">Electoral Bonds |
+                                                                    Supreme Court Struck Down Electoral Bond | ADR |
+                                                                    Election Commission |</a></h4>
+                                                            <p>October 22, 2018</p>
+
+                                                            <p>Here you will find General knowledge, Current Affairs,
+                                                                Science & Technology, History, Polity, Geography,
+                                                                Economics, Physics, Chemistry, Biology, Computer,
+                                                                Science & Technology, Defense, Space Technology, Indian
+                                                                Map & World Map, Social education video.</p>
+
+                                                            <div class="flexbox align-items-center mt-3">
+                                                                <a class="btn btn-sm btn-bold btn-primary" href="#">View
+                                                                    More</a>
+
+                                                                <div class="gap-items-4">
+                                                                    <a class="text-muted" href="#">
+                                                                        <i class="fa fa-heart mr-1"></i> 25
+                                                                    </a>
+                                                                    <a class="text-muted" href="#">
+                                                                        <i class="fa fa-comment mr-1"></i> 25
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <p class="mt-0 px-30 bt-1 py-10">
-                                    | <i class="fa fa-calendar"></i>16/02/2024
-                                    | <i class="fa fa-comment"></i> <a href="#">3 Comments</a>
-                                </p>
                             </div>
                         </div>
                         <!-- card end  -->
 
-                        <div class="box">
+                        <!-- <div class="box">
                             <div class="box-body p-4 mt-2">
                                 <h4 class="media-heading mt-15 mb-0 px-30"><a href="#">Exploring the transformative
                                         power of education in shaping individuals and societies.</a></h4>
                                 <div class="media">
-                                    <!-- YouTube video embedded using iframe -->
+                                   
                                     <iframe width="200" height="100" src="https://www.youtube.com/embed/8Q0NuYOa6B0"
                                         frameborder="0" allowfullscreen></iframe>
                                     <div class="media-body">
-                                        <p>Exploring the transformative power of education in shaping individuals and
+                                        <p>Exploring the transformative power of education in shaping individuals
+                                            and
                                             societies.Exploring the transformative power of education in shaping
                                             individuals and societies.</p>
                                         <a class="btn btn-sm btn-bold btn-primary mt-15" href="#">View More</a>
@@ -697,18 +759,17 @@
                                     | <i class="fa fa-comment"></i> <a href="#">3 Comments</a>
                                 </p>
                             </div>
-                        </div>
-                        <!-- card end  -->
-                        <div class="box">
+                        </div> -->
+                        <!-- <div class="box">
                             <div class="box-body p-4">
                                 <h4 class="media-heading mt-15 mb-0 px-30"><a href="#">Exploring the transformative
                                         power of education in shaping individuals and societies.</a></h4>
                                 <div class="media">
-                                    <!-- YouTube video embedded using iframe -->
                                     <iframe width="200" height="100" src="https://www.youtube.com/embed/8Q0NuYOa6B0"
                                         frameborder="0" allowfullscreen></iframe>
                                     <div class="media-body">
-                                        <p>Exploring the transformative power of education in shaping individuals and
+                                        <p>Exploring the transformative power of education in shaping individuals
+                                            and
                                             societies.Exploring the transformative power of education in shaping
                                             individuals and societies.</p>
                                         <a class="btn btn-sm btn-bold btn-primary mt-15" href="#">View More</a>
@@ -719,324 +780,322 @@
                                     | <i class="fa fa-comment"></i> <a href="#">3 Comments</a>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <!-- card end  -->
-                    <!-- </div>
-                    </div> -->
                 </div>
             </div>
         </div>
-        <!-- content here  -->
+    </div>
+    <!-- content here  -->
 
-        <footer class="main-footer">
-            &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
-        </footer>
+    <footer class="main-footer">
+        &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
+    </footer>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar">
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar">
 
-            <div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"><i
-                        class="ion ion-close text-white" data-toggle="control-sidebar"></i></span> </div>
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs control-sidebar-tabs">
-                <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab" class="active"><i
-                            class="mdi mdi-message-text"></i></a></li>
-                <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
-                            class="mdi mdi-playlist-check"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane active" id="control-sidebar-home-tab">
-                    <div class="flexbox">
-                        <a href="javascript:void(0)" class="text-grey">
-                            <i class="ti-more"></i>
+        <div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"><i class="ion ion-close text-white"
+                    data-toggle="control-sidebar"></i></span> </div>
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs control-sidebar-tabs">
+            <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab" class="active"><i
+                        class="mdi mdi-message-text"></i></a></li>
+            <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
+                        class="mdi mdi-playlist-check"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <div class="flexbox">
+                    <a href="javascript:void(0)" class="text-grey">
+                        <i class="ti-more"></i>
+                    </a>
+                    <p>Users</p>
+                    <a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
+                </div>
+                <div class="lookup lookup-sm lookup-right d-none d-lg-block">
+                    <input type="text" name="s" placeholder="Search" class="w-p100">
+                </div>
+                <div class="media-list media-list-hover mt-20">
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-success" href="#">
+                            <img src="images/avatar/1.jpg" alt="...">
                         </a>
-                        <p>Users</p>
-                        <a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+                            </p>
+                            <p>Praesent tristique diam...</p>
+                            <span>Just now</span>
+                        </div>
                     </div>
-                    <div class="lookup lookup-sm lookup-right d-none d-lg-block">
-                        <input type="text" name="s" placeholder="Search" class="w-p100">
+
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-danger" href="#">
+                            <img src="images/avatar/2.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Luke</strong></a>
+                            </p>
+                            <p>Cras tempor diam ...</p>
+                            <span>33 min ago</span>
+                        </div>
                     </div>
-                    <div class="media-list media-list-hover mt-20">
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-success" href="#">
-                                <img src="images/avatar/1.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Tyler</strong></a>
-                                </p>
-                                <p>Praesent tristique diam...</p>
-                                <span>Just now</span>
-                            </div>
-                        </div>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-danger" href="#">
-                                <img src="images/avatar/2.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Luke</strong></a>
-                                </p>
-                                <p>Cras tempor diam ...</p>
-                                <span>33 min ago</span>
-                            </div>
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-warning" href="#">
+                            <img src="images/avatar/3.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Evan</strong></a>
+                            </p>
+                            <p>In posuere tortor vel...</p>
+                            <span>42 min ago</span>
                         </div>
+                    </div>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-warning" href="#">
-                                <img src="images/avatar/3.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-primary" href="#">
+                            <img src="images/avatar/4.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Evan</strong></a>
+                            </p>
+                            <p>In posuere tortor vel...</p>
+                            <span>42 min ago</span>
                         </div>
+                    </div>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-primary" href="#">
-                                <img src="images/avatar/4.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-success" href="#">
+                            <img src="images/avatar/1.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+                            </p>
+                            <p>Praesent tristique diam...</p>
+                            <span>Just now</span>
                         </div>
+                    </div>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-success" href="#">
-                                <img src="images/avatar/1.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Tyler</strong></a>
-                                </p>
-                                <p>Praesent tristique diam...</p>
-                                <span>Just now</span>
-                            </div>
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-danger" href="#">
+                            <img src="images/avatar/2.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Luke</strong></a>
+                            </p>
+                            <p>Cras tempor diam ...</p>
+                            <span>33 min ago</span>
                         </div>
+                    </div>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-danger" href="#">
-                                <img src="images/avatar/2.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Luke</strong></a>
-                                </p>
-                                <p>Cras tempor diam ...</p>
-                                <span>33 min ago</span>
-                            </div>
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-warning" href="#">
+                            <img src="images/avatar/3.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Evan</strong></a>
+                            </p>
+                            <p>In posuere tortor vel...</p>
+                            <span>42 min ago</span>
                         </div>
+                    </div>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-warning" href="#">
-                                <img src="images/avatar/3.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
+                    <div class="media py-10 px-0">
+                        <a class="avatar avatar-lg status-primary" href="#">
+                            <img src="images/avatar/4.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <p class="font-size-16">
+                                <a class="hover-primary" href="#"><strong>Evan</strong></a>
+                            </p>
+                            <p>In posuere tortor vel...</p>
+                            <span>42 min ago</span>
                         </div>
-
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-primary" href="#">
-                                <img src="images/avatar/4.jpg" alt="...">
-                            </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-                    <div class="flexbox">
-                        <a href="javascript:void(0)" class="text-grey">
-                            <i class="ti-more"></i>
-                        </a>
-                        <p>Todo List</p>
-                        <a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
-                    </div>
-                    <ul class="todo-list mt-20">
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_1" class="filled-in">
-                            <label for="basic_checkbox_1" class="mb-0 h-15"></label>
-                            <!-- todo text -->
-                            <span class="text-line">Nulla vitae purus</span>
-                            <!-- Emphasis label -->
-                            <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                            <!-- General tools such as edit or delete-->
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_2" class="filled-in">
-                            <label for="basic_checkbox_2" class="mb-0 h-15"></label>
-                            <span class="text-line">Phasellus interdum</span>
-                            <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_3" class="filled-in">
-                            <label for="basic_checkbox_3" class="mb-0 h-15"></label>
-                            <span class="text-line">Quisque sodales</span>
-                            <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_4" class="filled-in">
-                            <label for="basic_checkbox_4" class="mb-0 h-15"></label>
-                            <span class="text-line">Proin nec mi porta</span>
-                            <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_5" class="filled-in">
-                            <label for="basic_checkbox_5" class="mb-0 h-15"></label>
-                            <span class="text-line">Maecenas scelerisque</span>
-                            <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_6" class="filled-in">
-                            <label for="basic_checkbox_6" class="mb-0 h-15"></label>
-                            <span class="text-line">Vivamus nec orci</span>
-                            <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_7" class="filled-in">
-                            <label for="basic_checkbox_7" class="mb-0 h-15"></label>
-                            <!-- todo text -->
-                            <span class="text-line">Nulla vitae purus</span>
-                            <!-- Emphasis label -->
-                            <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                            <!-- General tools such as edit or delete-->
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_8" class="filled-in">
-                            <label for="basic_checkbox_8" class="mb-0 h-15"></label>
-                            <span class="text-line">Phasellus interdum</span>
-                            <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_9" class="filled-in">
-                            <label for="basic_checkbox_9" class="mb-0 h-15"></label>
-                            <span class="text-line">Quisque sodales</span>
-                            <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_10" class="filled-in">
-                            <label for="basic_checkbox_10" class="mb-0 h-15"></label>
-                            <span class="text-line">Proin nec mi porta</span>
-                            <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.tab-pane -->
+
             </div>
-        </aside>
-        <script src="js/vendors.min.js"></script>
-        <script src="js/pages/chat-popup.js"></script>
-        <script src="assets/icons/feather-icons/feather.min.js"></script>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <div class="flexbox">
+                    <a href="javascript:void(0)" class="text-grey">
+                        <i class="ti-more"></i>
+                    </a>
+                    <p>Todo List</p>
+                    <a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
+                </div>
+                <ul class="todo-list mt-20">
+                    <li class="py-15 px-5 by-1">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_1" class="filled-in">
+                        <label for="basic_checkbox_1" class="mb-0 h-15"></label>
+                        <!-- todo text -->
+                        <span class="text-line">Nulla vitae purus</span>
+                        <!-- Emphasis label -->
+                        <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                        <!-- General tools such as edit or delete-->
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_2" class="filled-in">
+                        <label for="basic_checkbox_2" class="mb-0 h-15"></label>
+                        <span class="text-line">Phasellus interdum</span>
+                        <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5 by-1">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_3" class="filled-in">
+                        <label for="basic_checkbox_3" class="mb-0 h-15"></label>
+                        <span class="text-line">Quisque sodales</span>
+                        <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_4" class="filled-in">
+                        <label for="basic_checkbox_4" class="mb-0 h-15"></label>
+                        <span class="text-line">Proin nec mi porta</span>
+                        <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5 by-1">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_5" class="filled-in">
+                        <label for="basic_checkbox_5" class="mb-0 h-15"></label>
+                        <span class="text-line">Maecenas scelerisque</span>
+                        <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_6" class="filled-in">
+                        <label for="basic_checkbox_6" class="mb-0 h-15"></label>
+                        <span class="text-line">Vivamus nec orci</span>
+                        <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5 by-1">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_7" class="filled-in">
+                        <label for="basic_checkbox_7" class="mb-0 h-15"></label>
+                        <!-- todo text -->
+                        <span class="text-line">Nulla vitae purus</span>
+                        <!-- Emphasis label -->
+                        <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                        <!-- General tools such as edit or delete-->
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_8" class="filled-in">
+                        <label for="basic_checkbox_8" class="mb-0 h-15"></label>
+                        <span class="text-line">Phasellus interdum</span>
+                        <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5 by-1">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_9" class="filled-in">
+                        <label for="basic_checkbox_9" class="mb-0 h-15"></label>
+                        <span class="text-line">Quisque sodales</span>
+                        <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                    <li class="py-15 px-5">
+                        <!-- checkbox -->
+                        <input type="checkbox" id="basic_checkbox_10" class="filled-in">
+                        <label for="basic_checkbox_10" class="mb-0 h-15"></label>
+                        <span class="text-line">Proin nec mi porta</span>
+                        <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+                        <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/pages/chat-popup.js"></script>
+    <script src="assets/icons/feather-icons/feather.min.js"></script>
 
-        <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-        <script src="assets/vendor_components/moment/min/moment.min.js"></script>
-        <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+    <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+    <script src="assets/vendor_components/moment/min/moment.min.js"></script>
+    <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
 
-        <script src="js/pages/dashboard.js"></script>
-        <script src="js/pages/calendar.js"></script>
+    <script src="js/pages/dashboard.js"></script>
+    <script src="js/pages/calendar.js"></script>
 
 
-        <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-        <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
-        <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
-        <script src="assets/vendor_components/d3/d3.min.js"></script>
-        <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
+    <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+    <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
+    <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
+    <script src="assets/vendor_components/d3/d3.min.js"></script>
+    <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
 
-        <!-- attempt exam scr  -->
-        <script src="assets/vendor_components/datatable/datatables.min.js"></script>
-        <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
-        <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
+    <!-- attempt exam scr  -->
+    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
+    <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
 
-        <!-- EduAdmin App -->
-        <script src="js/template.js"></script>
+    <!-- EduAdmin App -->
+    <script src="js/template.js"></script>
 
-        <script src="js/pages/chart-widgets.js"></script>
-        <script src="js/pages/chartjs-int.js"></script>
+    <script src="js/pages/chart-widgets.js"></script>
+    <script src="js/pages/chartjs-int.js"></script>
 
-        <!-- table scr  -->
+    <!-- table scr  -->
 
-        <!-- EduAdmin App -->
+    <!-- EduAdmin App -->
 
-        <script src="js/pages/data-table.js"></script>
+    <script src="js/pages/data-table.js"></script>
 
-        <!-- picker  -->
+    <!-- picker  -->
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </div>
 </body>
 

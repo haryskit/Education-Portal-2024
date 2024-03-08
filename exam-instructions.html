@@ -84,11 +84,17 @@
 
 
 
-                        <h1 class="text-center text-info"><a class="hover-text-primary"><strong>Please read the instructions carefully</a></strong></h1>
+                        <h1 class="text-center text-info"><a class="hover-text-primary"><strong>Please read the
+                                    instructions carefully</a></strong></h1>
                         <div class="card-body">
                             <h4 class="card-title"><strong>General Instructions:</strong></h4>
-                            <p class="fs"><strong>1. </strong>The clock will be set at the server. The countdown timer in the top right corner of screen will display the remaining time available for you to complete the examination. When the timer reaches zero, the examination will end by itself. You will not be required to end or submit your examination after time has ended.</p>
-                            <p class="fs"><strong>2. </strong>The Questions Palette displayed on the right side of screen will show the status of each question using one of the following symbols:</p>
+                            <p class="fs"><strong>1. </strong>The clock will be set at the server. The countdown timer
+                                in the top right corner of screen will display the remaining time available for you to
+                                complete the examination. When the timer reaches zero, the examination will end by
+                                itself. You will not be required to end or submit your examination after time has ended.
+                            </p>
+                            <p class="fs"><strong>2. </strong>The Questions Palette displayed on the right side of
+                                screen will show the status of each question using one of the following symbols:</p>
                         </div>
                         <!-- <div class="col-6">  -->
                         <!-- <div class="box"> -->
@@ -130,48 +136,62 @@
                         </div>
                         <!-- start q 3 -->
                         <div class="card-body">
-                            <h4 class="card-title mt-4 mb-4"><strong><a class="hover-text-info">Navigate to a Question:</a></strong></h4>
+                            <h4 class="card-title mt-4 mb-4"><strong><a class="hover-text-info">Navigate to a
+                                        Question:</a></strong></h4>
                             <p class="fs">
-                                <strong>1. Click on the question number</strong> in the Question Palette at the right of your screen to go directly to that numbered question. Note: This option does NOT save your answer to the current question.
+                                <strong>1. Click on the question number</strong> in the Question Palette at the right of
+                                your screen to go directly to that numbered question. Note: This option does NOT save
+                                your answer to the current question.
                             </p>
                             <p class="fs">
-                                <strong>2. Click "Save & Next"</strong> to save your answer for the current question and move to the next question.
+                                <strong>2. Click "Save & Next"</strong> to save your answer for the current question and
+                                move to the next question.
                             </p>
                             <p class="fs">
                                 <strong>3. Click "Prev"</strong> to go to the previous question.
                             </p>
-                            <h4 class="card-title mt-4 mb-4"><strong><a class="hover-text-info">Answering a Question:</a></strong></h4>
+                            <h4 class="card-title mt-4 mb-4"><strong><a class="hover-text-info">Answering a
+                                        Question:</a></strong></h4>
                             <p class="fs">
-                                <strong>4. To select your answer,</strong> click on the radio button of one of the options.
+                                <strong>4. To select your answer,</strong> click on the radio button of one of the
+                                options.
                             </p>
                             <p class="fs">
-                                <strong>5. To deselect your chosen answer,</strong> click on the "Clear Response" button.
+                                <strong>5. To deselect your chosen answer,</strong> click on the "Clear Response"
+                                button.
                             </p>
                             <p class="fs">
                                 <strong>6. To change your chosen answer,</strong> click on the button of another option.
                             </p>
                             <p class="fs">
-                                <strong>7. To mark the question for review,</strong> click on the "Mark for Review" button.
+                                <strong>7. To mark the question for review,</strong> click on the "Mark for Review"
+                                button.
                             </p>
                             <p class="fs">
-                                <strong>8. To change your answer to a question</strong> that has already been answered, first select that question for answering and then follow the procedure for answering that type of question.
+                                <strong>8. To change your answer to a question</strong> that has already been answered,
+                                first select that question for answering and then follow the procedure for answering
+                                that type of question.
                             </p>
-                            <p class="fs"><strong>9.</strong> To mark the question for review, click on the Mark for Review button.</p>
-                            <p class="fs"><strong>10.</strong> To change your answer to a question that has already been answered, first select that question for answering and then follow the procedure for answering that type of question.</p>
+                            <p class="fs"><strong>9.</strong> To mark the question for review, click on the Mark for
+                                Review button.</p>
+                            <p class="fs"><strong>10.</strong> To change your answer to a question that has already been
+                                answered, first select that question for answering and then follow the procedure for
+                                answering that type of question.</p>
 
                         </div>
                         <div class="box-footer">
                             <div class="row">
                                 <div class="col-lg-6 mb-2">
                                     <div class="text-center">
-                                        <a href="#" id="editItem" class="btn  btn-rounded btn-danger d-inline-block" style="width: 120px;">
+                                        <a href="full-length-exam1.html" id="editItem" class="btn btn-rounded btn-danger d-inline-block" style="width: 120px;">
                                             Back
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-2">
                                     <div class="text-center ">
-                                        <a href="mock-test.html" class="btn  btn-rounded btn-info d-inline-block" style="width: 120px;">
+                                        <a href="mock-test.html" class="btn  btn-rounded btn-info d-inline-block"
+                                            style="width: 120px;">
                                             Begin Exam
                                         </a>
                                     </div>
@@ -186,8 +206,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
-        // Function to handle remove item modal
-        function handleeditItem(event) {
+        document.getElementById("editItem").addEventListener("click", function(event) {
             event.preventDefault(); // Prevent the default action of the link
 
             Swal.fire({
@@ -200,13 +219,11 @@
                 cancelButtonText: "Cancel",
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // Swal.fire("Removed!", "Your item has been removed.", "success");
+                    // If the user confirms, navigate to the URL specified in the link
+                    window.location.href = event.target.href;
                 }
             });
-        }
-
-        // Remove Item Click Handler
-        document.getElementById("editItem").addEventListener("click", handleeditItem);
+        });
     </script>
 </body>
 

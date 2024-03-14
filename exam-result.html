@@ -2,28 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="images/favicon.ico">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="images/favicon.ico">
 
-    <title>EduAdmin - Dashboard</title>
+	<title>EduAdmin - Dashboard</title>
 
-    <!-- Vendors Style-->
-    <link rel="stylesheet" href="css/vendors_css.css">
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="css/vendors_css.css">
 
-    <!-- Style-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skin_color.css">
+	<!-- Style-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/skin_color.css">
 
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
-    <div class="wrapper">
-        <!-- header s  -->
-        <header class="main-header">
+	<div class="wrapper">
+		<header class="main-header">
             <div class="d-flex align-items-center logo-box justify-content-start">
                 <a href="#"
                     class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
@@ -265,211 +264,133 @@
 
             </div>
         </aside>
-        <!-- header end  -->
-        <!-- content here  -->
-        <div class="content-wrapper">
-            <div class="container-full">
-                <section class="content">
-                    <h2 class="text-center mt-2 mb-4"><strong>Exams</strong></h2>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mx-auto">
-                            <div class="box box-outline-info">
-                                <div class="box-header with-border text-center">
-                                    <h4 class="box-title"><strong>Maths Exam</strong></h4>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>1</h6>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>2</h6>
-                                        <h4>Positive Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>3</h6>
-                                        <h4>Question</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>4</h6>
-                                        <h4>Negative Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center ml-2">
-                                    <div class="box-body col-md-6">
-                                        <h6>5</h6>
-                                        <h4>Maximum Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>6</h6>
-                                        <h4>Attempts</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                        
-                                <div class="box-footer">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a href="exam-instructions3.html" class="btn bg-gradient-primary text-white">
-                                                Take Exam
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
+		<!-- content here  -->
+		<div class="content-wrapper">
+			<div class="container">
+				<!-- <section class="content"> -->
+
+                    <div class="col-xl-12 col-lg-12 col-12">
+                        <div class="box">
+                            <div class="box-header with-border">						
+                                <h4 class="box-title">Exam Result</h4>
+                            </div>
+                            <div class="box-body">						
+                                <div class="table-responsive">
+        
+                                    <table id="example" class="table table-lg invoice-archive">
+                                        <thead>
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>Exam Name</th>
+                                                <th>Obtained Marks</th>
+                                                <th>Status</th>
+                                                <th>Percentage</th>
+                                                <th>Attempt No</th>
+                                                <th class="text-center">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Maths</td>
+                                                <td>
+                                                    <h6 class="mb-0">
+                                                        <a href="#">80</a>
+                                                        
+                                                    </h6>
+                                                </td>
+                                                <td>
+                                                    <select name="status" class="form-control" data-placeholder="Select status">
+                                                        <option value="overdue">Overdue</option>
+                                                        <option value="hold" selected>On hold</option>
+                                                        <option value="pending">Pending</option>
+                                                        <option value="paid">Paid</option>
+                                                        <option value="invalid">Invalid</option>
+                                                        <option value="cancel">Canceled</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    70%
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-success">3 Attempt</span>
+                                                </td>
+                                               
+                                                <td class="text-center">
+                                                    <div class="list-icons d-inline-flex">
+                                                        <a href="#" class="list-icons-item mr-10"><i class="fa fa-eye-slash"></i></a>
+                                                        <div class="list-icons-item dropdown">
+                                                            <a href="#" class="list-icons-item dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-text"></i></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a href="user-result-details.html" class="dropdown-item"><i class="fa fa-download"></i>View Result</a>
+                                                                <a href="#" class="dropdown-item"><i class="fa fa-print"></i> Print</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a href="#" class="dropdown-item"><i class="fa fa-pencil"></i> Edit</a>
+                                                                <a href="#" class="dropdown-item"><i class="fa fa-remove"></i> Remove</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+        
+                                            
+                                            </tr>
+                                        </tbody>
+                                    </table>
+        
                                 </div>
                             </div>
                         </div>
-                        <!-- card end  -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="box box-outline-info">
-                                <div class="box-header with-border text-center">
-                                    <h4 class="box-title"><strong>Maths Exam</strong></h4>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>1</h6>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>2</h6>
-                                        <h4>Positive Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>3</h6>
-                                        <h4>Question</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>4</h6>
-                                        <h4>Negative Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center ml-2">
-                                    <div class="box-body col-md-6">
-                                        <h6>5</h6>
-                                        <h4>Maximum Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>6</h6>
-                                        <h4>Attempts</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                        
-                                <div class="box-footer">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a href="exam-instructions3.html" class="btn bg-gradient-primary text-white">
-                                                Take Exam
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card end  -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="box box-outline-info">
-                                <div class="box-header with-border text-center">
-                                    <h4 class="box-title"><strong>Maths Exam</strong></h4>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>1</h6>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>2</h6>
-                                        <h4>Positive Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>3</h6>
-                                        <h4>Question</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>4</h6>
-                                        <h4>Negative Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center ml-2">
-                                    <div class="box-body col-md-6">
-                                        <h6>5</h6>
-                                        <h4>Maximum Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>6</h6>
-                                        <h4>Attempts</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                        
-                                <div class="box-footer">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a href="exam-instructions3.html" class="btn bg-gradient-primary text-white">
-                                                Take Exam
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-            </div>
-        </div>
-        <!-- content here  -->
-    </div>
-    <footer class="main-footer">
-        &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
-    </footer>
-    
-    <!-- Control Sidebar -->
-    
-        <script src="js/vendors.min.js"></script>
-    <script src="js/pages/chat-popup.js"></script>
-    <script src="assets/icons/feather-icons/feather.min.js"></script>
-    
-    <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-    <script src="assets/vendor_components/moment/min/moment.min.js"></script>
-    <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
-    
-    <script src="js/pages/dashboard.js"></script>
-    <script src="js/pages/calendar.js"></script>
-    
-    
-    <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-    <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
-    <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
-    <script src="assets/vendor_components/d3/d3.min.js"></script>
-    <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
-    
-    <!-- attempt exam scr  -->
-    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
-    <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
-    <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
-    
-    <!-- EduAdmin App -->
-    <script src="js/template.js"></script>
-    
-    <script src="js/pages/chart-widgets.js"></script>
-    <script src="js/pages/chartjs-int.js"></script>
-    
-    <!-- table scr  -->
-    
-    <!-- EduAdmin App -->
-    
-    <script src="js/pages/data-table.js"></script>
-    
-    <!-- picker  -->
-    
-        </div>
-    </body>
-    
-    </html>
+                    </div>
+
+				<!-- </section> -->
+			</div>
+		</div>
+		<!-- content here  -->
+		<footer class="main-footer">
+			&copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
+		</footer>
+
+		<!-- Control Sidebar -->
+		
+		<script src="js/vendors.min.js"></script>
+		<script src="js/pages/chat-popup.js"></script>
+		<script src="assets/icons/feather-icons/feather.min.js"></script>
+
+		<script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+		<script src="assets/vendor_components/moment/min/moment.min.js"></script>
+		<script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+
+		<script src="js/pages/dashboard.js"></script>
+		<script src="js/pages/calendar.js"></script>
+
+
+		<script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+		<script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
+		<script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
+		<script src="assets/vendor_components/d3/d3.min.js"></script>
+		<script src="assets/vendor_components/d3/d3_tooltip.js"></script>
+
+		<!-- attempt exam scr  -->
+		<script src="assets/vendor_components/datatable/datatables.min.js"></script>
+		<script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
+		<script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
+
+		<!-- EduAdmin App -->
+		<script src="js/template.js"></script>
+
+		<script src="js/pages/chart-widgets.js"></script>
+		<script src="js/pages/chartjs-int.js"></script>
+
+		<!-- table scr  -->
+
+		<!-- EduAdmin App -->
+
+		<script src="js/pages/data-table.js"></script>
+
+		<!-- picker  -->
+
+	</div>
 </body>
 
 </html>

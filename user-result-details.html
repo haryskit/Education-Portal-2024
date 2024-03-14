@@ -17,12 +17,72 @@
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
+    <!-- <link rel="stylesheet" href="css/template2.css "> -->
+
+    <style>
+        .timeline__group {
+            padding-top: 20px;
+        }
+
+        .timeline5:before {
+            height: 110%;
+        }
+
+        .timeline__box:not(:last-of-type) {
+            margin-bottom: 59px;
+        }
+
+        .timeline__group:not(:first-of-type) {
+            margin-top: 3rem;
+        }
+
+        .timeline__date {
+            margin-top: -26px;
+        }
+
+        .timeline__box {
+            padding-bottom: 3px;
+        }
+
+        .box-footer {
+            display: none;
+        }
+
+        .box {
+            margin-bottom: -16px;
+            box-shadow: none !important;
+
+        }
+
+        .box-header {
+            padding: 0px;
+            border-bottom: none;
+            border-bottom-style: none !important;
+        }
+
+        .box-header>.box-controls {
+            top: 0rem;
+        }
+
+        .hText {
+            margin-top: 18px;
+        }
+
+        .litext {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #spanText {
+            margin-top: 10px;
+        }
+    </style>
 
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
     <div class="wrapper">
-        <!-- header s  -->
         <header class="main-header">
             <div class="d-flex align-items-center logo-box justify-content-start">
                 <a href="#"
@@ -265,211 +325,188 @@
 
             </div>
         </aside>
-        <!-- header end  -->
         <!-- content here  -->
         <div class="content-wrapper">
             <div class="container-full">
-                <section class="content">
-                    <h2 class="text-center mt-2 mb-4"><strong>Exams</strong></h2>
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h3 class="page-title">Result</h3>
+                            <div class="d-inline-block align-items-center">
+                                <nav>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item" aria-current="page">Result</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Student Exam Result </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main content -->
+                <section class="invoice printableArea">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mx-auto">
-                            <div class="box box-outline-info">
-                                <div class="box-header with-border text-center">
-                                    <h4 class="box-title"><strong>Maths Exam</strong></h4>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>1</h6>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>2</h6>
-                                        <h4>Positive Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>3</h6>
-                                        <h4>Question</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>4</h6>
-                                        <h4>Negative Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center ml-2">
-                                    <div class="box-body col-md-6">
-                                        <h6>5</h6>
-                                        <h4>Maximum Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>6</h6>
-                                        <h4>Attempts</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                        
-                                <div class="box-footer">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a href="exam-instructions3.html" class="btn bg-gradient-primary text-white">
-                                                Take Exam
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
+                        <div class="col-12">
+                            <div class="bb-1 clearFix">
+                                <div class="text-right pb-15">
+                                    <button id="print2" class="btn btn-warning" type="button"> <span><i
+                                                class="fa fa-print"></i> Print</span> </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- card end  -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="box box-outline-info">
-                                <div class="box-header with-border text-center">
-                                    <h4 class="box-title"><strong>Maths Exam</strong></h4>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>1</h6>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>2</h6>
-                                        <h4>Positive Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>3</h6>
-                                        <h4>Question</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>4</h6>
-                                        <h4>Negative Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center ml-2">
-                                    <div class="box-body col-md-6">
-                                        <h6>5</h6>
-                                        <h4>Maximum Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>6</h6>
-                                        <h4>Attempts</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                        
-                                <div class="box-footer">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a href="exam-instructions3.html" class="btn bg-gradient-primary text-white">
-                                                Take Exam
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
+
+                        <!-- /.col -->
+                    </div>
+                    <div class="row invoice-info">
+                        <div class="col-md-6 invoice-col">
+                            <address>
+                                <strong class="text-blue font-size-24">Maths Exam</strong><br>
+
+                            </address>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-6 invoice-col text-right">
+                            <address>
+                                <strong class="text-blue font-size-18">Name : Rocky </strong>
+                                <br>
+                                <strong class="text-blue font-size-18">Roll No. 1</strong>
+                                <br>
+                                <strong class="text-blue font-size-18">Date & Time : </strong>
+                                <br>
+                                <strong>Phone: (00) 789-456-1230 &nbsp;&nbsp;&nbsp;&nbsp; Email:
+                                    conatct@example.com</strong>
+                            </address>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-12 invoice-col mb-15">
+                            <div class="invoice-details row no-margin">
+                                <div class="col-md-6 col-lg-3"><b>S.No : </b> 879</div>
+                                <div class="col-md-6 col-lg-3"><b>Question:</b> FC12548</div>
+                                <div class="col-md-6 col-lg-3"><b>Payment Due:</b> 14/08/2018</div>
+                                <div class="col-md-6 col-lg-3"><b>Account:</b> 00215487541296</div>
                             </div>
                         </div>
-                        <!-- card end  -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="box box-outline-info">
-                                <div class="box-header with-border text-center">
-                                    <h4 class="box-title"><strong>Maths Exam</strong></h4>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>1</h6>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>2</h6>
-                                        <h4>Positive Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center">
-                                    <div class="box-body col-md-6">
-                                        <h6>3</h6>
-                                        <h4>Question</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>4</h6>
-                                        <h4>Negative Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                                <div class="row text-center ml-2">
-                                    <div class="box-body col-md-6">
-                                        <h6>5</h6>
-                                        <h4>Maximum Marks</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                    <div class="box-body col-md-6">
-                                        <h6>6</h6>
-                                        <h4>Attempts</h4> <!-- Fixed closing tag -->
-                                    </div>
-                                </div>
-                        
-                                <div class="box-footer">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a href="exam-instructions3.html" class="btn bg-gradient-primary text-white">
-                                                Take Exam
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-12 table-responsive">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>S.no</th>
+                                        <th>Question</th>
+                                        <th>CORRECT ANSWER(OPTION)</th>
+                                        <th class="text-right">FILLED ANSWER</th>
+                                        <th class="text-right">WRONG ANSWER</th>
+                                        <th class="text-right">Subtotal</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td class="text-right">9</td>
+                                        <td class="text-right">2</td>
+                                        <td class="text-right">70%</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
                         </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-right">
+                            <p class="lead"><b>Exam Date </b><span class="text-danger"> 14/08/2018 </span></p>
+
+                            <div>
+                                <p>Max Marks : 100 </p>
+                                <p>Obtained Marks : 70</p>
+                                <p>Percentage : 70%</p>
+                            </div>
+                            <div class="total-payment">
+                                <h3><b>Total :</b> 70 Marks</h3>
+                            </div>
+
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row no-print">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-success-light pull-right mr-2"><i
+                                    class="fa fa-check-square-o"></i>
+                                Correct : 7
+                            </button>
+                            <button type="button" class="btn btn-warning pull-right mr-2"><i class="fa fa-question"></i>
+                                Unanswered : 1
+                            </button>
+                            <button type="button" class="btn btn-danger pull-right mr-2"><i
+                                    class="fa fa-remove (alias)"></i>
+                                Wrong : 2
+                            </button>
+                        </div>
+                    </div>
+                    <p>Result was created on a computer and is valid without the signature and seal.</p>
                 </section>
+                <!-- /.content -->
             </div>
         </div>
         <!-- content here  -->
-    </div>
-    <footer class="main-footer">
-        &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
-    </footer>
-    
-    <!-- Control Sidebar -->
-    
+        <footer class="main-footer">
+            &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+
         <script src="js/vendors.min.js"></script>
-    <script src="js/pages/chat-popup.js"></script>
-    <script src="assets/icons/feather-icons/feather.min.js"></script>
-    
-    <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-    <script src="assets/vendor_components/moment/min/moment.min.js"></script>
-    <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
-    
-    <script src="js/pages/dashboard.js"></script>
-    <script src="js/pages/calendar.js"></script>
-    
-    
-    <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-    <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
-    <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
-    <script src="assets/vendor_components/d3/d3.min.js"></script>
-    <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
-    
-    <!-- attempt exam scr  -->
-    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
-    <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
-    <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
-    
-    <!-- EduAdmin App -->
-    <script src="js/template.js"></script>
-    
-    <script src="js/pages/chart-widgets.js"></script>
-    <script src="js/pages/chartjs-int.js"></script>
-    
-    <!-- table scr  -->
-    
-    <!-- EduAdmin App -->
-    
-    <script src="js/pages/data-table.js"></script>
-    
-    <!-- picker  -->
-    
-        </div>
-    </body>
-    
-    </html>
+        <script src="js/pages/chat-popup.js"></script>
+        <script src="assets/icons/feather-icons/feather.min.js"></script>
+
+        <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+        <script src="assets/vendor_components/moment/min/moment.min.js"></script>
+        <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+
+        <script src="js/pages/dashboard.js"></script>
+        <script src="js/pages/calendar.js"></script>
+
+
+        <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+        <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
+        <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
+        <script src="assets/vendor_components/d3/d3.min.js"></script>
+        <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
+
+        <!-- attempt exam scr  -->
+        <script src="assets/vendor_components/datatable/datatables.min.js"></script>
+        <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
+        <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
+
+        <!-- EduAdmin App -->
+        <script src="js/template.js"></script>
+
+        <script src="js/pages/chart-widgets.js"></script>
+        <script src="js/pages/chartjs-int.js"></script>
+
+        <!-- table scr  -->
+
+        <!-- EduAdmin App -->
+
+        <script src="js/pages/data-table.js"></script>
+        <script src="js/pages/chat-popup.js"></script>
+        <script src="../assets/icons/feather-icons/feather.min.js"></script>
+        <script src="../assets/vendor_plugins/JqueryPrintArea/demo/jquery.PrintArea.js"></script>
+
+        <!-- EduAdmin App -->
+
+        <script src="js/pages/invoice.js"></script>
+
+        <!-- picker  -->
+
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduAdmin - Dashboard</title>
+
+    <!-- Vendors Style-->
+    <link rel="stylesheet" href="css/vendors_css.css">
+
+    <!-- Style-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skin_color.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .setting-item {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="d-flex align-items-center logo-box justify-content-start">
+                <a href="#"
+                    class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
+                    data-toggle="push-menu" role="button">
+                    <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
+                            class="path3"></span></span>
+                </a>
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <!-- logo-->
+                    <div class="logo-lg">
+                        <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
+                        <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
+                    </div>
+                </a>
+            </div>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div class="app-menu">
+                    <ul class="header-megamenu nav">
+                        <li class="btn-group nav-item d-md-none">
+                            <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu"
+                                role="button">
+                                <span class="icon-Align-left"><span class="path1"></span><span
+                                        class="path2"></span><span class="path3"></span></span>
+                            </a>
+                        </li>
+                        <!-- <li class="btn-group nav-item d-none d-xl-inline-block">
+                            <a href="#" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
+                                <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                        </li>
+                         -->
+                    </ul>
+                </div>
+
+                <div class="navbar-custom-menu r-side">
+                    <ul class="nav navbar-nav">
+                        <li class="btn-group nav-item d-lg-inline-flex d-none">
+                            <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
+                                title="Full Screen">
+                                <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                        </li>
+
+                        <!-- Notifications -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                                title="Notifications">
+                                <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                            <ul class="dropdown-menu animated bounceIn">
+
+                                <li class="header">
+                                    <div class="p-20">
+                                        <div class="flexbox">
+                                            <div>
+                                                <h4 class="mb-0 mt-0">Notifications</h4>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="text-danger">Clear All</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <ul class="menu sm-scrol">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
+                                                suscipit blandit.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
+                                                sapien elementum, in semper diam posuere.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
+                                                commodo porttitor pretium a erat.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
+                                                nisi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
+                                                dictum fermentum.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
+                                                interdum, at scelerisque ipsum imperdiet.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- User Account-->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                                title="User">
+                                <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                            <ul class="dropdown-menu animated flipInX">
+                                <li class="user-body">
+                                    <a class="dropdown-item" href="user-profile.html"><i
+                                            class="ti-user text-muted mr-2"></i>
+                                        Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> Change
+                                        Password</a>
+                                    <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <!-- sidebar-->
+            <section class="sidebar position-relative">
+                <div class="multinav">
+                    <div class="multinav-scroll" style="height: 100%;">
+                        <!-- sidebar menu-->
+                        <ul class="sidebar-menu" data-widget="tree">
+                            <!-- <li class="header">Dashboard </li> -->
+                            <li>
+                                <a href="index.html">
+                                    <i class="icon-Layout-4-blocks"><span class="path1"></span><span
+                                            class="path2"></span></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
+                                        class="path2"></span></i>
+                                    <span>My Course</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-right pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="my-courses.html"><i class="icon-Commit"><span
+                                                    class="path1"></span><span class="path2"></span></i>My Course 1</a>
+                                    </li>
+
+                                    <li><a href="my-course3.html"><i class="icon-Commit"><span
+                                                    class="path1"></span><span class="path2"></span></i>My Course 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="attemped-tests.html">
+                                    <i class="mdi mdi-pencil-box-outline"></i>
+                                    <span>Attempted Tests</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exam-result.html">
+                                    <i class="mdi mdi-note-multiple-outline"></i>
+                                    <span>Exam Result</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="live-classes.html">
+                                    <i class="mdi mdi-youtube-play"></i>
+                                    <span>Live Classes</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="bookmark-ques.html">
+                                    <i class="mdi mdi-bookmark-outline"></i>
+                                    <span>Bookmarked Ques.</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="doubts.html">
+                                    <i class="mdi mdi-comment-question-outline"></i>
+                                    <span>Doubts</span>
+
+                                </a>
+                            </li>
+                            <li class="header">Payment</li>
+                            <li>
+                                <a href="payment-history.html">
+                                    <i class="mdi mdi-credit-card"></i>
+                                    <span>Payment History</span>
+                                </a>
+                            </li>
+                            <li class="header">Profile</li>
+                            <li>
+                                <a href="user-profile.html">
+                                    <i class="mdi mdi-account"></i>
+                                    <span>User Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <div class="sidebar-footer">
+                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings"
+                    aria-describedby="tooltip92529">
+                    <span class="mdi mdi-settings"></span>
+                </a>
+                <a href="mailbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email">
+                    <span class="mdi mdi-email-outline"></span>
+                </a>
+                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout">
+                    <span class="mdi mdi-logout"></span>
+                </a>
+
+            </div>
+        </aside>
+        <!-- content here  -->
+        <div class="content-wrapper bg-white">
+            <!-- <div class="container"> -->
+            <section class="content">
+
+                <!-- <div class="container"> -->
+                <h2>Settings</h2>
+                <div class="setting-item">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+                <div class="setting-item">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="setting-item">
+                    <label for="theme">Theme:</label>
+                    <select id="theme" name="theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="notifications">Notifications:</label>
+                    <select id="notifications" name="notifications">
+                        <option value="on">On</option>
+                        <option value="off">Off</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="language">Language:</label>
+                    <select id="language" name="language">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="timezone">Timezone:</label>
+                    <select id="timezone" name="timezone">
+                        <option value="gmt-8">GMT-8</option>
+                        <option value="gmt-5">GMT-5</option>
+                        <option value="gmt">GMT</option>
+                        <option value="gmt+5">GMT+5</option>
+                    </select>
+                </div>
+                <button type="button" style="margin-bottom: 10px;">Save Settings</button>
+            </section>
+
+        </div>
+    <!-- content here  -->
+    <footer class="main-footer">
+        &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+
+    <script src="js/vendors.min.js"></script>
+    <script src="js/pages/chat-popup.js"></script>
+    <script src="assets/icons/feather-icons/feather.min.js"></script>
+
+    <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+    <script src="assets/vendor_components/moment/min/moment.min.js"></script>
+    <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+
+    <script src="js/pages/dashboard.js"></script>
+    <script src="js/pages/calendar.js"></script>
+
+
+    <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+    <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
+    <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
+    <script src="assets/vendor_components/d3/d3.min.js"></script>
+    <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
+
+    <!-- attempt exam scr  -->
+    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
+    <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
+
+    <!-- EduAdmin App -->
+    <script src="js/template.js"></script>
+
+    <script src="js/pages/chart-widgets.js"></script>
+    <script src="js/pages/chartjs-int.js"></script>
+
+    <!-- table scr  -->
+
+    <!-- EduAdmin App -->
+
+    <script src="js/pages/data-table.js"></script>
+
+    <!-- picker  -->
+
+    </div>
+</body>
+
+</html>

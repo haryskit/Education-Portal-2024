@@ -130,24 +130,7 @@
 
 <body class="hold-transition light-skin sidebar-mini theme-primary">
 
-    <header class="main-header exam-header-hidden">
-        <div class="d-flex align-items-center logo-box justify-content-start">
-            <a href="#" class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
-                data-toggle="push-menu" role="button">
-                <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
-                        class="path3"></span></span>
-            </a>
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-                <!-- logo-->
-                <div class="logo-lg">
-                    <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
-                    <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
-                </div>
-            </a>
-        </div>
-        <!-- Header Navbar -->
-    </header>
+    <div id="header-placeholder"></div>
     <aside class="main-sidebar">
         <!-- sidebar-->
         <section class="sidebar position-relative">
@@ -193,13 +176,6 @@
                             <a href="exam-result.html">
                                 <i class="mdi mdi-note-multiple-outline"></i>
                                 <span>Exam Result</span>
-
-                            </a>
-                        </li>
-                        <li>
-                            <a href="live-classes.html">
-                                <i class="mdi mdi-youtube-play"></i>
-                                <span>Live Classes</span>
 
                             </a>
                         </li>
@@ -1010,7 +986,7 @@
     <script src="js/vendors.min.js"></script>
     <script src="js/pages/chat-popup.js"></script>
     <script src="assets/icons/feather-icons/feather.min.js"></script>
-
+    <script src="js/scriptloader.js"></script>
     <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
     <script src="assets/vendor_components/moment/min/moment.min.js"></script>
     <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
@@ -1166,6 +1142,35 @@
         // Initial setup: Show the first question card
         showQuestionCard('question1'); // Assuming the ID of the first question card is 'question1'
     </script>
+
+<!-- script swal alert  -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- end  -->
+<script>
+    // Add an event listener to the logout link
+    document.getElementById('logout-link').addEventListener('click', function (event) {
+        // Prevent the default action of the link
+        event.preventDefault();
+
+        // Display a SweetAlert confirmation dialog
+        Swal.fire({
+            title: 'Are you sure you want to logout?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, logout'
+        }).then((result) => {
+            // If the user confirms, redirect to the logout page or perform the logout action
+            if (result.isConfirmed) {
+                // Redirect to the logout page or perform the logout action here
+                // For example, window.location.href = 'logout.php';
+                // Replace 'logout.php' with the actual URL of your logout page
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>

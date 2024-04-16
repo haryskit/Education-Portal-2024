@@ -124,6 +124,41 @@
             margin: 5px;
             color: black;
         }
+
+        .tab-content .tab-pane {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .card-header-video {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            /* Add black border */
+        }
+
+        .card-header-video .card-title {
+            padding: 0;
+            border: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .card-header-video>*:not(:first-child):not(:last-child) {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .card-header-video>*:first-child {
+            margin-right: 8px;
+        }
+
+        .card-header-video>*:last-child {
+            margin-left: 8px;
+        }
     </style>
 </head>
 
@@ -374,9 +409,19 @@
     <div class="content-wrapper">
         <div class="container">
             <section>
+
                 <div class="row p-15">
                     <div class="box-header">
                         <h3 class="box-title"><strong>Video Material</strong></h3>
+                        <nav class="mt-2">
+                            <ol class="breadcrumb" style="background-color: #fafbfd;">
+                                <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                                <li class="breadcrumb-item" aria-current="page">Courses</li>
+                                <li class="breadcrumb-item active" aria-current="page">Courses detalis</li>
+                                <li class="breadcrumb-item" aria-current="page">Video material</li>
+
+                            </ol>
+                        </nav>
                     </div>
 
                     <!-- content start here  -->
@@ -659,7 +704,7 @@
                                 <div id="navpills-1" class="tab-pane active">
 
                                     <div class="btn-light">
-                                        <div class="card-header d-flex align-items-center bg-primary-light">
+                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
                                             <h5 class="card-title">Maths Class Videos </h5>
                                             <button class="btn ml-auto" data-toggle="collapse"
                                                 data-target="#collapseInfo1" aria-expanded="false"
@@ -686,7 +731,7 @@
                                     </div>
                                     <!-- card end  -->
                                     <div class="btn-light" style="border-radius: 10px;">
-                                        <div class="card-header d-flex align-items-center bg-primary-light">
+                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
                                             <h5 class="card-title">Maths Class Videos </h5>
                                             <button class="btn ml-auto" data-toggle="collapse"
                                                 data-target="#collapseInfo2" aria-expanded="false"
@@ -712,7 +757,7 @@
                                     </div>
                                     <!-- card 2 end  -->
                                     <div class=" btn-light">
-                                        <div class="card-header d-flex align-items-center bg-primary-light">
+                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
                                             <h5 class="card-title">Maths Class Videos </h5>
                                             <button class="btn ml-auto" data-toggle="collapse"
                                                 data-target="#collapseInfo3" aria-expanded="false"
@@ -749,16 +794,16 @@
                             <div id="navpills-2" class="tab-pane active">
 
                                 <div class="btn-light">
-                                    <div class="card-header d-flex align-items-center bg-primary-light">
+                                    <div class="card-header-video d-flex align-items-center bg-primary-light">
                                         <h5 class="card-title">Physics Class Videos </h5>
                                         <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseInfo4"
                                             aria-expanded="false" aria-controls="collapseInfo4">
                                             <i class="fa fa-chevron-down"></i>
                                         </button>
                                     </div>
-                                    <div id="collapseInfo4" class="collapse"> <!-- Add 'show' class here -->
-                                        <div
-                                            class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                    <div id="collapseInfo4" class="collapse">
+                                        <div class="card-body border-bottom d-flex justify-content-between align-items-center"
+                                            style="padding-top: 5px; padding-bottom: 5px;">
                                             <div>
                                                 <a href="#">
                                                     <p><strong>Exploring the transformative power of
@@ -775,7 +820,7 @@
                                 </div>
                                 <!-- card end  -->
                                 <div class="btn-light" style="border-radius: 10px;">
-                                    <div class="card-header d-flex align-items-center bg-primary-light">
+                                    <div class="card-header-video d-flex align-items-center bg-primary-light">
                                         <h5 class="card-title">Physics Class Videos </h5>
                                         <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseInfo5"
                                             aria-expanded="false" aria-controls="collapseInfo5">
@@ -783,8 +828,8 @@
                                         </button>
                                     </div>
                                     <div id="collapseInfo5" class="collapse">
-                                        <div
-                                            class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                        <div class="card-body border-bottom d-flex justify-content-between align-items-center"
+                                            style="padding-top: 5px; padding-bottom: 5px;">
                                             <div>
                                                 <a href="#">
                                                     <p><strong>Exploring the transformative power of
@@ -800,7 +845,7 @@
                                 </div>
                                 <!-- card 2 end  -->
                                 <div class=" btn-light">
-                                    <div class="card-header d-flex align-items-center bg-primary-light">
+                                    <div class="card-header-video d-flex align-items-center bg-primary-light">
                                         <h5 class="card-title">Physics Class Videos </h5>
                                         <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseInfo6"
                                             aria-expanded="false" aria-controls="collapseInfo6">
@@ -808,8 +853,8 @@
                                         </button>
                                     </div>
                                     <div id="collapseInfo6" class="collapse">
-                                        <div
-                                            class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                        <div class="card-body border-bottom d-flex justify-content-between align-items-center"
+                                            style="padding-top: 5px; padding-bottom: 5px;">
                                             <div>
                                                 <a href="#">
                                                     <p><strong>Exploring the transformative power of
@@ -826,7 +871,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- content comes here  -->
+                    </div>
+                    <!-- content comes here  -->
                 </div>
             </section>
             <!-- content here  -->
@@ -854,7 +900,7 @@
 
         </div>
     </div>
-    
+
     <!-- Control Sidebar -->
     <script>
         document.getElementById('saveButton').addEventListener('click', function () {

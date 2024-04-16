@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>EduAdmin - Dashboard</title>
+    <title>Live Classes | Dashboard</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="css/vendors_css.css">
@@ -17,665 +17,960 @@
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
+    <style>
+        .avatar-answered {
+            border: 1px solid black;
+            background-color: #2beb52;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            margin-left: 0.5rem;
+        }
 
+        .avatar-not-answered {
+            border: 1px solid black;
+            background-color: #eb2b2b;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            margin-left: 0.5rem;
+        }
+
+        .avatar-not-visited {
+            border: 1px solid black;
+            background-color: #f7f7f7;
+            color: #010101;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            margin-left: 0.5rem;
+        }
+
+        .mark-for-review {
+            border-radius: 50%;
+            background-color: #2969e8;
+            color: #ffffff;
+            width: 40px;
+            height: 35px;
+            text-align: center;
+            /* padding-right: 10px; */
+            /* margin-left: 0.5rem; */
+        }
+
+        .form-check-inline .form-check-input {
+            display: inline-block;
+            margin-right: 10px;
+            /* Adjust spacing between radio button and label */
+        }
+
+        .form-check-inline .form-check-label {
+            display: inline-block;
+        }
+
+        .hide-show-icon {
+            /* position: absolute; */
+            /* top: 10px;
+            left: 10px; */
+            display: flex;
+            justify-content: flex-end;
+            z-index: 999;
+        }
+
+        .left-div {
+            flex: 1;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            width: 66.67%;
+        }
+
+        .right-div {
+            width: 33.33%;
+            transition: width 0.3s ease;
+            overflow: hidden;
+        }
+
+        .icon-large {
+            font-size: 24px;
+            /* Adjust the size as needed */
+        }
+
+        @media (max-width: 750px) {
+            .main-footer-exam-page {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: white;
+            }
+
+            .exam-header-hidden {
+                display: none;
+            }
+
+            .right-div {
+                overflow-y: auto;
+            }
+        }
+
+        .question-tile-main {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            margin: 5px;
+            color: black;
+        }
+
+        .tab-content .tab-pane {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .card-header-video {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            /* Add black border */
+        }
+
+        .card-header-video .card-title {
+            padding: 0;
+            border: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .card-header-video>*:not(:first-child):not(:last-child) {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .card-header-video>*:first-child {
+            margin-right: 8px;
+        }
+
+        .card-header-video>*:last-child {
+            margin-left: 8px;
+        }
+    </style>
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
-    <div class="wrapper">
-        <header class="main-header">
-            <div class="d-flex align-items-center logo-box justify-content-start">
-                <a href="#"
-                    class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
-                    data-toggle="push-menu" role="button">
-                    <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
-                            class="path3"></span></span>
-                </a>
-                <!-- Logo -->
-                <a href="index.html" class="logo">
-                    <!-- logo-->
-                    <div class="logo-lg">
-                        <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
-                        <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
-                    </div>
-                </a>
-            </div>
-            <!-- Header Navbar -->
-            <nav class="navbar navbar-static-top">
-                <!-- Sidebar toggle button-->
-                <div class="app-menu">
-                    <ul class="header-megamenu nav">
-                        <li class="btn-group nav-item d-md-none">
-                            <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu"
-                                role="button">
-                                <span class="icon-Align-left"><span class="path1"></span><span
-                                        class="path2"></span><span class="path3"></span></span>
-                            </a>
-                        </li>
-                        <!-- <li class="btn-group nav-item d-none d-xl-inline-block">
-                            <a href="#" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
-                                <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                        </li>
-                         -->
-                    </ul>
+
+    <header class="main-header">
+        <div class="d-flex align-items-center logo-box justify-content-start">
+            <a href="#" class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
+                data-toggle="push-menu" role="button">
+                <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
+                        class="path3"></span></span>
+            </a>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- logo-->
+                <div class="logo-lg">
+                    <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
+                    <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
                 </div>
+            </a>
+        </div>
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <div class="app-menu">
+                <ul class="header-megamenu nav">
+                    <li class="btn-group nav-item d-md-none">
+                        <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu"
+                            role="button">
+                            <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
+                                    class="path3"></span></span>
+                        </a>
+                    </li>
 
-                <div class="navbar-custom-menu r-side">
-                    <ul class="nav navbar-nav">
-                        <li class="btn-group nav-item d-lg-inline-flex d-none">
-                            <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
-                                title="Full Screen">
-                                <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                        </li>
+                </ul>
+            </div>
 
-                        <!-- Notifications -->
-                        <li class="dropdown notifications-menu">
-                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
-                                title="Notifications">
-                                <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                            <ul class="dropdown-menu animated bounceIn">
+            <div class="navbar-custom-menu r-side">
+                <ul class="nav navbar-nav">
+                    <li class="btn-group nav-item d-lg-inline-flex d-none">
+                        <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
+                            title="Full Screen">
+                            <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
+                        </a>
+                    </li>
 
-                                <li class="header">
-                                    <div class="p-20">
-                                        <div class="flexbox">
-                                            <div>
-                                                <h4 class="mb-0 mt-0">Notifications</h4>
-                                            </div>
-                                            <div>
-                                                <a href="#" class="text-danger">Clear All</a>
-                                            </div>
+                    <!-- Notifications -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                            title="Notifications">
+                            <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
+                        </a>
+                        <ul class="dropdown-menu animated bounceIn">
+
+                            <li class="header">
+                                <div class="p-20">
+                                    <div class="flexbox">
+                                        <div>
+                                            <h4 class="mb-0 mt-0">Notifications</h4>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="text-danger">Clear All</a>
                                         </div>
                                     </div>
-                                </li>
-
-                                <li>
-                                    <ul class="menu sm-scrol">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
-                                                suscipit blandit.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
-                                                sapien elementum, in semper diam posuere.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
-                                                commodo porttitor pretium a erat.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
-                                                nisi
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
-                                                dictum fermentum.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
-                                                interdum, at scelerisque ipsum imperdiet.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer">
-                                    <a href="#">View all</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- User Account-->
-                        <li class="dropdown user user-menu">
-                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
-                                title="User">
-                                <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                            <ul class="dropdown-menu animated flipInX">
-                                <li class="user-body">
-                                    <a class="dropdown-item" href="user-profile.html"><i
-                                            class="ti-user text-muted mr-2"></i>
-                                        Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> Change
-                                        Password</a>
-                                    <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <aside class="main-sidebar">
-            <!-- sidebar-->
-            <section class="sidebar position-relative">
-                <div class="multinav">
-                    <div class="multinav-scroll" style="height: 100%;">
-                        <!-- sidebar menu-->
-                        <ul class="sidebar-menu" data-widget="tree">
-                            <!-- <li class="header">Dashboard </li> -->
-                            <li>
-                                <a href="index.html">
-                                    <i class="icon-Layout-4-blocks"><span class="path1"></span><span
-                                            class="path2"></span></i>
-                                    <span>Dashboard</span>
-                                </a>
+                                </div>
                             </li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
-                                        class="path2"></span></i>
-                                    <span>My Course</span>
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="my-courses.html"><i class="icon-Commit"><span
-                                                    class="path1"></span><span class="path2"></span></i>My Course 1</a>
+
+                            <li>
+                                <ul class="menu sm-scrol">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
+                                            suscipit blandit.
+                                        </a>
                                     </li>
-                                    
-                                    <li><a href="my-course3.html"><i class="icon-Commit"><span
-                                                    class="path1"></span><span class="path2"></span></i>My Course 2</a>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
+                                            sapien elementum, in semper diam posuere.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
+                                            commodo porttitor pretium a erat.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
+                                            nisi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
+                                            dictum fermentum.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
+                                            interdum, at scelerisque ipsum imperdiet.
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="attemped-tests.html">
-                                    <i class="mdi mdi-pencil-box-outline"></i>
-                                    <span>Attempted Tests</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="exam-result.html">
-                                    <i class="mdi mdi-note-multiple-outline"></i>
-                                    <span>Exam Result</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="live-classes.html">
-                                    <i class="mdi mdi-youtube-play"></i>
-                                    <span>Live Classes</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="bookmark-ques.html">
-                                    <i class="mdi mdi-bookmark-outline"></i>
-                                    <span>Bookmarked Ques.</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="doubts.html">
-                                    <i class="mdi mdi-comment-question-outline"></i>
-                                    <span>Doubts</span>
-
-                                </a>
-                            </li>
-                            <li class="header">Payment</li>
-                            <li>
-                                <a href="payment-history.html">
-                                    <i class="mdi mdi-credit-card"></i>
-                                    <span>Payment History</span>
-                                </a>
-                            </li>
-                            <li class="header">Profile</li>
-                            <li>
-                                <a href="user-profile.html">
-                                    <i class="mdi mdi-account"></i>
-                                    <span>User Profile</span>
-                                </a>
+                            <li class="footer">
+                                <a href="#">View all</a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-                
-            </section>
-            <div class="sidebar-footer">
-                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings"
-                    aria-describedby="tooltip92529">
-                    <span class="mdi mdi-settings"></span>
-                </a>
-                <a href="mailbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email">
-                    <span class="mdi mdi-email-outline"></span>
-                </a>
-                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout">
-                    <span class="mdi mdi-logout"></span>
-                </a>
+                    </li>
 
-            </div>
-        </aside>
-        <!-- content here  -->
-        <div class="content-wrapper">
-            <div class="container-full">
-                <section class="content">
-                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="box pull-up">
-                            <div class="box-body bg-img bg-primary-light">
-                                <div class="d-lg-flex align-items-center justify-content-between">
-                                    <div class="d-lg-flex align-items-center  w-p100">
-                                        <img src="../images/svg-icon/color-svg/custom-14.svg"
-                                            class="img-fluid max-w-250" alt="">
-                                        <div class="">
-                                            <h2 class="mb-10">Take Advance Courses to Achive Your Goal !</h2>
-                                            <p class="mb-0 text-fade font-size-18">It is a long established fact that a
-                                                reader will be distracted <br>of a page when looking at its layout. </p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <button type="button"
-                                            class="waves-effect waves-light btn-block btn btn-primary "
-                                            style="white-space: nowrap;">Start Now!</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- content comes here  -->
-                    <div class="col-12">
-                        <div class="box bg-primary-light">
-                            <div class="box-header">
-                                <h4 class="box-title">Live Classes</h4>
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <div class="owl-carousel owl-theme">
-                                    <div class="box">
-                                        <div class="item">
-                                            <a href="index.html">
-                                                <img class="card-img-top img-responsive" src="../images/card/img1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                            <div class="image-text text-center mt-2 mb-10">NCERT Live Classes</div>
-                                        </div>
-                                    </div>
-                                    <div class="box">
-                                        <div class="item">
-                                            <a href="index.html">
-                                                <img class="card-img-top img-responsive" src="../images/card/img1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                            <div class="image-text text-center mt-2 mb-10">NCERT Live Classes</div>
-                                        </div>
-                                    </div>
-                                    <div class="box">
-                                        <div class="item">
-                                            <a href="index.html">
-                                                <img class="card-img-top img-responsive" src="../images/card/img1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                            <div class="image-text text-center mt-2 mb-10">NCERT Live Classes</div>
-                                        </div>
-                                    </div>
-                                    <div class="box">
-                                        <div class="item">
-                                            <a href="index.html">
-                                                <img class="card-img-top img-responsive" src="../images/card/img1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                            <div class="image-text text-center mt-2 mb-10">NCERT Live Classes</div>
-                                        </div>
-                                    </div>
-                                    <div class="box">
-                                        <div class="item">
-                                            <a href="index.html">
-                                                <img class="card-img-top img-responsive" src="../images/card/img1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                            <div class="image-text text-center mt-2 mb-10">NCERT Live Classes</div>
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                    </div>
-
-                </section>
-            </div>
-        </div>
-        <!-- content here  -->
-        <footer class="main-footer">
-            &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
-        </footer>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar">
-
-            <div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"><i
-                        class="ion ion-close text-white" data-toggle="control-sidebar"></i></span> </div>
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs control-sidebar-tabs">
-                <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab" class="active"><i
-                            class="mdi mdi-message-text"></i></a></li>
-                <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
-                            class="mdi mdi-playlist-check"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane active" id="control-sidebar-home-tab">
-                    <div class="flexbox">
-                        <a href="javascript:void(0)" class="text-grey">
-                            <i class="ti-more"></i>
+                    <!-- User Account-->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                            title="User">
+                            <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
                         </a>
-                        <p>Users</p>
-                        <a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
-                    </div>
-                    <div class="lookup lookup-sm lookup-right d-none d-lg-block">
-                        <input type="text" name="s" placeholder="Search" class="w-p100">
-                    </div>
-                    <div class="media-list media-list-hover mt-20">
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-success" href="#">
-                                <img src="images/avatar/1.jpg" alt="...">
+                        <ul class="dropdown-menu animated flipInX">
+                            <li class="user-body">
+                                <a class="dropdown-item" href="user-profile.html"><i
+                                        class="ti-user text-muted mr-2"></i>
+                                    Profile</a>
+                                <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> Change
+                                    Password</a>
+                                <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="main-sidebar">
+        <!-- sidebar-->
+        <section class="sidebar position-relative">
+            <div class="multinav">
+                <div class="multinav-scroll" style="height: 100%;">
+                    <!-- sidebar menu-->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <!-- <li class="header">Dashboard </li> -->
+                        <li>
+                            <a href="index.html">
+                                <i class="icon-Layout-4-blocks"><span class="path1"></span><span
+                                        class="path2"></span></i>
+                                <span>Dashboard</span>
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Tyler</strong></a>
-                                </p>
-                                <p>Praesent tristique diam...</p>
-                                <span>Just now</span>
-                            </div>
-                        </div>
-
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-danger" href="#">
-                                <img src="images/avatar/2.jpg" alt="...">
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
+                                    class="path2"></span></i>
+                                <span>My Course</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Luke</strong></a>
-                                </p>
-                                <p>Cras tempor diam ...</p>
-                                <span>33 min ago</span>
-                            </div>
-                        </div>
+                            <ul class="treeview-menu">
+                                <li><a href="my-courses.html"><i class="icon-Commit"><span class="path1"></span><span
+                                                class="path2"></span></i>My Course 1</a>
+                                </li>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-warning" href="#">
-                                <img src="images/avatar/3.jpg" alt="...">
+                                <li><a href="my-course3.html"><i class="icon-Commit"><span class="path1"></span><span
+                                                class="path2"></span></i>My Course 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="attemped-tests.html">
+                                <i class="mdi mdi-pencil-box-outline"></i>
+                                <span>Attempted Tests</span>
+
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="exam-result.html">
+                                <i class="mdi mdi-note-multiple-outline"></i>
+                                <span>Exam Result</span>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-primary" href="#">
-                                <img src="images/avatar/4.jpg" alt="...">
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="live-classes.html">
+                                <i class="mdi mdi-youtube-play"></i>
+                                <span>Live Classes</span>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-success" href="#">
-                                <img src="images/avatar/1.jpg" alt="...">
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Tyler</strong></a>
-                                </p>
-                                <p>Praesent tristique diam...</p>
-                                <span>Just now</span>
-                            </div>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="bookmark-ques.html">
+                                <i class="mdi mdi-bookmark-outline"></i>
+                                <span>Bookmarked Ques.</span>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-danger" href="#">
-                                <img src="images/avatar/2.jpg" alt="...">
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Luke</strong></a>
-                                </p>
-                                <p>Cras tempor diam ...</p>
-                                <span>33 min ago</span>
-                            </div>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="doubts.html">
+                                <i class="mdi mdi-comment-question-outline"></i>
+                                <span>Doubts</span>
 
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-warning" href="#">
-                                <img src="images/avatar/3.jpg" alt="...">
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
-                        </div>
-
-                        <div class="media py-10 px-0">
-                            <a class="avatar avatar-lg status-primary" href="#">
-                                <img src="images/avatar/4.jpg" alt="...">
+                        </li>
+                        <li class="header">Payment</li>
+                        <li>
+                            <a href="payment-history.html">
+                                <i class="mdi mdi-credit-card"></i>
+                                <span>Payment History</span>
                             </a>
-                            <div class="media-body">
-                                <p class="font-size-16">
-                                    <a class="hover-primary" href="#"><strong>Evan</strong></a>
-                                </p>
-                                <p>In posuere tortor vel...</p>
-                                <span>42 min ago</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-                    <div class="flexbox">
-                        <a href="javascript:void(0)" class="text-grey">
-                            <i class="ti-more"></i>
-                        </a>
-                        <p>Todo List</p>
-                        <a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
-                    </div>
-                    <ul class="todo-list mt-20">
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_1" class="filled-in">
-                            <label for="basic_checkbox_1" class="mb-0 h-15"></label>
-                            <!-- todo text -->
-                            <span class="text-line">Nulla vitae purus</span>
-                            <!-- Emphasis label -->
-                            <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                            <!-- General tools such as edit or delete-->
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
                         </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_2" class="filled-in">
-                            <label for="basic_checkbox_2" class="mb-0 h-15"></label>
-                            <span class="text-line">Phasellus interdum</span>
-                            <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_3" class="filled-in">
-                            <label for="basic_checkbox_3" class="mb-0 h-15"></label>
-                            <span class="text-line">Quisque sodales</span>
-                            <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_4" class="filled-in">
-                            <label for="basic_checkbox_4" class="mb-0 h-15"></label>
-                            <span class="text-line">Proin nec mi porta</span>
-                            <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_5" class="filled-in">
-                            <label for="basic_checkbox_5" class="mb-0 h-15"></label>
-                            <span class="text-line">Maecenas scelerisque</span>
-                            <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_6" class="filled-in">
-                            <label for="basic_checkbox_6" class="mb-0 h-15"></label>
-                            <span class="text-line">Vivamus nec orci</span>
-                            <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_7" class="filled-in">
-                            <label for="basic_checkbox_7" class="mb-0 h-15"></label>
-                            <!-- todo text -->
-                            <span class="text-line">Nulla vitae purus</span>
-                            <!-- Emphasis label -->
-                            <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                            <!-- General tools such as edit or delete-->
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_8" class="filled-in">
-                            <label for="basic_checkbox_8" class="mb-0 h-15"></label>
-                            <span class="text-line">Phasellus interdum</span>
-                            <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5 by-1">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_9" class="filled-in">
-                            <label for="basic_checkbox_9" class="mb-0 h-15"></label>
-                            <span class="text-line">Quisque sodales</span>
-                            <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li class="py-15 px-5">
-                            <!-- checkbox -->
-                            <input type="checkbox" id="basic_checkbox_10" class="filled-in">
-                            <label for="basic_checkbox_10" class="mb-0 h-15"></label>
-                            <span class="text-line">Proin nec mi porta</span>
-                            <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
+                        <li class="header">Profile</li>
+                        <li>
+                            <a href="user-profile.html">
+                                <i class="mdi mdi-account"></i>
+                                <span>User Profile</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <!-- /.tab-pane -->
             </div>
-        </aside>
-        <script src="js/vendors.min.js"></script>
-        <script src=""></script>
-        <script src="assets/icons/feather-icons/feather.min.js"></script>
 
-        <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-        <script src="assets/vendor_components/moment/min/moment.min.js"></script>
-        <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+        </section>
+        <div class="sidebar-footer">
+            <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings"
+                aria-describedby="tooltip92529">
+                <span class="mdi mdi-settings"></span>
+            </a>
+            <a href="mailbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email">
+                <span class="mdi mdi-email-outline"></span>
+            </a>
+            <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout">
+                <span class="mdi mdi-logout"></span>
+            </a>
 
-        <script src="js/pages/dashboard.js"></script>
-        <script src="js/pages/calendar.js"></script>
+        </div>
+    </aside>
+    <!-- content here  -->
+    <div class="content-wrapper">
+        <div class="container">
+            <section>
 
+                <div class="row p-15">
+                    <div class="box-header">
 
-        <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-        <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
-        <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
-        <script src="assets/vendor_components/d3/d3.min.js"></script>
-        <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
+                        <h3 class="box-title"><strong>Live Classes</strong></h3>
+                        <nav class="mt-2">
+                            <ol class="breadcrumb" style="background-color: #fafbfd;">
+                                <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                                <li class="breadcrumb-item" aria-current="page">Courses</li>
+                                <li class="breadcrumb-item active" aria-current="page">Courses detalis</li>
+                                <li class="breadcrumb-item" aria-current="page">Live Classes</li>
 
-        <!-- attempt exam scr  -->
-        <script src="assets/vendor_components/datatable/datatables.min.js"></script>
-        <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
-        <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
+                            </ol>
+                        </nav>
+                    </div>
 
-        <!-- EduAdmin App -->
-        <script src="js/template.js"></script>
+                    <!-- content start here  -->
+                    <div class="row">
+                        <div class="left-div ml-3" id="leftDiv">
+                            <div>
+                                <ul class="nav nav-tabs nav-fill" role="tablist">
+                                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#subject-1"
+                                            role="tab"> <span class="hidden-xs-down ml-15">PHYSICS</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-2"
+                                            role="tab">
+                                            <span class="hidden-xs-down ml-15">CHEMISTRY</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-3"
+                                            role="tab"><span class="hidden-xs-down ml-15">ENGLISH</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-4"
+                                            role="tab"><span class="hidden-xs-down ml-15">MATHS</span></a> </li>
+                                    <li class=" hide-show-icon mr-3 " onclick="toggleDivs()">
+                                        <i class="mdi mdi-code-greater-than icon-large mt-1"></i>
+                                    </li>
+                                </ul>
+                                <div style="overflow-y: auto;  height: 500px;">
+                                    <div class="tab-content tabcontent-border">
+                                        <div class="tab-content tabcontent-border">
+                                            <div class="tab-pane active" id="subject-1" role="tabpanel">
+                                                <!-- nap pill 1  -->
+                                                <div class="row-element">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12">
+                                                        <div class="timeline-item mt-4">
 
-        <script src="js/pages/chart-widgets.js"></script>
-        <script src="js/pages/chartjs-int.js"></script>
+                                                            <div class="timeline-event">
+                                                                <h4>Physics</h4>
+                                                                <div class="timeline-heading">
+                                                                    <h4 class="timeline-title"><a href="#">Khan
+                                                                            Sir
+                                                                        </a><small>
+                                                                            shared a video</small></h4>
+                                                                </div>
+                                                                <div class="timeline-body">
+                                                                    <div
+                                                                        class="embed-responsive embed-responsive-16by9">
+                                                                        <iframe width="300" height="200"
+                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                            frameborder="0" allowfullscreen></iframe>
 
-        <!-- table scr  -->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-body">
+                                                                    <h4><a class="hover-primary" href="#">Electoral
+                                                                            Bonds |
+                                                                            Supreme Court Struck Down Electoral
+                                                                            Bond |
+                                                                            ADR |
+                                                                            Election Commission |</a></h4>
+                                                                    <p>October 22, 2018</p>
 
-        <!-- EduAdmin App -->
+                                                                    <p>Here you will find General knowledge,
+                                                                        Current
+                                                                        Affairs,
+                                                                        Science & Technology, History, Polity,
+                                                                        Geography,
+                                                                        Economics, Physics, Chemistry, Biology,
+                                                                        Computer,
+                                                                        Science & Technology, Defense, Space
+                                                                        Technology,
+                                                                        Indian
+                                                                        Map & World Map, Social education video.
+                                                                    </p>
 
-        <script src="js/pages/data-table.js"></script>
-        <script src="js/pages/chat-popup.js"></script>
-        <script src="../assets/icons/feather-icons/feather.min.js"></script>
-        <script src="../assets/vendor_plugins/bootstrap-slider/bootstrap-slider.js"></script>
-        <script src="../assets/vendor_components/OwlCarousel2/dist/owl.carousel.js"></script>
-        <script src="../assets/vendor_components/flexslider/jquery.flexslider.js"></script>
+                                                                    <div class="flexbox align-items-center mt-3">
+                                                                        <a class="btn btn-sm btn-bold btn-primary"
+                                                                            href="#">View
+                                                                            More >></a>
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-toggle="modal"
+                                                                            data-target="#modal-center">
+                                                                            Raise A Doubt
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
-        <!-- EduAdmin App -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="subject-2" role="tabpanel">
+                                                <!-- nap pill 2  -->
+                                                <div class="row-element">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12">
+                                                        <div class="timeline-item mt-4">
 
-        <script src="js/pages/slider.js"></script>
+                                                            <div class="timeline-event">
+                                                                <h4>Chemistry</h4>
+                                                                <div class="timeline-heading">
+                                                                    <h4 class="timeline-title"><a href="#">Khan
+                                                                            Sir
+                                                                        </a><small>
+                                                                            shared a video</small></h4>
+                                                                </div>
+                                                                <div class="timeline-body">
+                                                                    <div
+                                                                        class="embed-responsive embed-responsive-16by9">
+                                                                        <iframe width="300" height="200"
+                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                            frameborder="0" allowfullscreen></iframe>
 
-        <!-- picker  -->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-body">
+                                                                    <h4><a class="hover-primary" href="#">Electoral
+                                                                            Bonds |
+                                                                            Supreme Court Struck Down Electoral
+                                                                            Bond |
+                                                                            ADR |
+                                                                            Election Commission |</a></h4>
+                                                                    <p>October 22, 2018</p>
 
+                                                                    <p>Here you will find General knowledge,
+                                                                        Current
+                                                                        Affairs,
+                                                                        Science & Technology, History, Polity,
+                                                                        Geography,
+                                                                        Economics, Physics, Chemistry, Biology,
+                                                                        Computer,
+                                                                        Science & Technology, Defense, Space
+                                                                        Technology,
+                                                                        Indian
+                                                                        Map & World Map, Social education video.
+                                                                    </p>
+
+                                                                    <div class="flexbox align-items-center mt-3">
+                                                                        <a class="btn btn-sm btn-bold btn-primary"
+                                                                            href="#">View
+                                                                            More >></a>
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-toggle="modal"
+                                                                            data-target="#modal-center">
+                                                                            Raise A Doubt
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="subject-3" role="tabpanel">
+                                                <!-- nap pill 3 -->
+                                                <div class="row-element">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12">
+                                                        <div class="timeline-item mt-4">
+
+                                                            <div class="timeline-event">
+                                                                <h4>English</h4>
+                                                                <div class="timeline-heading">
+                                                                    <h4 class="timeline-title"><a href="#">Khan
+                                                                            Sir
+                                                                        </a><small>
+                                                                            shared a video</small></h4>
+                                                                </div>
+                                                                <div class="timeline-body">
+                                                                    <div
+                                                                        class="embed-responsive embed-responsive-16by9">
+                                                                        <iframe width="300" height="200"
+                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                            frameborder="0" allowfullscreen></iframe>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-body">
+                                                                    <h4><a class="hover-primary" href="#">Electoral
+                                                                            Bonds |
+                                                                            Supreme Court Struck Down Electoral
+                                                                            Bond |
+                                                                            ADR |
+                                                                            Election Commission |</a></h4>
+                                                                    <p>October 22, 2018</p>
+
+                                                                    <p>Here you will find General knowledge,
+                                                                        Current
+                                                                        Affairs,
+                                                                        Science & Technology, History, Polity,
+                                                                        Geography,
+                                                                        Economics, Physics, Chemistry, Biology,
+                                                                        Computer,
+                                                                        Science & Technology, Defense, Space
+                                                                        Technology,
+                                                                        Indian
+                                                                        Map & World Map, Social education video.
+                                                                    </p>
+
+                                                                    <div class="flexbox align-items-center mt-3">
+                                                                        <a class="btn btn-sm btn-bold btn-primary"
+                                                                            href="#">View
+                                                                            More >></a>
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-toggle="modal"
+                                                                            data-target="#modal-center">
+                                                                            Raise A Doubt
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="subject-4" role="tabpanel">
+                                                <!-- nap pill 4  -->
+                                                <div class="row-element">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12">
+                                                        <div class="timeline-item mt-4">
+                                                            <h4>Maths</h4>
+                                                            <div class="timeline-event">
+
+                                                                <div class="timeline-heading">
+                                                                    <h4 class="timeline-title"><a href="#">Khan
+                                                                            Sir
+                                                                        </a><small>
+                                                                            shared a video</small></h4>
+                                                                </div>
+                                                                <div class="timeline-body">
+                                                                    <div
+                                                                        class="embed-responsive embed-responsive-16by9">
+                                                                        <iframe width="300" height="200"
+                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                            frameborder="0" allowfullscreen></iframe>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box-body">
+                                                                    <h4><a class="hover-primary" href="#">Electoral
+                                                                            Bonds |
+                                                                            Supreme Court Struck Down Electoral
+                                                                            Bond |
+                                                                            ADR |
+                                                                            Election Commission |</a></h4>
+                                                                    <p>October 22, 2018</p>
+
+                                                                    <p>Here you will find General knowledge,
+                                                                        Current
+                                                                        Affairs,
+                                                                        Science & Technology, History, Polity,
+                                                                        Geography,
+                                                                        Economics, Physics, Chemistry, Biology,
+                                                                        Computer,
+                                                                        Science & Technology, Defense, Space
+                                                                        Technology,
+                                                                        Indian
+                                                                        Map & World Map, Social education video.
+                                                                    </p>
+
+                                                                    <div class="flexbox align-items-center mt-3">
+                                                                        <a class="btn btn-sm btn-bold btn-primary"
+                                                                            href="#">View
+                                                                            More >></a>
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-toggle="modal"
+                                                                            data-target="#modal-center">
+                                                                            Raise A Doubt
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-div" id="rightDiv">
+                            <!-- <div class=" d-flex flex-wrap "> -->
+                            <div class="tab-content">
+                                <div id="navpills-1" class="tab-pane active">
+
+                                    <div class="btn-light">
+                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                            <h5 class="card-title">Maths Class Videos </h5>
+                                            <button class="btn ml-auto" data-toggle="collapse"
+                                                data-target="#collapseInfo1" aria-expanded="false"
+                                                aria-controls="collapseInfo1">
+                                                <i class="fa fa-chevron-down"></i>
+                                            </button>
+                                        </div>
+                                        <div id="collapseInfo1" class="collapse"> <!-- Add 'show' class here -->
+                                            <div
+                                                class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <p><strong>Exploring the transformative power of
+                                                                education
+                                                                in shaping
+                                                                individuals and societies.</strong></p>
+                                                        <h6>individuals and societies</h6>
+                                                        <i class="fa fa-tv"></i> 2 min
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- card end  -->
+                                    <div class="btn-light" style="border-radius: 10px;">
+                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                            <h5 class="card-title">Maths Class Videos </h5>
+                                            <button class="btn ml-auto" data-toggle="collapse"
+                                                data-target="#collapseInfo2" aria-expanded="false"
+                                                aria-controls="collapseInfo2">
+                                                <i class="fa fa-chevron-down"></i>
+                                            </button>
+                                        </div>
+                                        <div id="collapseInfo2" class="collapse">
+                                            <div
+                                                class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <p><strong>Exploring the transformative power of
+                                                                education
+                                                                in shaping
+                                                                individuals and societies.</strong></p>
+                                                        <h6>individuals and societies</h6>
+                                                        <i class="fa fa-tv"></i> 2 min
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- card 2 end  -->
+                                    <div class=" btn-light">
+                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                            <h5 class="card-title">Maths Class Videos </h5>
+                                            <button class="btn ml-auto" data-toggle="collapse"
+                                                data-target="#collapseInfo3" aria-expanded="false"
+                                                aria-controls="collapseInfo3">
+                                                <i class="fa fa-chevron-down"></i>
+                                            </button>
+                                        </div>
+                                        <div id="collapseInfo3" class="collapse">
+                                            <div
+                                                class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <p><strong>Exploring the transformative power of
+                                                                education
+                                                                in shaping
+                                                                individuals and societies.</strong></p>
+                                                        <h6>individuals and societies</h6>
+                                                        <i class="fa fa-tv"></i> 2 min
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <!-- <div class="row"> -->
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="tab-content mt-4">
+                            <div id="navpills-2" class="tab-pane active">
+
+                                <div class="btn-light">
+                                    <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                        <h5 class="card-title">Physics Class Videos </h5>
+                                        <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseInfo4"
+                                            aria-expanded="false" aria-controls="collapseInfo4">
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapseInfo4" class="collapse">
+                                        <div class="card-body border-bottom d-flex justify-content-between align-items-center"
+                                            style="padding-top: 5px; padding-bottom: 5px;">
+                                            <div>
+                                                <a href="#">
+                                                    <p><strong>Exploring the transformative power of
+                                                            education
+                                                            in shaping
+                                                            individuals and societies.</strong></p>
+                                                    <h6>individuals and societies</h6>
+                                                    <i class="fa fa-tv"></i> 2 min
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card end  -->
+                                <div class="btn-light" style="border-radius: 10px;">
+                                    <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                        <h5 class="card-title">Physics Class Videos </h5>
+                                        <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseInfo5"
+                                            aria-expanded="false" aria-controls="collapseInfo5">
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapseInfo5" class="collapse">
+                                        <div class="card-body border-bottom d-flex justify-content-between align-items-center"
+                                            style="padding-top: 5px; padding-bottom: 5px;">
+                                            <div>
+                                                <a href="#">
+                                                    <p><strong>Exploring the transformative power of
+                                                            education
+                                                            in shaping
+                                                            individuals and societies.</strong></p>
+                                                    <h6>individuals and societies</h6>
+                                                    <i class="fa fa-tv"></i> 2 min
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card 2 end  -->
+                                <div class=" btn-light">
+                                    <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                        <h5 class="card-title">Physics Class Videos </h5>
+                                        <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseInfo6"
+                                            aria-expanded="false" aria-controls="collapseInfo6">
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapseInfo6" class="collapse">
+                                        <div class="card-body border-bottom d-flex justify-content-between align-items-center"
+                                            style="padding-top: 5px; padding-bottom: 5px;">
+                                            <div>
+                                                <a href="#">
+                                                    <p><strong>Exploring the transformative power of
+                                                            education
+                                                            in shaping
+                                                            individuals and societies.</strong></p>
+                                                    <h6>individuals and societies</h6>
+                                                    <i class="fa fa-tv"></i> 2 min
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content comes here  -->
+                </div>
+            </section>
+            <!-- content here  -->
+            <div class="modal center-modal fade" id="modal-center" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Write Your Doubts</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="modal-footer modal-footer-uniform">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary float-right" id="saveButton">Save
+                                Doubts</button>
+                            <!-- <button type="button" class="btn btn-primary float-right">Save Doubts</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+    <!-- Control Sidebar -->
+    <script>
+        document.getElementById('saveButton').addEventListener('click', function () {
+            // Trigger SweetAlert here
+            Swal.fire({
+                icon: 'success',
+                title: 'Doubts Saved!',
+                text: 'Your doubts have been successfully saved.',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>
+
+    <script src="js/vendors.min.js"></script>
+    <script src="js/pages/chat-popup.js"></script>
+    <script src="assets/icons/feather-icons/feather.min.js"></script>
+
+    <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+    <script src="assets/vendor_components/moment/min/moment.min.js"></script>
+    <script src="assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+
+    <script src="js/pages/dashboard.js"></script>
+    <script src="js/pages/calendar.js"></script>
+
+
+    <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+    <script src="assets/vendor_components/easypiechart/dist/jquery.easypiechart.js"></script>
+    <script src="assets/vendor_components/chart.js-master/Chart.min.js"></script>
+    <script src="assets/vendor_components/d3/d3.min.js"></script>
+    <script src="assets/vendor_components/d3/d3_tooltip.js"></script>
+
+    <!-- attempt exam scr  -->
+    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
+    <script src="assets/vendor_components/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/vendor_components/tiny-editable/numeric-input-example.js"></script>
+    <script src="../assets/vendor_components/sweetalert/jquery.sweet-alert.custom.js"></script>
+
+    <!-- EduAdmin App -->
+    <script src="js/template.js"></script>
+
+    <script src="js/pages/chart-widgets.js"></script>
+    <script src="js/pages/chartjs-int.js"></script>
+
+    <!-- table scr  -->
+
+    <!-- EduAdmin App -->
+
+    <script src="js/pages/data-table.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script>
+
+        function toggleDivs() {
+            var leftDiv = document.getElementById('leftDiv');
+            var rightDiv = document.getElementById('rightDiv');
+
+            if (leftDiv.style.width === '66.67%' || leftDiv.style.width === '') {
+                leftDiv.style.width = '100%';
+                rightDiv.style.width = '0%';
+            } else {
+                leftDiv.style.width = '66.67%';
+                rightDiv.style.width = '33.33%';
+            }
+        }
+
+
+
+        // JavaScript for switching between question cards
+
+
+    </script>
+
 </body>
 
 </html>

@@ -17,7 +17,37 @@
 	<!-- Style-->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/skin_color.css">
+	<style>
+		.card-header-video {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			background-color: transparent;
+			border-bottom: 1px solid rgb(255, 255, 255);
+			/* Add black border */
+		}
 
+		.card-header-video .card-title {
+			padding: 0;
+			border: none;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.card-header-video>*:not(:first-child):not(:last-child) {
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+
+		.card-header-video>*:first-child {
+			margin-right: 8px;
+		}
+
+		.card-header-video>*:last-child {
+			margin-left: 8px;
+		}
+	</style>
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
@@ -270,8 +300,18 @@
 				<div class="row">
 					<div class="col-md-12 col-lg-12 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
 						<div class="box mt-4">
+							<nav>
+								<ol class="breadcrumb" style="background-color: #f8f9fa;">
+									<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+									<li class="breadcrumb-item" aria-current="page">Courses</li>
+									<li class="breadcrumb-item active" aria-current="page">Courses detalis</li>
+									<li class="breadcrumb-item" aria-current="page">Study material</li>
+		
+								</ol>
+							</nav>
 							<div class="box-header ">
 								<h3 class="box-title"><strong>Study Material</strong></h3>
+								
 							</div>
 							<!-- /.box-header -->
 							<div class="box-body">
@@ -295,7 +335,7 @@
 									<div id="navpills-1" class="tab-pane active">
 
 										<div class="btn-light mt-4" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Physics Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo1" aria-expanded="false"
@@ -304,16 +344,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo1" class="collapse"> <!-- Add 'show' class here -->
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -321,7 +362,7 @@
 										</div>
 										<!-- card end  -->
 										<div class="btn-light" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Physics Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo2" aria-expanded="false"
@@ -330,23 +371,24 @@
 												</button>
 											</div>
 											<div id="collapseInfo2" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<!-- card 2 end  -->
 										<div class=" btn-light">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Physics Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo3" aria-expanded="false"
@@ -355,16 +397,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo3" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -374,7 +417,7 @@
 									<div id="navpills-2" class="tab-pane">
 
 										<div class="btn-light mt-4" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Chemistry Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo4" aria-expanded="false"
@@ -383,16 +426,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo4" class="collapse"> <!-- Add 'show' class here -->
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -400,7 +444,7 @@
 										</div>
 										<!-- card end  -->
 										<div class="btn-light" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Chemistry Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo5" aria-expanded="false"
@@ -409,23 +453,24 @@
 												</button>
 											</div>
 											<div id="collapseInfo5" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<!-- card 2 end  -->
 										<div class=" btn-light">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Chemistry Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo6" aria-expanded="false"
@@ -434,16 +479,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo6" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -454,7 +500,7 @@
 									<div id="navpills-3" class="tab-pane">
 
 										<div class="btn-light mt-4" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Maths Study Material </h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo7" aria-expanded="false"
@@ -463,16 +509,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo7" class="collapse"> <!-- Add 'show' class here -->
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -480,7 +527,7 @@
 										</div>
 										<!-- card end  -->
 										<div class="btn-light" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Maths Study Material</h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo8" aria-expanded="false"
@@ -489,23 +536,24 @@
 												</button>
 											</div>
 											<div id="collapseInfo8" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<!-- card 2 end  -->
 										<div class=" btn-light">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">Maths Study Material</h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo9" aria-expanded="false"
@@ -514,16 +562,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo9" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -532,7 +581,7 @@
 									</div>
 									<div id="navpills-4" class="tab-pane">
 										<div class="btn-light mt-4" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">LR & EN Study Material</h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo10" aria-expanded="false"
@@ -541,16 +590,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo10" class="collapse"> <!-- Add 'show' class here -->
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
@@ -558,7 +608,7 @@
 										</div>
 										<!-- card end  -->
 										<div class="btn-light" style="border-radius: 10px;">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">LR & EN Study Material</h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo11" aria-expanded="false"
@@ -567,23 +617,24 @@
 												</button>
 											</div>
 											<div id="collapseInfo11" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<!-- card 2 end  -->
 										<div class=" btn-light">
-											<div class="card-header d-flex align-items-center bg-primary-light">
+											<div class="card-header-video d-flex align-items-center bg-primary-light">
 												<h5 class="card-title">LR & EN Study Material</h5>
 												<button class="btn ml-auto" data-toggle="collapse"
 													data-target="#collapseInfo12" aria-expanded="false"
@@ -592,16 +643,17 @@
 												</button>
 											</div>
 											<div id="collapseInfo12" class="collapse">
-												<div
-													class="card-body border-bottom d-flex justify-content-between align-items-center">
-													<div>
-														<a href="#">
+												<div class="card-body ">
+													<div class="card-body p-0 d-flex justify-content-between">
+														<div>
 															<p><strong>Exploring the transformative power of education
 																	in shaping
 																	individuals and societies.</strong></p>
-															<h6>individuals and societies</h6>
-															<i class="fa fa-tv"></i> 2 min
-														</a>
+														</div>
+														<div>
+															<button type="button" class="btn btn-primary">View</button>
+
+														</div>
 													</div>
 												</div>
 											</div>

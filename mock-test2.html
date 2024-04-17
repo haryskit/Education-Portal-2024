@@ -225,7 +225,8 @@
                                 <span>Payment History</span>
                             </a>
                         </li>
-                        
+                        <li class="header">Profile</li>
+
                     </ul>
                 </div>
             </div>
@@ -1161,6 +1162,32 @@
 
         // Initial setup: Show the first question card
         showQuestionCard('question1'); // Assuming the ID of the first question card is 'question1'
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- end  -->
+    <script>
+        // Add an event listener to the logout link
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            // Prevent the default action of the link
+            event.preventDefault();
+
+            // Display a SweetAlert confirmation dialog
+            Swal.fire({
+                title: 'Are you sure you want to logout?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, logout'
+            }).then((result) => {
+                // If the user confirms, redirect to the logout page or perform the logout action
+                if (result.isConfirmed) {
+                    // Redirect to the logout page or perform the logout action here
+                    // For example, window.location.href = 'logout.php';
+                    // Replace 'logout.php' with the actual URL of your logout page
+                }
+            });
+        });
     </script>
 </body>
 

@@ -235,12 +235,7 @@
                             </a>
                         </li>
                         <li class="header">Profile</li>
-                        <li>
-                            <a href="user-profile.html">
-                                <i class="mdi mdi-account"></i>
-                                <span>User Profile</span>
-                            </a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -269,9 +264,12 @@
                         <h3 class="box-title"><strong>Video Material</strong></h3>
                         <nav>
                             <ol class="breadcrumb" style="background-color: #fafbfd;">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="my-courses.html">Courses</a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="course-details.html">Course Details</a></li>
+                                <li class="breadcrumb-item"><a href="index.html"><i
+                                            class="mdi mdi-home-outline"></i></a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="my-courses.html">Courses</a>
+                                </li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="course-details.html">Course
+                                        Details</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Video material</li>
 
                             </ol>
@@ -754,6 +752,9 @@
 
         </div>
     </div>
+    <footer class="main-footer">
+        &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
+    </footer>
 
     <!-- Control Sidebar -->
     <script>
@@ -822,41 +823,35 @@
             }
         }
 
-
-
-        // JavaScript for switching between question cards
-
-
     </script>
 
+    <!-- script swal alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- end  -->
+    <script>
+        // Add an event listener to the logout link
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            // Prevent the default action of the link
+            event.preventDefault();
 
-<!-- script swal alert  -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!-- end  -->
-<script>
-    // Add an event listener to the logout link
-    document.getElementById('logout-link').addEventListener('click', function (event) {
-        // Prevent the default action of the link
-        event.preventDefault();
-
-        // Display a SweetAlert confirmation dialog
-        Swal.fire({
-            title: 'Are you sure you want to logout?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, logout'
-        }).then((result) => {
-            // If the user confirms, redirect to the logout page or perform the logout action
-            if (result.isConfirmed) {
-                // Redirect to the logout page or perform the logout action here
-                // For example, window.location.href = 'logout.php';
-                // Replace 'logout.php' with the actual URL of your logout page
-            }
+            // Display a SweetAlert confirmation dialog
+            Swal.fire({
+                title: 'Are you sure you want to logout?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, logout'
+            }).then((result) => {
+                // If the user confirms, redirect to the logout page or perform the logout action
+                if (result.isConfirmed) {
+                    // Redirect to the logout page or perform the logout action here
+                    // For example, window.location.href = 'logout.php';
+                    // Replace 'logout.php' with the actual URL of your logout page
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 

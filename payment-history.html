@@ -504,7 +504,38 @@
             });
         });
     </script>
+ <!-- profile update  -->
+ <script>
+    // JavaScript function to toggle edit mode
+    function toggleEditMode() {
+        var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].readOnly = !inputs[i].readOnly;
+        }
 
+        // Show or hide the Update Profile button
+        var updateButton = document.getElementById('update-profile-btn');
+        updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
+
+        // Enable or disable the gender dropdown
+        var genderDropdown = document.getElementById('gender');
+        genderDropdown.disabled = !genderDropdown.disabled;
+    }
+
+    // JavaScript function to handle profile update
+    function updateProfile() {
+        // You can add your logic here to handle profile update
+        // For example, sending an AJAX request to update the profile data
+
+        // Once the profile is updated, show a Swal alert
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: 'Profile updated successfully.',
+        });
+    }
+</script>
+<!-- profile update end  -->
 </body>
 
 </html>

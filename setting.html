@@ -158,7 +158,7 @@
             <section class="content">
 
                 <!-- <div class="container"> -->
-                <h2>Settings</h2>
+                <h2 class="p-3 text-primary ">Settings</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="setting-item">
@@ -218,7 +218,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-primary mt-4">Save Settings</button>
+                    <button class="btn btn-primary mt-4" id="saveButton">Save Settings</button>
                 </div>
             </section>
         </div>
@@ -321,6 +321,23 @@
     </script>
     <!-- profile update end  -->
 
+    <!-- save setting alert s  -->
+    <script>
+        // Select the button element
+        const saveButton = document.getElementById('saveButton');
+
+        // Add event listener to the button
+        saveButton.addEventListener('click', () => {
+            // Display SweetAlert
+            Swal.fire({
+                icon: 'success',
+                title: 'Settings Saved!',
+                showConfirmButton: false,
+                timer: 1500 // Close alert after 1.5 seconds
+            });
+        });
+    </script>
+    <!-- save setting alert e  -->
 </body>
 
 </html>

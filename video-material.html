@@ -233,7 +233,7 @@
                                 <i class="mdi mdi-credit-card"></i>
                                 <span>Payment History</span>
                             </a>
-                        </li> 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -279,19 +279,35 @@
                         <div class="left-div ml-3" id="leftDiv">
                             <div>
                                 <ul class="nav nav-tabs nav-fill" role="tablist">
-                                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#subject-1"
-                                            role="tab"> <span class="hidden-xs-down ml-15">PHYSICS</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-2"
-                                            role="tab">
-                                            <span class="hidden-xs-down ml-15">CHEMISTRY</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-3"
-                                            role="tab"><span class="hidden-xs-down ml-15">ENGLISH</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-4"
-                                            role="tab"><span class="hidden-xs-down ml-15">MATHS</span></a> </li>
-                                    <li class=" hide-show-icon mr-3 " onclick="toggleDivs()">
+                                    <li class="nav-item"> 
+                                        <a class="nav-link active" data-toggle="tab" href="#subject-1" role="tab">
+                                            <span><i class="fa fa-gears (alias)"></i></span> <!-- Icon for Physics -->
+                                            <span class="hidden-xs-down ml-15">PHYSICS</span>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" data-toggle="tab" href="#subject-2" role="tab">
+                                            <span><i class="fa fa-thermometer-full"></i></span> <!-- Icon for Chemistry -->
+                                            <span class="hidden-xs-down ml-15">CHEMISTRY</span>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" data-toggle="tab" href="#subject-3" role="tab">
+                                            <span><i class="ion-compose"></i></span> <!-- Icon for English -->
+                                            <span class="hidden-xs-down ml-15">ENGLISH</span>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" data-toggle="tab" href="#subject-4" role="tab">
+                                            <span><i class="ion-calculator"></i></span> <!-- Icon for Maths -->
+                                            <span class="hidden-xs-down ml-15">MATHS</span>
+                                        </a> 
+                                    </li>
+                                    <li class="hide-show-icon mr-3" onclick="toggleDivs()">
                                         <i class="mdi mdi-code-greater-than icon-large mt-1"></i>
                                     </li>
                                 </ul>
+                                
                                 <div style="overflow-y: auto;  height: 500px;">
                                     <div class="tab-content tabcontent-border">
                                         <div class="tab-content tabcontent-border">
@@ -850,38 +866,38 @@
             });
         });
     </script>
- <!-- profile update  -->
- <script>
-    // JavaScript function to toggle edit mode
-    function toggleEditMode() {
-        var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].readOnly = !inputs[i].readOnly;
+    <!-- profile update  -->
+    <script>
+        // JavaScript function to toggle edit mode
+        function toggleEditMode() {
+            var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].readOnly = !inputs[i].readOnly;
+            }
+
+            // Show or hide the Update Profile button
+            var updateButton = document.getElementById('update-profile-btn');
+            updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
+
+            // Enable or disable the gender dropdown
+            var genderDropdown = document.getElementById('gender');
+            genderDropdown.disabled = !genderDropdown.disabled;
         }
 
-        // Show or hide the Update Profile button
-        var updateButton = document.getElementById('update-profile-btn');
-        updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
+        // JavaScript function to handle profile update
+        function updateProfile() {
+            // You can add your logic here to handle profile update
+            // For example, sending an AJAX request to update the profile data
 
-        // Enable or disable the gender dropdown
-        var genderDropdown = document.getElementById('gender');
-        genderDropdown.disabled = !genderDropdown.disabled;
-    }
-
-    // JavaScript function to handle profile update
-    function updateProfile() {
-        // You can add your logic here to handle profile update
-        // For example, sending an AJAX request to update the profile data
-
-        // Once the profile is updated, show a Swal alert
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: 'Profile updated successfully.',
-        });
-    }
-</script>
-<!-- profile update end  -->
+            // Once the profile is updated, show a Swal alert
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Profile updated successfully.',
+            });
+        }
+    </script>
+    <!-- profile update end  -->
 </body>
 
 </html>

@@ -256,7 +256,7 @@
     <div class="content-wrapper">
         <div class="container">
             <section>
-                <div class="row p-0">
+                <div class="row p-1">
                     <div class="box-header p-0">
 
                         <h3 class="box-title"><strong>Live Classes</strong></h3>
@@ -275,22 +275,38 @@
                     </div>
 
                     <!-- content start here  -->
-                    <div class="row">
-                        <div class="left-div ml-3" id="leftDiv">
+                    <div class="row p-3">
+                        <div class="left-div" id="leftDiv">
                             <div>
                                 <ul class="nav nav-tabs nav-fill" role="tablist">
-                                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#subject-1"
-                                            role="tab"> <span class="hidden-xs-down ml-15">PHYSICS</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-2"
-                                            role="tab">
-                                            <span class="hidden-xs-down ml-15">CHEMISTRY</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-3"
-                                            role="tab"><span class="hidden-xs-down ml-15">ENGLISH</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#subject-4"
-                                            role="tab"><span class="hidden-xs-down ml-15">MATHS</span></a> </li>
-                                    <li class=" hide-show-icon mr-3 " onclick="toggleDivs()">
+                                    <li class="nav-item"> 
+                                        <a class="nav-link active" data-toggle="tab" href="#subject-1" role="tab">
+                                            <span><i class="fa fa-gears (alias) "></i></span> <!-- Icon for Physics -->
+                                            <span class="hidden-xs-down ml-15">PHYSICS</span>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" data-toggle="tab" href="#subject-2" role="tab">
+                                            <span><i class="fa fa-thermometer-full"></i></span> <!-- Icon for Chemistry -->
+                                            <span class="hidden-xs-down ml-15">CHEMISTRY</span>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" data-toggle="tab" href="#subject-3" role="tab">
+                                            <span><i class="fa fa-font"></i></span> <!-- Icon for English -->
+                                            <span class="hidden-xs-down ml-15">ENGLISH</span>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" data-toggle="tab" href="#subject-4" role="tab">
+                                            <span><i class="mdi mdi-math-compass"></i></span> <!-- Icon for Maths -->
+                                            <span class="hidden-xs-down ml-15">MATHS</span>
+                                        </a> 
+                                    </li>
+                                    <li class="hide-show-icon mr-3" onclick="toggleDivs()">
                                         <i class="mdi mdi-code-greater-than icon-large mt-1"></i>
                                     </li>
+                                    
                                 </ul>
                                 <div style="overflow-y: auto;  height: 500px;">
                                     <div class="tab-content tabcontent-border">

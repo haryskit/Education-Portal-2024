@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Home | Institute Portal</title>
+
+    <!-- Vendors Style-->
+    <link rel="stylesheet" href="css/vendors_css.css">
+
+    <!-- Style-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skin_color.css">
+
+</head>
+
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+
+    <div class="wrapper">
+        <div id="header-placeholder"></div>
+        <aside class="main-sidebar">
+            <!-- sidebar-->
+            <section class="sidebar position-relative">
+                <div class="multinav">
+                    <div class="multinav-scroll" style="height: 100%;">
+                        <!-- sidebar menu-->
+                        <ul class="sidebar-menu" data-widget="tree">
+                            <!-- <li class="header">Dashboard </li> -->
+                            <li>
+                                <a href="home.html">
+                                    <i class="icon-Layout-4-blocks"><span class="path1"></span><span
+                                            class="path2"></span></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="manage-course.html">
+                                    <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
+                                        class="path2"></span></i>
+                                    <span>All Course</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="all-exam.html">
+                                    <i class="mdi mdi-library-books"></i>
+                                    <span>All Exam</span>
+
+                                </a>
+                            </li>
+                            <li class="treeview">
+                                <a href="result.html">
+                                    <i class="mdi mdi-note-multiple-outline"></i>
+                                    <span>Exam Result</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-right pull-right"></i>
+                                    </span>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
+                                                        class="path2"></span></i>Maths</a>
+                                        </li>
+
+                                        <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
+                                                        class="path2"></span></i>Science</a>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="treeview">
+                                <a href="all-users.html">
+                                    <i class="mdi mdi-account-multiple"></i>
+                                    <span>All Users</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-right pull-right"></i>
+                                    </span>
+                                    <ul class="treeview-menu">
+                                        <li><a href="manage-all-user.html"><i class="icon-User"><span
+                                                        class="path1"></span><span class="path2"></span></i>All User
+                                                List</a>
+                                        </li>
+
+                                        <li><a href="create-new-users.html"><i class="mdi mdi-account-plus"><span
+                                                        class="path1"></span><span class="path2"></span></i>Register New
+                                                Users</a>
+                                        </li>
+                                        <li><a href="block-user.html"><i class="mdi mdi-account-off"><span
+                                                        class="path1"></span><span class="path2"></span></i>Block Users
+                                                Users</a>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="reported-issue.html">
+                                    <i class="mdi mdi-comment-question-outline"></i>
+                                    <span>Reported Issue</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="attempt-request.html">
+                                    <i class="mdi mdi-account-alert"></i>
+                                    <span>Attempt Request</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <div class="sidebar-footer">
+                <a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Settings"
+                    aria-describedby="tooltip92529">
+                    <span class="mdi mdi-settings"></span>
+                </a>
+                <a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Email">
+                    <span class="mdi mdi-email-outline"></span>
+                </a>
+                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout">
+                    <span class="mdi mdi-logout"></span>
+                </a>
+
+            </div>
+        </aside>
+        <!-- content here  -->
+        <!-- notification bar  -->
+        <div class="content-wrapper">
+            <div class="container-full">
+                <section class="content">
+                    <nav>
+                        <ol class="breadcrumb" style="background-color: #fafbfd;">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page">Home</li>
+                            <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
+                        </ol>
+                    </nav>
+                    <!-- content here  -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="box no-shadow bg-transparent">
+                                <h2 class="box-title mb-1">Dashboard</h2>
+
+                                <ul class="box-controls pull-right d-m  d-none">
+                                    <li>
+                                        <button class="btn btn-primary-light" style="margin-bottom: 50px;">View
+                                            All</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="box pull-up bg-danger">
+                                <div class="box-body text-center">
+                                    <div class="flex-column flex-grow-1">
+                                        <h3 class="box-title font-size-16 mb-2 text-white">Courses</h3>
+                                        <h2 class="mt-4 text-center">10</h2>
+                                        <!-- <a href="#">Learn more</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="box pull-up bg-primary">
+                                <div class="box-body text-center">
+                                    <div class="  flex-column flex-grow-1">
+                                        <h3 class="box-title font-size-16 mb-2 text-white">Full Length Exams</h3>
+                                        <h2 class="mt-4 text-center">10</h2>
+                                        <!-- <a href="#">Learn more</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="box pull-up bg-success">
+                                <div class="box-body text-center">
+                                    <div class="  flex-column flex-grow-1">
+                                        <h3 class="box-title font-size-16 mb-2 text-white">Users</h3>
+                                        <h2 class="mt-4 text-center">10</h2>
+                                        <!-- <a href="#">Learn more</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="box pull-up bg-info">
+                                <div class="box-body text-center">
+                                    <div class="  flex-column flex-grow-1">
+                                        <h3 class="box-title font-size-16 mb-2 text-white">Subjects</h3>
+                                        <h2 class="mt-4 text-center">10</h2>
+                                        <!-- <a href="#">Learn more</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-12">
+                        <div class="box">
+                            <div class="box-header with-border"
+                                style="display: flex; align-items: center; justify-content: space-between;">
+                                <h3 class="title mt-3">Recently Added Users</h3>
+                                <div class="btn btn-primary">
+                                    <a href="manage-all-user.html" style="color: #fafbfd;">View All</a>
+                                </div>
+                            </div>
+                            <div class="box-body px-0 pt-0 pb-10">
+                                <div class="media-list media-list-hover">
+                                    <a class="media media-single" href="#">
+                                        <h4 class="w-50 text-gray font-weight-500">10:10</h4>
+                                        <div class="media-body pl-15 bl-5 rounded border-primary">
+                                            <p>Morbi quis ex eu arcu.</p>
+                                            <span class="text-fade">by Johne</span>
+                                        </div>
+                                    </a>
+
+                                    <a class="media media-single" href="#">
+                                        <h4 class="w-50 text-gray font-weight-500">08:40</h4>
+                                        <div class="media-body pl-15 bl-5 rounded border-success">
+                                            <p>Proin iacul eros no odi.</p>
+                                            <span class="text-fade">by Amla</span>
+                                        </div>
+                                    </a>
+
+                                    <a class="media media-single" href="#">
+                                        <h4 class="w-50 text-gray font-weight-500">07:10</h4>
+                                        <div class="media-body pl-15 bl-5 rounded border-info">
+                                            <p>In mattis mi posuere.</p>
+                                            <span class="text-fade">by Josef</span>
+                                        </div>
+                                    </a>
+
+                                    <a class="media media-single" href="#">
+                                        <h4 class="w-50 text-gray font-weight-500">01:15</h4>
+                                        <div class="media-body pl-15 bl-5 rounded border-danger">
+                                            <p>Morbi quis ex eu arcu.</p>
+                                            <span class="text-fade">by Rima</span>
+                                        </div>
+                                    </a>
+
+                                    <a class="media media-single" href="#">
+                                        <h4 class="w-50 text-gray font-weight-500">23:12</h4>
+                                        <div class="media-body pl-15 bl-5 rounded border-warning">
+                                            <p>Morbi quis ex eu arcu.</p>
+                                            <span class="text-fade">by Alaxa</span>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- <div class="sticky-toolbar">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Now"
+                    class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
+                    <span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
+                </a>
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Portfolio"
+                    class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
+                    <span class="icon-Image"></span>
+                </a>
+                <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat"
+                    class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
+                    <span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
+                </a>
+            </div> -->
+        </div>
+    </div>
+    <footer class="main-footer">
+        &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
+    </footer>
+
+    <!-- script start here  -->
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scriptloader.js"></script>
+    <script src="js/pages/dashboard.js"></script>
+    <script src="js/template.js"></script>
+
+    <!-- script swal alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- end  -->
+    <script>
+        // Add an event listener to the logout link
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            // Prevent the default action of the link
+            event.preventDefault();
+
+            // Display a SweetAlert confirmation dialog
+            Swal.fire({
+                title: 'Are you sure you want to logout?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, logout'
+            }).then((result) => {
+                // If the user confirms, redirect to the logout page or perform the logout action
+                if (result.isConfirmed) {
+                    // Redirect to the logout page or perform the logout action here
+                    // For example, window.location.href = 'logout.php';
+                    // Replace 'logout.php' with the actual URL of your logout page
+                }
+            });
+        });
+    </script>
+    <!-- profile update  -->
+    <script>
+        // JavaScript function to toggle edit mode
+        function toggleEditMode() {
+            var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].readOnly = !inputs[i].readOnly;
+            }
+
+            // Show or hide the Update Profile button
+            var updateButton = document.getElementById('update-profile-btn');
+            updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
+
+            // Enable or disable the gender dropdown
+            var genderDropdown = document.getElementById('gender');
+            genderDropdown.disabled = !genderDropdown.disabled;
+        }
+
+        // JavaScript function to handle profile update
+        function updateProfile() {
+            // You can add your logic here to handle profile update
+            // For example, sending an AJAX request to update the profile data
+
+            // Once the profile is updated, show a Swal alert
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Profile updated successfully.',
+            });
+        }
+    </script>
+    <!-- profile update end  -->
+</body>
+
+</html>

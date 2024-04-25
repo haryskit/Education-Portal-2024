@@ -53,14 +53,14 @@
 
                                 </a>
                             </li>
-                            <li class="treeview">
+                            <li>
                                 <a href="result.html">
                                     <i class="mdi mdi-note-multiple-outline"></i>
                                     <span>Exam Result</span>
-                                    <span class="pull-right-container">
+                                    <!-- <span class="pull-right-container">
                                         <i class="fa fa-angle-right pull-right"></i>
-                                    </span>
-                                    <ul class="treeview-menu">
+                                    </span> -->
+                                    <!-- <ul class="treeview-menu">
                                         <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
                                                         class="path2"></span></i>Maths</a>
                                         </li>
@@ -68,7 +68,7 @@
                                         <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
                                                         class="path2"></span></i>Science</a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </a>
                             </li>
                             <li class="treeview">
@@ -79,7 +79,7 @@
                                         <i class="fa fa-angle-right pull-right"></i>
                                     </span>
                                     <ul class="treeview-menu">
-                                        <li><a href="manage-all-user.html"><i class="icon-User"><span
+                                        <li><a href="manage-all-users.html"><i class="icon-User"><span
                                                         class="path1"></span><span class="path2"></span></i>All User
                                                 List</a>
                                         </li>
@@ -131,31 +131,134 @@
         <!-- notification bar  -->
         <div class="content-wrapper">
             <div class="container-full">
-                <section class="content">
-                    <nav>
-                        <ol class="breadcrumb" style="background-color: #fafbfd;">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
-                            </li>
-                            <li class="breadcrumb-item" aria-current="page">Home</li>
-                            <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
-                        </ol>
-                    </nav>
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h3 class="page-title">Result</h3>
+                            <div class="d-inline-block align-items-center">
+                                <nav>
+                                    <ol class="breadcrumb" style="background-color: #fafbfd;">
+                                        <li class="breadcrumb-item"><a href="home.html"><i
+                                                    class="mdi mdi-home-outline"></i></a></li>
+                                        <!-- <li class="breadcrumb-item" aria-current="page"><a href="course-details.html">Course Details</a></li> -->
+                                        <li class="breadcrumb-item active" aria-current="page">Result</li>
 
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main content -->
+                <section class="invoice printableArea">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="bb-1 clearFix">
+                                <div class="text-right pb-15">
+                                    <button class="btn btn-success" type="button"> <span><i class="fa fa-print"></i>
+                                            Save</span> </button>
+                                    <button id="print2" class="btn btn-warning" type="button"> <span><i
+                                                class="fa fa-print"></i> Print</span> </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /.col -->
+                    </div>
+                    <div class="row invoice-info">
+                        <div class="col-md-6 invoice-col">
+                            <address>
+                                <strong class="text-blue font-size-24">Maths Exam</strong><br>
+
+                            </address>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-6 invoice-col text-right">
+                            <address>
+                                <strong class="text-blue font-size-18">Name : Rocky </strong>
+                                <br>
+                                <strong class="text-blue font-size-18">Roll No. 1</strong>
+                                <br>
+                                <strong class="text-blue font-size-18">Date & Time : </strong>
+                                <br>
+                                <strong>Phone: (00) 789-456-1230 &nbsp;&nbsp;&nbsp;&nbsp; Email:
+                                    conatct@example.com</strong>
+                            </address>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-12 invoice-col mb-15">
+                            <div class="invoice-details row no-margin">
+                                <div class="col-md-6 col-lg-3"><b>S.No : </b> 879</div>
+                                <div class="col-md-6 col-lg-3"><b>Question:</b> FC12548</div>
+                                <div class="col-md-6 col-lg-3"><b>Payment Due:</b> 14/08/2018</div>
+                                <div class="col-md-6 col-lg-3"><b>Account:</b> 00215487541296</div>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-12 table-responsive">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>S.no</th>
+                                        <th>Question</th>
+                                        <th>CORRECT ANSWER(OPTION)</th>
+                                        <th class="text-right">FILLED ANSWER</th>
+                                        <th class="text-right">WRONG ANSWER</th>
+                                        <th class="text-right">Subtotal</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td class="text-right">9</td>
+                                        <td class="text-right">2</td>
+                                        <td class="text-right">70%</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-right">
+                            <p class="lead"><b>Exam Date </b><span class="text-danger"> 14/08/2018 </span></p>
+
+                            <div>
+                                <p>Max Marks : 100 </p>
+                                <p>Obtained Marks : 70</p>
+                                <p>Percentage : 70%</p>
+                            </div>
+                            <div class="total-payment">
+                                <h3><b>Total :</b> 70 Marks</h3>
+                            </div>
+
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row no-print">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-success-light pull-right mr-2"><i
+                                    class="fa fa-check-square-o"></i>
+                                Correct : 7
+                            </button>
+                            <button type="button" class="btn btn-warning pull-right mr-2"><i class="fa fa-question"></i>
+                                Unanswered : 1
+                            </button>
+                            <button type="button" class="btn btn-danger pull-right mr-2"><i
+                                    class="fa fa-remove (alias)"></i>
+                                Wrong : 2
+                            </button>
+                        </div>
+                    </div>
+                    <p>Result was created on a computer and is valid without the signature and seal.</p>
                 </section>
-            </div>
-            <div class="sticky-toolbar">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Now"
-                    class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
-                </a>
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Portfolio"
-                    class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Image"></span>
-                </a>
-                <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat"
-                    class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
-                    <span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
-                </a>
+                <!-- /.content -->
             </div>
         </div>
     </div>

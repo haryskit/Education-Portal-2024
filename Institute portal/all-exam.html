@@ -79,7 +79,7 @@
                                         <i class="fa fa-angle-right pull-right"></i>
                                     </span>
                                     <ul class="treeview-menu">
-                                        <li><a href="manage-all-users"><i class="icon-User"><span
+                                        <li><a href="manage-all-users.html"><i class="icon-User"><span
                                                         class="path1"></span><span class="path2"></span></i>All User
                                                 List</a>
                                         </li>
@@ -133,16 +133,16 @@
             <div class="container-full">
                 <section class="content">
                     <nav>
-                        <ol class="breadcrumb" style="background-color: #fafbfd;">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
+                        <ol class="breadcrumb" style="background-color: #ffffff;">
+                            <li class="breadcrumb-item"><a href="home.html"><i class="mdi mdi-home-outline"></i></a>
                             </li>
-                            <li class="breadcrumb-item" aria-current="page">Home</li>
+                            <li class="breadcrumb-item" aria-current="page">All Exams</li>
                         </ol>
                         <div class="d-flex align-items-center">
-                            <h3 class="p-2">Manage Full Length Exam</h3>
+                            <h3 class="p-2">All Exams</h3>
                             <button type="button" class="btn btn-primary ml-auto" data-toggle="modal"
                                 data-target="#createTestModal">
-                                Create Test
+                                All Exams
                             </button>
                         </div>
                     </nav>
@@ -328,10 +328,20 @@
                 var testCardHTML = `
             <div class="col-md-4 mb-3">
                 <div class="box">
-                    <div class="box-header bg-primary">
-                        <h4 class="box-title"><strong>${test.title}</strong></h4>
-                    </div>
-                    <div class="box-body">
+    <div class="box-header bg-primary d-flex align-items-center justify-content-between">
+        <h4 class="box-title mb-0"><strong>${test.title}</strong></h4>
+        <div class="dropdown">
+            <button class="btn btn-rounded btn-outline dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+            <div class="dropdown-menu" style="">
+                <a class="dropdown-item active" href="exam-question-list.html">View Question</a>
+                <a class="dropdown-item " href="manage-full-length-exam.html">Manage Exam</a>
+                <a class="dropdown-item" href="#">Edit Exam</a>
+                <a class="dropdown-item" href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+                    <div class="box-body bg-white">
                         <div class="table-responsive">
                             <table class="table simple mb-0">
                                 <tbody>
@@ -363,7 +373,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="box-footer">
+                    <div class="box-footer bg-white">
                         <button class="btn btn-danger" onclick="deleteExam(${existingTests.indexOf(test)})">Delete Exam</button>
                         <button class="btn btn-primary pull-right">View Exam</button>
                     </div>

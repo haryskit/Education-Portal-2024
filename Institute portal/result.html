@@ -13,10 +13,11 @@
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="css/vendors_css.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
+
 
 </head>
 
@@ -53,22 +54,11 @@
 
                                 </a>
                             </li>
-                            <li class="treeview">
+                            <li>
                                 <a href="result.html">
                                     <i class="mdi mdi-note-multiple-outline"></i>
                                     <span>Exam Result</span>
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </span>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
-                                                        class="path2"></span></i>Maths</a>
-                                        </li>
 
-                                        <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
-                                                        class="path2"></span></i>Science</a>
-                                        </li>
-                                    </ul>
                                 </a>
                             </li>
                             <li class="treeview">
@@ -140,38 +130,133 @@
                             <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
                         </ol>
                     </nav>
+                    <!-- content start here  -->
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="box">
+                                <div class="box-header bg-primary">
+                                    <h4 class="box-title"><strong>Exam Result</strong></h4>
+                                </div>
 
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table class="table product-overview">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.No</th>
+                                                    <th>User Name</th>
+                                                    <th>Obtained Marks</th>
+                                                    <th>Percentage</th>
+                                                    <th style="text-align:center">Total Attempt</th>
+                                                    <th style="text-align:center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>1 </td>
+                                                    <td>
+                                                        <h5>Akash</h5>
+                                                    </td>
+                                                    <td>270</td>
+                                                    <td>80%</td>
+
+                                                    <td align="center" class="font-weight-900">2</td>
+                                                    <td align="center">
+                                                        <a href="full-result.html" class="btn btn-circle btn-info btn-xs" title="View"
+                                                            data-toggle="tooltip">
+                                                            <i class="ti-eye"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-circle btn-danger btn-xs delete-btn"
+                                                            title="Delete" data-toggle="tooltip">
+                                                            <i class="ti-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1 </td>
+                                                    <td>
+                                                        <h5>Akash</h5>
+                                                    </td>
+                                                    <td>270</td>
+                                                    <td>80%</td>
+
+                                                    <td align="center" class="font-weight-900">2</td>
+                                                    <td align="center">
+                                                        <a href="full-result.html" class="btn btn-circle btn-info btn-xs" title="View"
+                                                            data-toggle="tooltip">
+                                                            <i class="ti-eye"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-circle btn-danger btn-xs delete-btn"
+                                                            title="Delete" data-toggle="tooltip">
+                                                            <i class="ti-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- <button class="btn btn-success pull-right"><i
+                                                class="fa fa fa-shopping-cart"></i>
+                                            Checkout</button>
+                                        <button class="btn btn-info"><i class="fa fa-arrow-left"></i> Continue
+                                            shopping</button> -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
-            <div class="sticky-toolbar">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Now"
-                    class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
-                </a>
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Portfolio"
-                    class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Image"></span>
-                </a>
-                <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat"
-                    class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
-                    <span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
-                </a>
-            </div>
+
         </div>
     </div>
     <footer class="main-footer">
         &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
     </footer>
 
-<!-- script start here  -->
-    <script src="js/vendors.min.js"></script> 
-    <script src="js/scriptloader.js"></script>  
-    <script src="js/pages/dashboard.js"></script> 
+    <!-- script start here  -->
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scriptloader.js"></script>
+    <script src="js/pages/dashboard.js"></script>
     <script src="js/template.js"></script>
 
     <!-- script swal alert  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <!-- end  -->
+    <script>
+        // Function to handle delete confirmation
+        function confirmDelete() {
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this item!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        // Add your delete logic here
+                        // For example, you can redirect to a delete endpoint
+                        // window.location.href = "delete.php";
+                        swal("Poof! Your item has been deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your item is safe!");
+                    }
+                });
+        }
+
+        // Attach click event listener to delete button
+        document.querySelector('.delete-btn').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action (e.g., following the link)
+
+            // Call the confirmDelete function to show the confirmation dialog
+            confirmDelete();
+        });
+    </script>
     <script>
         // Add an event listener to the logout link
         document.getElementById('logout-link').addEventListener('click', function (event) {

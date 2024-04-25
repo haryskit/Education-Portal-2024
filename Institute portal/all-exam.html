@@ -39,7 +39,7 @@
                                     <span>Dashboard</span>
                                 </a>
                             </li>
-                            <li >
+                            <li>
                                 <a href="manage-course.html">
                                     <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
                                         class="path2"></span></i>
@@ -53,14 +53,14 @@
 
                                 </a>
                             </li>
-                            <li class="treeview">
+                            <li>
                                 <a href="result.html">
                                     <i class="mdi mdi-note-multiple-outline"></i>
                                     <span>Exam Result</span>
-                                    <span class="pull-right-container">
+                                    <!-- <span class="pull-right-container">
                                         <i class="fa fa-angle-right pull-right"></i>
-                                    </span>
-                                    <ul class="treeview-menu">
+                                    </span> -->
+                                    <!-- <ul class="treeview-menu">
                                         <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
                                                         class="path2"></span></i>Maths</a>
                                         </li>
@@ -68,7 +68,7 @@
                                         <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
                                                         class="path2"></span></i>Science</a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </a>
                             </li>
                             <li class="treeview">
@@ -137,25 +137,70 @@
                             <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
                             </li>
                             <li class="breadcrumb-item" aria-current="page">Home</li>
-                            <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
                         </ol>
+                        <div class="d-flex align-items-center">
+                            <h3 class="p-2">Manage Full Length Exam</h3>
+                            <button type="button" class="btn btn-primary ml-auto" data-toggle="modal"
+                                data-target="#createTestModal">
+                                Create Test
+                            </button>
+                        </div>
                     </nav>
-
+                    <!-- content here -->
+                    <div class="row" id="testCardsContainer">
+                    </div>
+                    <!-- add more box here  -->
                 </section>
             </div>
-            <div class="sticky-toolbar">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Now"
-                    class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
-                </a>
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Portfolio"
-                    class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Image"></span>
-                </a>
-                <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat"
-                    class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
-                    <span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
-                </a>
+
+        </div>
+    </div>
+    <!-- Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="createTestModal" tabindex="-1" role="dialog" aria-labelledby="createTestModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createTestModalLabel">Create Test</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="negativeMarks">Negative Marks:</label>
+                        <input type="number" class="form-control" id="negativeMarks">
+                    </div>
+                    <div class="form-group">
+                        <label for="minimumMarks">Minimum Marks:</label>
+                        <input type="number" class="form-control" id="minimumMarks">
+                    </div>
+                    <div class="form-group">
+                        <label for="attemptAllow">Attempt Allow:</label>
+                        <input type="number" class="form-control" id="attemptAllow">
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" class="form-control" id="startDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date:</label>
+                        <input type="date" class="form-control" id="endDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalmarks">Total Marks</label>
+                        <input type="number" class="form-control" id="totalmarks">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="createTest()">Create</button>
+                </div>
             </div>
         </div>
     </div>
@@ -163,10 +208,10 @@
         &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
     </footer>
 
-<!-- script start here  -->
-    <script src="js/vendors.min.js"></script> 
-    <script src="js/scriptloader.js"></script>  
-    <script src="js/pages/dashboard.js"></script> 
+    <!-- script start here  -->
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scriptloader.js"></script>
+    <script src="js/pages/dashboard.js"></script>
     <script src="js/template.js"></script>
 
     <!-- script swal alert  -->
@@ -228,6 +273,145 @@
         }
     </script>
     <!-- profile update end  -->
+    <script>
+        // Function to create test
+        function createTest() {
+            var title = document.getElementById("title").value;
+            var negativeMarks = document.getElementById("negativeMarks").value;
+            var minimumMarks = document.getElementById("minimumMarks").value;
+            var attemptAllow = document.getElementById("attemptAllow").value;
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
+            var totalmarks = document.getElementById("totalmarks").value;
+
+            // Validate input
+            if (title.trim() === "" || startDate === "" || endDate === "") {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            // Create test using the entered data
+            var test = {
+                title: title,
+                negativeMarks: negativeMarks,
+                minimumMarks: minimumMarks,
+                attemptAllow: attemptAllow,
+                startDate: startDate,
+                endDate: endDate,
+                totalmarks: totalmarks,
+            };
+
+            // Get existing tests from localStorage or create an empty array
+            var existingTests = JSON.parse(localStorage.getItem("tests")) || [];
+
+            // Add the new test to the existing tests
+            existingTests.push(test);
+
+            // Save the updated tests to localStorage
+            localStorage.setItem("tests", JSON.stringify(existingTests));
+
+            // Display the newly created exam in the box
+            displayTests();
+
+            // Close modal
+            $('#createTestModal').modal('hide');
+        }
+
+        // Function to display tests in the box
+        function displayTests() {
+            var testCardsContainer = document.getElementById("testCardsContainer");
+            var existingTests = JSON.parse(localStorage.getItem("tests")) || [];
+
+            testCardsContainer.innerHTML = ""; // Clear previous content
+
+            existingTests.forEach(function (test) {
+                var testCardHTML = `
+            <div class="col-md-4 mb-3">
+                <div class="box">
+                    <div class="box-header bg-info">
+                        <h4 class="box-title"><strong>${test.title}</strong></h4>
+                    </div>
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table simple mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td>Negative Marks</td>
+                                        <td class="text-right font-weight-700">${test.negativeMarks}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minimum Marks</td>
+                                        <td class="text-right font-weight-700">${test.minimumMarks}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Attempt Allow</td>
+                                        <td class="text-right font-weight-700">${test.attemptAllow}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Start Date</td>
+                                        <td class="text-right font-weight-700">${test.startDate}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>End Date</td>
+                                        <td class="text-right font-weight-700">${test.endDate}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Marks</td>
+                                        <td class="text-right font-weight-700">${test.totalmarks}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button class="btn btn-danger" onclick="deleteExam(${existingTests.indexOf(test)})">Delete Exam</button>
+                        <button class="btn btn-primary pull-right">View Exam</button>
+                    </div>
+                </div>
+            </div>
+        `;
+                testCardsContainer.innerHTML += testCardHTML;
+            });
+        }
+
+        // Function to delete exam with Swal alert
+        function deleteExam(index) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Get existing tests from localStorage
+                    var existingTests = JSON.parse(localStorage.getItem("tests")) || [];
+
+                    // Remove the test at the specified index
+                    existingTests.splice(index, 1);
+
+                    // Save the updated tests to localStorage
+                    localStorage.setItem("tests", JSON.stringify(existingTests));
+
+                    // After deleting, display tests again
+                    displayTests();
+
+                    Swal.fire(
+                        'Deleted!',
+                        'Your exam has been deleted.',
+                        'success'
+                    );
+                }
+            });
+        }
+
+        // Call displayTests() when the page loads to load existing tests from localStorage
+        window.onload = function () {
+            displayTests();
+        };
+    </script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Home | Institute Portal</title>
+    <title>Attempted Request| Institute Portal</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="css/vendors_css.css">
@@ -79,7 +79,7 @@
                                         <i class="fa fa-angle-right pull-right"></i>
                                     </span>
                                     <ul class="treeview-menu">
-                                        <li><a href="manage-all-users"><i class="icon-User"><span
+                                        <li><a href="manage-all-user.html"><i class="icon-User"><span
                                                         class="path1"></span><span class="path2"></span></i>All User
                                                 List</a>
                                         </li>
@@ -134,28 +134,137 @@
                 <section class="content">
                     <nav>
                         <ol class="breadcrumb" style="background-color: #fafbfd;">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
+                            <li class="breadcrumb-item"><a href="home.html"><i class="mdi mdi-home-outline"></i></a>
                             </li>
-                            <li class="breadcrumb-item" aria-current="page">Home</li>
+                            <li class="breadcrumb-item" aria-current="page">Attempted Request</li>
                             <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
                         </ol>
+                        <div class="d-flex align-items-center">
+                            <h3 class="p-2">Attempted Request</h3>
+                            <button type="button" class="btn btn-primary ml-auto" data-toggle="modal"
+                                data-target="#createTestModal">
+                                Add New
+                            </button>
+                        </div>
                     </nav>
-
+                    <!-- content start  -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="box">
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <div id="productorder_wrapper"
+                                            class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="dataTables_length" id="productorder_length"><label>Show
+                                                            <select name="productorder_length"
+                                                                aria-controls="productorder"
+                                                                class="form-control form-control-sm">
+                                                                <option value="10">10</option>
+                                                                <option value="25">25</option>
+                                                                <option value="50">50</option>
+                                                                <option value="100">100</option>
+                                                            </select> entries</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div id="productorder_filter" class="dataTables_filter">
+                                                        <label>Search:<input type="search"
+                                                                class="form-control form-control-sm" placeholder=""
+                                                                aria-controls="productorder"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table id="productorder"
+                                                        class="table table-hover no-wrap product-order dataTable no-footer"
+                                                        data-page-size="10" role="grid"
+                                                        aria-describedby="productorder_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting_asc" tabindex="0"
+                                                                    aria-controls="productorder" rowspan="1" colspan="1"
+                                                                    aria-sort="ascending"
+                                                                    aria-label="Customer: activate to sort column descending">
+                                                                    S No.</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="productorder" rowspan="1" colspan="1"
+                                                                    aria-label="Order ID: activate to sort column ascending">
+                                                                    Exam Title</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="productorder" rowspan="1" colspan="1"
+                                                                    aria-label="Photo: activate to sort column ascending">
+                                                                    User Name</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="productorder" rowspan="1" colspan="1"
+                                                                    aria-label="Product: activate to sort column ascending">
+                                                                    User Comment </th>
+                                                                
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="productorder" rowspan="1" colspan="1"
+                                                                    aria-label="Actions: activate to sort column ascending">
+                                                                    Actions
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr role="row" class="odd">
+                                                                <td>#1</td>
+                                                                <td class="sorting_1">Maical Roy</td>
+                                                                <td>akash@gmail</td>
+                                                                <td>7000847543</td>
+                                                                
+                                                                <td><a href="javascript:void(0)" class="text-info mr-10"
+                                                                        data-toggle="tooltip"
+                                                                        data-original-title="Edit">
+                                                                        <i class="ti-marker-alt"></i>
+                                                                    </a>
+                                                                    <a href="#" class="text-danger"
+                                                                        onclick="confirmDelete()">
+                                                                        <i class="ti-trash"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <div class="dataTables_info" id="productorder_info" role="status"
+                                                        aria-live="polite">Showing 1 to 10 of 12 entries</div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-7">
+                                                    <div class="dataTables_paginate paging_simple_numbers"
+                                                        id="productorder_paginate">
+                                                        <ul class="pagination">
+                                                            <li class="paginate_button page-item previous disabled"
+                                                                id="productorder_previous"><a href="#"
+                                                                    aria-controls="productorder" data-dt-idx="0"
+                                                                    tabindex="0" class="page-link">Previous</a></li>
+                                                            <li class="paginate_button page-item active"><a href="#"
+                                                                    aria-controls="productorder" data-dt-idx="1"
+                                                                    tabindex="0" class="page-link">1</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="productorder" data-dt-idx="2"
+                                                                    tabindex="0" class="page-link">2</a></li>
+                                                            <li class="paginate_button page-item next"
+                                                                id="productorder_next"><a href="#"
+                                                                    aria-controls="productorder" data-dt-idx="3"
+                                                                    tabindex="0" class="page-link">Next</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-            </div>
-            <div class="sticky-toolbar">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Now"
-                    class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
-                </a>
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Portfolio"
-                    class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
-                    <span class="icon-Image"></span>
-                </a>
-                <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat"
-                    class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
-                    <span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
-                </a>
             </div>
         </div>
     </div>
@@ -163,10 +272,10 @@
         &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
     </footer>
 
-<!-- script start here  -->
-    <script src="js/vendors.min.js"></script> 
-    <script src="js/scriptloader.js"></script>  
-    <script src="js/pages/dashboard.js"></script> 
+    <!-- script start here  -->
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scriptloader.js"></script>
+    <script src="js/pages/dashboard.js"></script>
     <script src="js/template.js"></script>
 
     <!-- script swal alert  -->
@@ -189,9 +298,7 @@
             }).then((result) => {
                 // If the user confirms, redirect to the logout page or perform the logout action
                 if (result.isConfirmed) {
-                    // Redirect to the logout page or perform the logout action here
-                    // For example, window.location.href = 'logout.php';
-                    // Replace 'logout.php' with the actual URL of your logout page
+
                 }
             });
         });
@@ -228,6 +335,25 @@
         }
     </script>
     <!-- profile update end  -->
+    <script>
+        function confirmDelete() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You will not be able to recover this item!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Here you can perform the delete action
+                    Swal.fire('Deleted!', 'Your item has been deleted.', 'success');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

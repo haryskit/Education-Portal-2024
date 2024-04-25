@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Home | Institute Portal</title>
+    <title>Exam Result | Institute Portal</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="css/vendors_css.css">
@@ -17,6 +17,8 @@
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
+    <link href="datatables/jquery/jquery-3.7.1.min.js">
+    <link rel="stylesheet" href="datatables/datatable.css">
 
 
 </head>
@@ -58,7 +60,18 @@
                                 <a href="result.html">
                                     <i class="mdi mdi-note-multiple-outline"></i>
                                     <span>Exam Result</span>
+                                    <!-- <span class="pull-right-container">
+                                        <i class="fa fa-angle-right pull-right"></i>
+                                    </span> -->
+                                    <!-- <ul class="treeview-menu">
+                                        <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
+                                                        class="path2"></span></i>Maths</a>
+                                        </li>
 
+                                        <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
+                                                        class="path2"></span></i>Science</a>
+                                        </li>
+                                    </ul> -->
                                 </a>
                             </li>
                             <li class="treeview">
@@ -124,86 +137,90 @@
                 <section class="content">
                     <nav>
                         <ol class="breadcrumb" style="background-color: #fafbfd;">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
+                            <li class="breadcrumb-item"><a href="home.html"><i class="mdi mdi-home-outline"></i></a>
                             </li>
-                            <li class="breadcrumb-item" aria-current="page">Home</li>
+                            <li class="breadcrumb-item" aria-current="page">Exam Result</li>
                             <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
                         </ol>
+                        <div class="d-flex align-items-center">
+                            <h3 class="p-2">Exam Result</h3>
+                            <button type="button" class="btn btn-primary ml-auto" data-toggle="modal"
+                                data-target="#createTestModal">
+                                Add New
+                            </button>
+                        </div>
                     </nav>
-                    <!-- content start here  -->
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="box">
-                                <div class="box-header bg-primary">
-                                    <h4 class="box-title"><strong>Exam Result</strong></h4>
-                                </div>
+                    <!-- content start  -->
+                    <div class="card card-bordered-custom card-preview " id="invoiceListCard">
+                        <div class="card-inner-custom p-3">
 
-                                <div class="box-body">
-                                    <div class="table-responsive">
-                                        <table class="table product-overview">
-                                            <thead>
-                                                <tr>
-                                                    <th>S.No</th>
-                                                    <th>User Name</th>
-                                                    <th>Obtained Marks</th>
-                                                    <th>Percentage</th>
-                                                    <th style="text-align:center">Total Attempt</th>
-                                                    <th style="text-align:center">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-
-                                                <tr>
-                                                    <td>1 </td>
-                                                    <td>
-                                                        <h5>Akash</h5>
-                                                    </td>
-                                                    <td>270</td>
-                                                    <td>80%</td>
-
-                                                    <td align="center" class="font-weight-900">2</td>
-                                                    <td align="center">
-                                                        <a href="full-result.html" class="btn btn-circle btn-info btn-xs" title="View"
-                                                            data-toggle="tooltip">
-                                                            <i class="ti-eye"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-circle btn-danger btn-xs delete-btn"
-                                                            title="Delete" data-toggle="tooltip">
-                                                            <i class="ti-trash"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1 </td>
-                                                    <td>
-                                                        <h5>Akash</h5>
-                                                    </td>
-                                                    <td>270</td>
-                                                    <td>80%</td>
-
-                                                    <td align="center" class="font-weight-900">2</td>
-                                                    <td align="center">
-                                                        <a href="full-result.html" class="btn btn-circle btn-info btn-xs" title="View"
-                                                            data-toggle="tooltip">
-                                                            <i class="ti-eye"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-circle btn-danger btn-xs delete-btn"
-                                                            title="Delete" data-toggle="tooltip">
-                                                            <i class="ti-trash"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- <button class="btn btn-success pull-right"><i
-                                                class="fa fa fa-shopping-cart"></i>
-                                            Checkout</button>
-                                        <button class="btn btn-info"><i class="fa fa-arrow-left"></i> Continue
-                                            shopping</button> -->
-                                    </div>
-
-                                </div>
-                            </div>
+                            <!-- <div class="table-responsive"> -->
+                            <table id="report-issue-tbl" class="display">
+                                <thead>
+                                    <tr>
+                                        <th>S No.</th>
+                                        <th>User Name</th>
+                                        <th>Obtained Marks</th>
+                                        <th>Percentage</th>
+                                        <th>Attempt No.</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="nk-tb-item">
+                                        <td><span class="table-text-custom-sfr">1</span></td>
+                                        <td><span class="table-text-custom-sfr">akash gupta</span></td>
+                                        <td><span class="table-text-custom-sfr">80</span></td>
+                                        <td><span class="table-text-custom-sfr">80%</span></td>
+                                        <td><span class="table-text-custom-sfr">2</span></td>
+                                        <td>
+                                            <div class="dropdown show">
+                                                <button class="btn btn-rounded btn-outline btn-primary dropdown-toggle "
+                                                    type="button" data-toggle="dropdown"
+                                                    aria-expanded="true">Action</button>
+                                                <div class="dropdown-menu" x-placement="bottom-start"
+                                                    style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 41px, 0px);">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i>
+                                                        Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+                                                        Delete</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+                                                        Share</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 1 end  -->
+                                    <tr class="nk-tb-item">
+                                        <td><span class="table-text-custom-sfr">1</span></td>
+                                        <td><span class="table-text-custom-sfr">akash gupta</span></td>
+                                        <td><span class="table-text-custom-sfr">80</span></td>
+                                        <td><span class="table-text-custom-sfr">80%</span></td>
+                                        <td><span class="table-text-custom-sfr">2</span></td>
+                                        <td>
+                                            <div class="dropdown show">
+                                                <button class="btn btn-rounded btn-outline btn-primary dropdown-toggle "
+                                                    type="button" data-toggle="dropdown"
+                                                    aria-expanded="true">Action</button>
+                                                <div class="dropdown-menu" x-placement="bottom-start"
+                                                    style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 41px, 0px);">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i>
+                                                        Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+                                                        Delete</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+                                                        Share</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </section>
@@ -220,6 +237,13 @@
     <script src="js/scriptloader.js"></script>
     <script src="js/pages/dashboard.js"></script>
     <script src="js/template.js"></script>
+    <script src="datatables/datatable.js"></script>
+    <!-- table start  -->
+    <script>
+        $(document).ready(function () {
+            $('#report-issue-tbl').DataTable();
+        });
+    </script>
 
     <!-- script swal alert  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -17,6 +17,8 @@
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
+    <link href="datatables/jquery/jquery-3.7.1.min.js">
+    <link rel="stylesheet" href="datatables/datatable.css">
 
 </head>
 
@@ -53,14 +55,14 @@
 
                                 </a>
                             </li>
-                            <li class="treeview">
+                            <li>
                                 <a href="result.html">
                                     <i class="mdi mdi-note-multiple-outline"></i>
                                     <span>Exam Result</span>
-                                    <span class="pull-right-container">
+                                    <!-- <span class="pull-right-container">
                                         <i class="fa fa-angle-right pull-right"></i>
-                                    </span>
-                                    <ul class="treeview-menu">
+                                    </span> -->
+                                    <!-- <ul class="treeview-menu">
                                         <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
                                                         class="path2"></span></i>Maths</a>
                                         </li>
@@ -68,7 +70,7 @@
                                         <li><a href="#"><i class="icon-Commit"><span class="path1"></span><span
                                                         class="path2"></span></i>Science</a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </a>
                             </li>
                             <li class="treeview">
@@ -79,7 +81,7 @@
                                         <i class="fa fa-angle-right pull-right"></i>
                                     </span>
                                     <ul class="treeview-menu">
-                                        <li><a href="manage-all-user.html"><i class="icon-User"><span
+                                        <li><a href="manage-all-users"><i class="icon-User"><span
                                                         class="path1"></span><span class="path2"></span></i>All User
                                                 List</a>
                                         </li>
@@ -136,11 +138,11 @@
                         <ol class="breadcrumb" style="background-color: #fafbfd;">
                             <li class="breadcrumb-item"><a href="home.html"><i class="mdi mdi-home-outline"></i></a>
                             </li>
-                            <li class="breadcrumb-item" aria-current="page">Reported Issue </li>
+                            <li class="breadcrumb-item" aria-current="page">Reported Issues</li>
                             <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
                         </ol>
                         <div class="d-flex align-items-center">
-                            <h3 class="p-2">Reported Issue</h3>
+                            <h3 class="p-2">Reported Issues</h3>
                             <button type="button" class="btn btn-primary ml-auto" data-toggle="modal"
                                 data-target="#createTestModal">
                                 Add New
@@ -148,129 +150,81 @@
                         </div>
                     </nav>
                     <!-- content start  -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="box">
-                                <div class="box-body">
-                                    <div class="table-responsive">
-                                        <div id="productorder_wrapper"
-                                            class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6">
-                                                    <div class="dataTables_length" id="productorder_length"><label>Show
-                                                            <select name="productorder_length"
-                                                                aria-controls="productorder"
-                                                                class="form-control form-control-sm">
-                                                                <option value="10">10</option>
-                                                                <option value="25">25</option>
-                                                                <option value="50">50</option>
-                                                                <option value="100">100</option>
-                                                            </select> entries</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6">
-                                                    <div id="productorder_filter" class="dataTables_filter">
-                                                        <label>Search:<input type="search"
-                                                                class="form-control form-control-sm" placeholder=""
-                                                                aria-controls="productorder"></label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <table id="productorder"
-                                                        class="table table-hover no-wrap product-order dataTable no-footer"
-                                                        data-page-size="10" role="grid"
-                                                        aria-describedby="productorder_info">
-                                                        <thead>
-                                                            <tr role="row">
-                                                                <th class="sorting_asc" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-sort="ascending"
-                                                                    aria-label="Customer: activate to sort column descending">
-                                                                    S No.</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-label="Order ID: activate to sort column ascending">
-                                                                    Exam Title</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-label="Photo: activate to sort column ascending">
-                                                                    User Name</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-label="Product: activate to sort column ascending">
-                                                                    Question</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-label="Quantity: activate to sort column ascending">
-                                                                    Issue</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-label="Date: activate to sort column ascending">
-                                                                    User Comment</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="productorder" rowspan="1" colspan="1"
-                                                                    aria-label="Actions: activate to sort column ascending">
-                                                                    Actions
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr role="row" class="odd">
-                                                                <td>#1</td>
-                                                                <td class="sorting_1">Maical Roy</td>
-                                                                <td>akash@gmail</td>
-                                                                <td>7000847543</td>
-                                                                <td>BBA</td>
-                                                                <td>24-01-2018</td>
-                                                                
-                                                                <td><a href="javascript:void(0)" class="text-info mr-10"
-                                                                        data-toggle="tooltip"
-                                                                        data-original-title="Edit">
-                                                                        <i class="ti-marker-alt"></i>
-                                                                    </a>
-                                                                    <a href="#" class="text-danger"
-                                                                        onclick="confirmDelete()">
-                                                                        <i class="ti-trash"></i>
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                    <div class="card card-bordered-custom card-preview " id="invoiceListCard">
+                        <div class="card-inner-custom p-3">
+
+                            <!-- <div class="table-responsive"> -->
+                            <table id="report-issue-tbl" class="display">
+                                <thead>
+                                    <tr>
+                                        <th>S No.</th>
+                                        <th>Exam Title</th>
+                                        <th>User Name</th>
+                                        <th>Qusetion No.</th>
+                                        <th>Issues</th>
+                                        <th>User Comment</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="nk-tb-item">
+                                        <td><span class="table-text-custom-sfr">1</span></td>
+                                        <td><span class="table-text-custom-sfr">IIM</span></td>
+                                        <td><span class="table-text-custom-sfr">akash gupta</span></td>
+                                        <td><span class="table-text-custom-sfr">23</span></td>
+                                        <td><span class="table-text-custom-sfr">Wrong Answer</span></td>
+                                        <td><span class="table-text-custom-sfr">Make it Right</span></td>
+
+                                        <td>
+                                            <div class="dropdown show">
+                                                <button class="btn btn-rounded btn-outline btn-primary dropdown-toggle "
+                                                    type="button" data-toggle="dropdown"
+                                                    aria-expanded="true">Action</button>
+                                                <div class="dropdown-menu" x-placement="bottom-start"
+                                                    style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 41px, 0px);">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i>
+                                                        Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+                                                        Delete</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+                                                        Share</a>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-5">
-                                                    <div class="dataTables_info" id="productorder_info" role="status"
-                                                        aria-live="polite">Showing 1 to 10 of 12 entries</div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-7">
-                                                    <div class="dataTables_paginate paging_simple_numbers"
-                                                        id="productorder_paginate">
-                                                        <ul class="pagination">
-                                                            <li class="paginate_button page-item previous disabled"
-                                                                id="productorder_previous"><a href="#"
-                                                                    aria-controls="productorder" data-dt-idx="0"
-                                                                    tabindex="0" class="page-link">Previous</a></li>
-                                                            <li class="paginate_button page-item active"><a href="#"
-                                                                    aria-controls="productorder" data-dt-idx="1"
-                                                                    tabindex="0" class="page-link">1</a></li>
-                                                            <li class="paginate_button page-item "><a href="#"
-                                                                    aria-controls="productorder" data-dt-idx="2"
-                                                                    tabindex="0" class="page-link">2</a></li>
-                                                            <li class="paginate_button page-item next"
-                                                                id="productorder_next"><a href="#"
-                                                                    aria-controls="productorder" data-dt-idx="3"
-                                                                    tabindex="0" class="page-link">Next</a></li>
-                                                        </ul>
-                                                    </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 1 end  -->
+                                    <tr class="nk-tb-item">
+                                        <td><span class="table-text-custom-sfr">1</span></td>
+                                        <td><span class="table-text-custom-sfr">IIM</span></td>
+                                        <td><span class="table-text-custom-sfr">akash gupta</span></td>
+                                        <td><span class="table-text-custom-sfr">23</span></td>
+                                        <td><span class="table-text-custom-sfr">Wrong Answer</span></td>
+                                        <td><span class="table-text-custom-sfr">Make it Right</span></td>
+
+                                        <td>
+                                            <div class="dropdown show">
+                                                <button class="btn btn-rounded btn-outline btn-primary dropdown-toggle "
+                                                    type="button" data-toggle="dropdown"
+                                                    aria-expanded="true">Action</button>
+                                                <div class="dropdown-menu" x-placement="bottom-start"
+                                                    style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 41px, 0px);">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i>
+                                                        Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+                                                        Delete</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+                                                        Share</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </section>
@@ -286,7 +240,14 @@
     <script src="js/scriptloader.js"></script>
     <script src="js/pages/dashboard.js"></script>
     <script src="js/template.js"></script>
-
+    <script src="datatables/datatable.js"></script>
+    <!-- table start  -->
+    <script>
+        $(document).ready(function () {
+            $('#report-issue-tbl').DataTable();
+        });
+    </script>
+    <!-- table end  -->
     <!-- script swal alert  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- end  -->

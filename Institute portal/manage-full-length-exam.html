@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Home | Institute Portal</title>
+    <title>Manage Exam | Institute Portal</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="css/vendors_css.css">
@@ -136,27 +136,160 @@
                         <ol class="breadcrumb" style="background-color: #fafbfd;">
                             <li class="breadcrumb-item"><a href="home.html"><i class="mdi mdi-home-outline"></i></a>
                             </li>
-                            <li class="breadcrumb-item" aria-current="page">Home</li>
-                            <!-- <li class="breadcrumb-item active" aria-current="page">Bookmarked Questions</li> -->
+                            <li class="breadcrumb-item" aria-current="page">Manage Full Exam</li>
                         </ol>
                     </nav>
-<!-- content start here  -->
+                    <!-- content start here  -->
+                    <div class="col-lg-12 col-12">
+                        <!-- Basic Forms -->
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h4 class="box-title">Manage full Exam </h4>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Exam Title</label>
+                                            <input type="text" class="form-control" placeholder="Enter Exam Title">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Exam Time (In Minutes) *</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter Exam Time (In Minutes) *">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Exam Maximum Questions</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter Exam Maximum Questions">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Positive Marks (Per Question)</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter Positive Marks (Per Question)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Negitive Marks (If Empty, Default is Zero)</label>
+                                            <input type="text" class="form-control" placeholder="Enter Negitive Marks ">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="courseSelect">Course</label>
+                                            <select class="form-control" id="courseSelect">
+                                                <option value="">Select Course</option>
+                                                <option value="course1">Course 1</option>
+                                                <option value="course2">Course 2</option>
+                                                <option value="course3">Course 3</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Exam Starting Date</label>
+                                            <input type="date" class="form-control"
+                                                placeholder="Enter Exam Starting Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Exam Closing Date</label>
+                                            <input type="date" class="form-control"
+                                                placeholder="Enter Exam Closing Date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Maximum Attempts Allowed*</label>
+                                            <input type="number" class="form-control"
+                                                placeholder="Enter Maximum Attempts Allowed">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>User Save For Later Permission</label>
+                                            <select class="form-control" id="permissionSelect">
+                                                <option value="">Select Permission</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-<!-- content end here  -->
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Questions Available in this Exam</label>
+                                            <input type="number" class="form-control"
+                                                placeholder="Enter No. Of Question">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label>Exam Description</label>
+                                            <textarea class="form-control"
+                                                placeholder="Enter Exam Description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 mt-4">
+                                    <div class="col-12">
+                                        <!-- Buttons -->
+                                        <button type="button" class="btn btn-default mr-4 ml-4"><i
+                                                class="fa fa-arrow-left"></i> Back</button>
+                                        <button type="button" class="btn btn-primary mr-4 ml-4"><i
+                                                class="fa fa-save"></i> Save Edit</button>
+                                        <button type="button" class="btn btn-success mr-4 ml-4"><i
+                                                class="fa fa-plus"></i> Add Question Manually</button>
+                                        <button type="button" class="btn btn-danger mr-4 ml-4"><i
+                                                class="fa fa-file-excel"></i> Add Question From Excel File</button>
+                                    </div>
+                                </div>
 
-                </section>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
             </div>
-            
+            <!-- /.box -->
         </div>
+        <!-- content end here  -->
+
+        </section>
+    </div>
+    </div>
     </div>
     <footer class="main-footer">
         &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
     </footer>
 
-<!-- script start here  -->
-    <script src="js/vendors.min.js"></script> 
-    <script src="js/scriptloader.js"></script>  
-    <script src="js/pages/dashboard.js"></script> 
+    <!-- script start here  -->
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scriptloader.js"></script>
+    <script src="js/pages/dashboard.js"></script>
     <script src="js/template.js"></script>
 
     <!-- script swal alert  -->

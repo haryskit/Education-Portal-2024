@@ -333,10 +333,9 @@
         <div class="dropdown">
             <button class="btn btn-rounded btn-outline dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"></button>
             <div class="dropdown-menu" style="">
-                <a class="dropdown-item active" href="exam-question-list.html">View Question</a>
                 <a class="dropdown-item " href="manage-full-length-exam.html">Manage Exam</a>
-                <a class="dropdown-item" href="#">Edit Exam</a>
-                <a class="dropdown-item" href="#">Delete</a>
+                <a class="dropdown-item" href="manage-full-length-exam.html">Edit Exam</a>
+                <a class="dropdown-item" onclick="deleteExam(${existingTests.indexOf(test)})" href="#">Delete</a>
             </div>
         </div>
     </div>
@@ -373,10 +372,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="box-footer bg-white">
-                        <button class="btn btn-danger" onclick="deleteExam(${existingTests.indexOf(test)})">Delete Exam</button>
-                        <button class="btn btn-primary pull-right">View Exam</button>
-                    </div>
+                    
                 </div>
             </div>
         `;

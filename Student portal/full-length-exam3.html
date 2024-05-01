@@ -23,7 +23,147 @@
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
     <div class="wrapper">
         <!-- header s  -->
-        <div id="header-placeholder"></div>
+        <header class="main-header">
+            <div class="d-flex align-items-center logo-box justify-content-start">
+                <a href="#"
+                    class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
+                    data-toggle="push-menu" role="button">
+                    <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
+                            class="path3"></span></span>
+                </a>
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <!-- logo-->
+                    <div class="logo-lg">
+                        <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
+                        <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
+                    </div>
+                </a>
+            </div>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div class="app-menu">
+                    <ul class="header-megamenu nav">
+                        <li class="btn-group nav-item d-md-none">
+                            <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu"
+                                role="button">
+                                <span class="icon-Align-left"><span class="path1"></span><span
+                                        class="path2"></span><span class="path3"></span></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="navbar-custom-menu r-side">
+                    <ul class="nav navbar-nav">
+                        <li class="btn-group nav-item d-lg-inline-flex d-none">
+                            <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
+                                title="Full Screen">
+                                <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                        </li>
+
+                        <!-- Notifications -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                                title="Notifications">
+                                <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                            <ul class="dropdown-menu animated bounceIn">
+
+                                <li class="header">
+                                    <div class="p-20">
+                                        <div class="flexbox">
+                                            <div>
+                                                <h4 class="mb-0 mt-0">Notifications</h4>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="text-danger">Clear All</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <ul class="menu sm-scrol">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
+                                                suscipit blandit.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
+                                                sapien elementum, in semper diam posuere.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
+                                                commodo porttitor pretium a erat.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
+                                                nisi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
+                                                dictum fermentum.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
+                                                interdum, at scelerisque ipsum imperdiet.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- User Account-->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
+                                title="User">
+                                <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+                            </a>
+                            <ul class="dropdown-menu animated flipInX">
+                                <li class="user-body">
+                                    <a class="dropdown-item" href="#" data-toggle="modal"
+                                        data-target="#modal-user-profile">
+                                        <i class="ti-user text-muted mr-2"></i> Profile
+                                    </a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal"
+                                        data-target="#change-password-modal">
+                                        <i class="ti-lock text-muted mr-2"></i> Change Password
+                                    </a>
+                                    <a class="dropdown-item" href="#" id="logout-link">
+                                        <i class="ti-lock text-muted mr-2"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
         <aside class="main-sidebar">
             <!-- sidebar-->
             <section class="sidebar position-relative">
@@ -65,13 +205,7 @@
 
                                 </a>
                             </li>
-                            <li>
-                                <a href="exam-result.html">
-                                    <i class="mdi mdi-note-multiple-outline"></i>
-                                    <span>Exam Result</span>
 
-                                </a>
-                            </li>
                             <li>
                                 <a href="bookmark-ques.html">
                                     <i class="mdi mdi-bookmark-outline"></i>
@@ -92,7 +226,7 @@
                                     <i class="mdi mdi-credit-card"></i>
                                     <span>Payment History</span>
                                 </a>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -286,6 +420,127 @@
         </div>
         <!-- content here  -->
     </div>
+    <!-- profile modal start  -->
+    <div class="modal center-modal fade" id="modal-user-profile" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">User Profile</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="profile-info">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="username">Username:</label>
+                                    <input type="text" id="username" name="username" class="form-control bg-transparent"
+                                        placeholder="Enter your username" required readonly>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" class="form-control bg-transparent"
+                                        placeholder="Enter your email address" required readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="age">Age:</label>
+                                    <input type="number" id="age" name="age" class="form-control bg-transparent"
+                                        placeholder="Enter your age" required readonly>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="gender">Gender:</label>
+                                    <select id="gender" name="gender" class="form-control bg-transparent" required
+                                        disabled>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="country">Country:</label>
+                                    <input type="text" id="country" name="country" class="form-control bg-transparent"
+                                        placeholder="Enter your country" required readonly>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="occupation">Occupation:</label>
+                                    <input type="text" id="occupation" name="occupation"
+                                        class="form-control bg-transparent" placeholder="Enter your occupation" required
+                                        readonly>
+                                </div>
+                            </div>
+                            <!-- Add more input fields here -->
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="toggleEditMode()">Edit
+                        Profile</button>
+                    <button id="update-profile-btn" type="button" class="btn btn-outline-success" style="display: none;"
+                        onclick="updateProfile()">Update Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- model end  -->
+    <!-- password model start here  -->
+    <div class="modal center-modal fade" id="change-password-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change Password</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
+                                </div>
+                                <input type="old-password" class="form-control pl-15 bg-transparent"
+                                    placeholder="Enter Your old Password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
+                                </div>
+                                <input type="new-password" class="form-control pl-15 bg-transparent"
+                                    placeholder="Enter your new Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control pl-15 bg-transparent"
+                                    placeholder="Re-enter your Password">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Change Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- model end  -->
     <footer class="main-footer">
         &copy; 2023 <a href="#">Zealcraft</a>. All Rights Reserved.
     </footer>
@@ -326,7 +581,7 @@
     <!-- EduAdmin App -->
 
     <script src="js/pages/data-table.js"></script>
-    
+
     <!-- script swal alert  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- end  -->
@@ -354,38 +609,38 @@
             });
         });
     </script>
- <!-- profile update  -->
- <script>
-    // JavaScript function to toggle edit mode
-    function toggleEditMode() {
-        var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].readOnly = !inputs[i].readOnly;
+    <!-- profile update  -->
+    <script>
+        // JavaScript function to toggle edit mode
+        function toggleEditMode() {
+            var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].readOnly = !inputs[i].readOnly;
+            }
+
+            // Show or hide the Update Profile button
+            var updateButton = document.getElementById('update-profile-btn');
+            updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
+
+            // Enable or disable the gender dropdown
+            var genderDropdown = document.getElementById('gender');
+            genderDropdown.disabled = !genderDropdown.disabled;
         }
 
-        // Show or hide the Update Profile button
-        var updateButton = document.getElementById('update-profile-btn');
-        updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
+        // JavaScript function to handle profile update
+        function updateProfile() {
+            // You can add your logic here to handle profile update
+            // For example, sending an AJAX request to update the profile data
 
-        // Enable or disable the gender dropdown
-        var genderDropdown = document.getElementById('gender');
-        genderDropdown.disabled = !genderDropdown.disabled;
-    }
-
-    // JavaScript function to handle profile update
-    function updateProfile() {
-        // You can add your logic here to handle profile update
-        // For example, sending an AJAX request to update the profile data
-
-        // Once the profile is updated, show a Swal alert
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: 'Profile updated successfully.',
-        });
-    }
-</script>
-<!-- profile update end  -->
+            // Once the profile is updated, show a Swal alert
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Profile updated successfully.',
+            });
+        }
+    </script>
+    <!-- profile update end  -->
 </body>
 
 </html>

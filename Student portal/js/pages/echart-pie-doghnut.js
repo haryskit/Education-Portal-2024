@@ -1,113 +1,117 @@
 $(function() {
     "use strict";
     // ------------------------------
-    // Basic pie chart
-    // ------------------------------
-    // based on prepared DOM, initialize echarts instance
-        var basicpieChart = echarts.init(document.getElementById('basic-pie'));
-        var option = {
-            // Add title
-                title: {
-                    text: 'A site user access source',
-                    subtext: 'Purely Fictitious',
-                    x: 'center'
-                },
 
-                // Add tooltip
-                tooltip: {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
-                },
 
-                // Add legend
-                legend: {
-                    orient: 'vertical',
-                    x: 'left',
-                    data: ['Direct Access', 'Mail Marketing', 'Union ad', 'Video ad', 'Search Engine']
-                },
+    // // Basic pie chart
+    // // ------------------------------
+    // // based on prepared DOM, initialize echarts instance
+    //     var basicpieChart = echarts.init(document.getElementById('basic-pie'));
+    //     var option = {
+    //         // Add title
+    //             title: {
+    //                 text: 'A site user access source',
+    //                 subtext: 'Purely Fictitious',
+    //                 x: 'center'
+    //             },
 
-                // Add custom colors
-                color: ['#689f38', '#38649f', '#389f99', '#ee1044', '#ff8f00'],
+    //             // Add tooltip
+    //             tooltip: {
+    //                 trigger: 'item',
+    //                 formatter: "{a} <br/>{b}: {c} ({d}%)"
+    //             },
 
-                // Display toolbox
-                toolbox: {
-                    show: true,
-                    orient: 'vertical',
-                    feature: {
-                        mark: {
-                            show: true,
-                            title: {
-                                mark: 'Markline switch',
-                                markUndo: 'Undo markline',
-                                markClear: 'Clear markline'
-                            }
-                        },
-                        dataView: {
-                            show: true,
-                            readOnly: false,
-                            title: 'View data',
-                            lang: ['View chart data', 'Close', 'Update']
-                        },
-                        magicType: {
-                            show: true,
-                            title: {
-                                pie: 'Switch to pies',
-                                funnel: 'Switch to funnel',
-                            },
-                            type: ['pie', 'funnel'],
-                            option: {
-                                funnel: {
-                                    x: '25%',
-                                    y: '20%',
-                                    width: '50%',
-                                    height: '70%',
-                                    funnelAlign: 'left',
-                                    max: 1548
-                                }
-                            }
-                        },
-                        restore: {
-                            show: true,
-                            title: 'Restore'
-                        },
-                        saveAsImage: {
-                            show: true,
-                            title: 'Same as image',
-                            lang: ['Save']
-                        }
-                    }
-                },
+    //             // Add legend
+    //             legend: {
+    //                 orient: 'vertical',
+    //                 x: 'left',
+    //                 data: ['Chemistry', 'Physics', 'LR and Eng', 'Maths', 'Hindi']
+    //             },
 
-                // Enable drag recalculate
-                calculable: true,
+    //             // Add custom colors
+    //             color: ['#689f38', '#38649f', '#389f99', '#ee1044', '#ff8f00'],
 
-                // Add series
-                series: [{
-                    name: 'Marketing',
-                    type: 'pie',
-                    radius: '70%',
-                    center: ['50%', '57.5%'],
-                    data: [
-                        {value: 335, name: 'Direct Access'},
-                        {value: 310, name: 'Mail Marketing'},
-                        {value: 234, name: 'Union ad'},
-                        {value: 135, name: 'Video ad'},
-                        {value: 1548, name: 'Search Engine'}
-                    ]
-                }]
-        };
+    //             // Display toolbox
+    //             toolbox: {
+    //                 show: true,
+    //                 orient: 'vertical',
+    //                 feature: {
+    //                     mark: {
+    //                         show: true,
+    //                         title: {
+    //                             mark: 'Markline switch',
+    //                             markUndo: 'Undo markline',
+    //                             markClear: 'Clear markline'
+    //                         }
+    //                     },
+    //                     dataView: {
+    //                         show: true,
+    //                         readOnly: false,
+    //                         title: 'View data',
+    //                         lang: ['View chart data', 'Close', 'Update']
+    //                     },
+    //                     magicType: {
+    //                         show: true,
+    //                         title: {
+    //                             pie: 'Switch to pies',
+    //                             funnel: 'Switch to funnel',
+    //                         },
+    //                         type: ['pie', 'funnel'],
+    //                         option: {
+    //                             funnel: {
+    //                                 x: '25%',
+    //                                 y: '20%',
+    //                                 width: '50%',
+    //                                 height: '70%',
+    //                                 funnelAlign: 'left',
+    //                                 max: 1548
+    //                             }
+    //                         }
+    //                     },
+    //                     restore: {
+    //                         show: true,
+    //                         title: 'Restore'
+    //                     },
+    //                     saveAsImage: {
+    //                         show: true,
+    //                         title: 'Same as image',
+    //                         lang: ['Save']
+    //                     }
+    //                 }
+    //             },
+
+    //             // Enable drag recalculate
+    //             calculable: true,
+
+    //             // Add series
+    //             series: [{
+    //                 name: 'Marketing',
+    //                 type: 'pie',
+    //                 radius: '70%',
+    //                 center: ['50%', '57.5%'],
+    //                 data: [
+    //                     {value: 335, name: 'Chemistry'},
+    //                     {value: 310, name: 'Physics'},
+    //                     {value: 234, name: 'LR and Eng'},
+    //                     {value: 135, name: 'Maths'},
+    //                     {value: 1548, name: 'Hindi'}
+    //                 ]
+    //             }]
+    //     };
     
-        basicpieChart.setOption(option);
+    //     basicpieChart.setOption(option);
+    // // ------------------------------
+    // // Basic pie chart
     // ------------------------------
-    // Basic pie chart
-    // ------------------------------
+
+
+
     // based on prepared DOM, initialize echarts instance
         var basicdoughnutChart = echarts.init(document.getElementById('basic-doughnut'));
         var option = {
             // Add title
                 title: {
-                    text: 'A site user access source',
-                    subtext: 'Purely Fictitious',
+                    text: 'A Full Performance Chart',
                     x: 'center'
                 },
 
@@ -115,7 +119,7 @@ $(function() {
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-                    data: ['Direct Access', 'Mail Marketing', 'Union ad', 'Video ad', 'Search Engine']
+                    data: ['Chemistry', 'Physics', 'LR and Eng', 'Maths', 'Hindi']
                 },
 
                 // Add custom colors
@@ -149,12 +153,12 @@ $(function() {
                             type: ['pie', 'funnel'],
                             option: {
                                 funnel: {
-                                    x: '25%',
-                                    y: '20%',
-                                    width: '50%',
-                                    height: '70%',
+                                    x: '10%',
+                                    y: '10%',
+                                    width: '30%',
+                                    height: '50%',
                                     funnelAlign: 'left',
-                                    max: 1548
+                                    max: 100
                                 }
                             }
                         },
@@ -192,22 +196,22 @@ $(function() {
                             emphasis: {
                                 label: {
                                     show: true,
-                                    formatter: '{b}' + '\n\n' + '{c} ({d}%)',
+                                    formatter: '{b}' + '\n\n' + '{c}',
                                     position: 'center',
                                     textStyle: {
                                         fontSize: '17',
-                                        fontWeight: '500'
+                                        fontWeight: '600'
                                     }
                                 }
                             }
                         },
 
                         data: [
-                            {value: 335, name: 'Direct Access'},
-                        	{value: 310, name: 'Mail Marketing'},
-                        	{value: 234, name: 'Union ad'},
-                        	{value: 135, name: 'Video ad'},
-                        	{value: 1548, name: 'Search Engine'}
+                            {value: 70, name: 'Chemistry'},
+                        	{value: 50, name: 'Physics'},
+                        	{value: 50, name: 'LR and Eng'},
+                        	{value: 40, name: 'Maths'},
+                        	{value: 80, name: 'Hindi'}
                         ]
                     }
                 ]
@@ -252,11 +256,11 @@ $(function() {
                     radius : '55%',
                     center: ['50%', '50%'],
                     data:[
-                        {value:335, name:'Direct Access'},
-                        {value:310, name:'Mail Marketing'},
-                        {value:274, name:'Union ad'},
-                        {value:235, name:'Video ad'},
-                        {value:400, name:'Search Engine'}
+                        {value:335, name:'Chemistry'},
+                        {value:310, name:'Physics'},
+                        {value:274, name:'LR and Eng'},
+                        {value:235, name:'Maths'},
+                        {value:400, name:'Hindi'}
                     ].sort(function (a, b) { return a.value - b.value; }),
                     roseType: 'radius',
                     label: {
@@ -311,7 +315,7 @@ $(function() {
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-                    data: ['Direct','Marketing Advertising','Search Engine','Mail Marketing','Union ad','Video ad','Baidu','Google','Bing','Other']
+                    data: ['Direct','Marketing Advertising','Hindi','Physics','LR and Eng','Maths','Baidu','Google','Bing','Other']
                 },
 
                 // Add custom colors
@@ -396,7 +400,7 @@ $(function() {
                         data: [
                             {value: 535, name: 'Direct'},
                             {value: 679, name: 'Marketing ad'},
-                            {value: 1548, name: 'Search Engine'}
+                            {value: 1548, name: 'Hindi'}
                         ]
                     },
 
@@ -416,9 +420,9 @@ $(function() {
 
                         data: [
                             {value:335, name: 'Direct'},
-							{value:310, name: 'Mail Marketing'},
-							{value:234, name: 'Union ad'},
-							{value:135, name: 'Video ad'},
+							{value:310, name: 'Physics'},
+							{value:234, name: 'LR and Eng'},
+							{value:135, name: 'Maths'},
 							{value:1048, name: 'Baidu'},
 							{value:251, name:'Google'},
 							{value:147, name: 'Bing'},

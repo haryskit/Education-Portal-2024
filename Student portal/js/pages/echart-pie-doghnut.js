@@ -180,7 +180,7 @@ $(function() {
                 // Add series
                 series: [
                     {
-                        name: 'Marketing',
+                        name: 'All[BITSAT]',
                         type: 'pie',
                         radius: ['50%', '70%'],
                         center: ['50%', '57.5%'],

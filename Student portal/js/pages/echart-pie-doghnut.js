@@ -109,11 +109,7 @@ $(function() {
     // based on prepared DOM, initialize echarts instance
         var basicdoughnutChart = echarts.init(document.getElementById('basic-doughnut'));
         var option = {
-            // Add title
-                title: {
-                    text: 'A Full Performance Chart',
-                    x: 'center'
-                },
+            // Add title 
 
                 // Add legend
                 legend: {

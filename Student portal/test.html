@@ -18,7 +18,47 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
     <style>
-          
+        .avatar-answered {
+            border: 1px solid black;
+            background-color: #2beb52;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            margin-left: 0.5rem;
+        }
+
+        .avatar-not-answered {
+            border: 1px solid black;
+            background-color: #eb2b2b;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            margin-left: 0.5rem;
+        }
+
+        .avatar-not-visited {
+            border: 1px solid black;
+            background-color: #f7f7f7;
+            color: #010101;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            margin-left: 0.5rem;
+        }
+
+        .mark-for-review {
+            border-radius: 50%;
+            background-color: #2969e8;
+            color: #ffffff;
+            width: 40px;
+            height: 35px;
+            text-align: center;
+            /* padding-right: 10px; */
+            /* margin-left: 0.5rem; */
+        }
+
         .form-check-inline .form-check-input {
             display: inline-block;
             margin-right: 10px;
@@ -67,10 +107,7 @@
             .exam-header-hidden {
                 display: none;
             }
-
-            .right-div {
-                overflow-y: auto;
-            }
+ 
 
         }
 
@@ -90,8 +127,62 @@
             position: relative;
             overflow-y: auto;
             /* Enable vertical scrolling if content overflows */
-            height: 90vh;
+            /* height: 90vh; */
             /* Adjust as needed */
+        }
+
+        @media (max-width: 768px) {
+            .right-div {
+                width: 100%;
+                /* Make the right div full width on mobile */
+            }
+
+            .left-div {
+                width: 0;
+                /* Hide the left div on mobile */
+            }
+
+            .content-wrapper {
+                height: auto;
+                /* Adjust height to fit content on mobile */
+            }
+
+            .box-header.with-border {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .box-header.with-border .box-title {
+                width: 100%;
+                /* Make the title full width on mobile */
+                margin-bottom: 10px;
+                /* Adjust spacing */
+            }
+
+            .box-header.with-border .d-flex.align-items-center {
+                width: 100%;
+                /* Make badges full width on mobile */
+            }
+
+            .box-header.with-border .badge {
+                margin-top: 5px;
+                /* Adjust spacing */
+                margin-left: 0 !important;
+                /* Remove left margin */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .right-div {
+                width: 33.33%;
+                /* Set width back to original on larger screens */
+            }
+
+            .left-div {
+                width: 66.67%;
+                /* Set width back to original on larger screens */
+            }
         }
     </style>
 </head>
@@ -184,7 +275,7 @@
                                 <i class="mdi mdi-credit-card"></i>
                                 <span>Payment History</span>
                             </a>
-                        </li> 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -768,32 +859,34 @@
                             <div class=" d-flex flex-wrap ">
                                 <div class="col-md-6 col-lg-6 col-sm-6 mt-4 d-flex align-items-center">
                                     <span class="badge badge-xl badge-primary ">10</span>
-                                    <div class="d-flex flex-column justify-content-center ml-2 mr-1">
+                                    <div class="d-flex flex-column justify-content-center ml-3">
                                         <h6>Answered</h6>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6 col-lg-6 col-sm-6 mt-4 d-flex align-items-center">
                                     <span class="badge badge-xl badge-success ">10</span>
-                                    <div class="d-flex flex-column justify-content-center ml-2 mr-1">
+                                    <div class="d-flex flex-column justify-content-center ml-3">
                                         <h6>Not Answered</h6>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-sm-6 mt-4 d-flex align-items-center">
                                     <span class="badge badge-xl badge-danger ">10</span>
-                                    <div class="d-flex flex-column justify-content-center ml-2 mr-1">
+                                    <div class="d-flex flex-column justify-content-center ml-3">
                                         <h6 class="text-black">Not Visited</h6>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-sm-6 mt-4 d-flex ">
                                     <span class="badge badge-xl badge-info ">10</span>
-                                    <div class="d-flex flex-column justify-content-center ml-2 mr-1">
+                                    <div class="d-flex flex-column justify-content-center ml-3">
                                         <h6> Mark for review</h6>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-12 col-sm-12 mt-4 d-flex align-items-center">
-                                    <span class="badge badge-xl badge-info ">10</span>
-                                    <div class="d-flex flex-column justify-content-center ml-2 mr-1">
+                                    <div class="mark-for-review" style="height: 40px;">
+                                        <span class="badge text-center mt-2">1</span>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ml-3">
                                         <h6> Answered and Mark for Review</h6>
                                     </div>
                                 </div>
@@ -1137,8 +1230,8 @@
             });
         });
     </script>
-     <!-- profile update  -->
-     <script>
+    <!-- profile update  -->
+    <script>
         // JavaScript function to toggle edit mode
         function toggleEditMode() {
             var inputs = document.querySelectorAll('.profile-info input, .profile-info select');

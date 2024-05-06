@@ -160,6 +160,27 @@
             margin-left: 8px;
         }
     </style>
+    <style>
+        /* CSS for Mobile View */
+        @media (max-width: 768px) {
+            .left-div {
+                width: 100%;
+                /* Set left-div to full width */
+                margin-bottom: 20px;
+                margin-right: 20px;
+                /* Add margin at bottom */
+            }
+
+            .right-div {
+                width: 100%;
+                padding: 15px;
+                /* Set right-div to full width */
+            }
+            .hide-show-icon { 
+            display: none; 
+        }
+        }
+    </style>
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
@@ -396,9 +417,9 @@
                             <ol class="breadcrumb" style="background-color: #fafbfd;">
                                 <li class="breadcrumb-item"><a href="index.html"><i
                                             class="mdi mdi-home-outline"></i></a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="my-courses.html">Courses</a>
+                                <li class="breadcrumb-item" aria-current="page"><a href="my-course3.html">Courses</a>
                                 </li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="course-details.html">Course
+                                <li class="breadcrumb-item" aria-current="page"><a href="course-detail3.html">Course
                                         Details</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Video material</li>
 
@@ -407,287 +428,298 @@
                     </div>
 
                     <!-- content start here  -->
-                    <div class="row">
-                        <div class="left-div ml-3" id="leftDiv">
-                            <div>
-                                <ul class="nav nav-tabs nav-fill" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#subject-1" role="tab">
-                                            <span><i class="fa fa-gears (alias)"></i></span> <!-- Icon for Physics -->
-                                            <span class="hidden-xs-down ml-15">PHYSICS</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#subject-2" role="tab">
-                                            <span><i class="fa fa-thermometer-full"></i></span>
-                                            <!-- Icon for Chemistry -->
-                                            <span class="hidden-xs-down ml-15">CHEMISTRY</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#subject-3" role="tab">
-                                            <span><i class="ion-compose"></i></span> <!-- Icon for English -->
-                                            <span class="hidden-xs-down ml-15">ENGLISH</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#subject-4" role="tab">
-                                            <span><i class="ion-calculator"></i></span> <!-- Icon for Maths -->
-                                            <span class="hidden-xs-down ml-15">MATHS</span>
-                                        </a>
-                                    </li>
-                                    <li class="hide-show-icon mr-3" onclick="toggleDivs()">
-                                        <i class="mdi mdi-code-greater-than icon-large mt-1"></i>
-                                    </li>
-                                </ul>
+                    <div class="container">
+                        <div class="row">
+                            <div class="left-div ml-3" id="leftDiv">
+                                <div>
+                                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#subject-1" role="tab">
+                                                <span><i class="fa fa-gears (alias)"></i></span>
+                                                <!-- Icon for Physics -->
+                                                <span class="hidden-xs-down ml-15">PHYSICS</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#subject-2" role="tab">
+                                                <span><i class="fa fa-thermometer-full"></i></span>
+                                                <!-- Icon for Chemistry -->
+                                                <span class="hidden-xs-down ml-15">CHEMISTRY</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#subject-3" role="tab">
+                                                <span><i class="ion-compose"></i></span> <!-- Icon for English -->
+                                                <span class="hidden-xs-down ml-15">ENGLISH</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#subject-4" role="tab">
+                                                <span><i class="ion-calculator"></i></span> <!-- Icon for Maths -->
+                                                <span class="hidden-xs-down ml-15">MATHS</span>
+                                            </a>
+                                        </li>
+                                        <li class="hide-show-icon mr-3" onclick="toggleDivs()">
+                                            <i class="mdi mdi-code-greater-than icon-large mt-1"></i>
+                                        </li>
+                                    </ul>
 
-                                <div style="overflow-y: auto;  height: 500px;">
-                                    <div class="tab-content tabcontent-border">
+                                    <div style="overflow-y: auto;  height: 500px;">
                                         <div class="tab-content tabcontent-border">
-                                            <div class="tab-pane active" id="subject-1" role="tabpanel">
-                                                <!-- nap pill 1  -->
-                                                <div class="row-element">
-                                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                                        <div class="timeline-item mt-4">
+                                            <div class="tab-content tabcontent-border">
+                                                <div class="tab-pane active" id="subject-1" role="tabpanel">
+                                                    <!-- nap pill 1  -->
+                                                    <div class="row-element">
+                                                        <div class="col-md-12 col-lg-12 col-sm-12">
+                                                            <div class="timeline-item mt-4">
 
-                                                            <div class="timeline-event">
-                                                                <h4>Physics</h4>
-                                                                <div class="timeline-heading">
-                                                                    <h4 class="timeline-title"><a href="#">Khan
-                                                                            Sir
-                                                                        </a><small>
-                                                                            shared a video</small></h4>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div
-                                                                        class="embed-responsive embed-responsive-16by9">
-                                                                        <iframe width="300" height="200"
-                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
-                                                                            frameborder="0" allowfullscreen></iframe>
+                                                                <div class="timeline-event">
+                                                                    <h4>Physics</h4>
+                                                                    <div class="timeline-heading">
+                                                                        <h4 class="timeline-title"><a href="#">Khan
+                                                                                Sir
+                                                                            </a><small>
+                                                                                shared a video</small></h4>
+                                                                    </div>
+                                                                    <div class="timeline-body">
+                                                                        <div
+                                                                            class="embed-responsive embed-responsive-16by9">
+                                                                            <iframe width="300" height="200"
+                                                                                src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                                frameborder="0"
+                                                                                allowfullscreen></iframe>
 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-body">
+                                                                        <h4><a class="hover-primary" href="#">Electoral
+                                                                                Bonds |
+                                                                                Supreme Court Struck Down Electoral
+                                                                                Bond |
+                                                                                ADR |
+                                                                                Election Commission |</a></h4>
+                                                                        <p>October 22, 2018</p>
+
+                                                                        <p>Here you will find General knowledge,
+                                                                            Current
+                                                                            Affairs,
+                                                                            Science & Technology, History, Polity,
+                                                                            Geography,
+                                                                            Economics, Physics, Chemistry, Biology,
+                                                                            Computer,
+                                                                            Science & Technology, Defense, Space
+                                                                            Technology,
+                                                                            Indian
+                                                                            Map & World Map, Social education video.
+                                                                        </p>
+
+                                                                        <div class="flexbox align-items-center mt-3">
+                                                                            <a class="btn btn-sm btn-bold btn-primary"
+                                                                                href="#">View
+                                                                                More >></a>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary"
+                                                                                data-toggle="modal"
+                                                                                data-target="#modal-center">
+                                                                                Raise A Doubt
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="box-body">
-                                                                    <h4><a class="hover-primary" href="#">Electoral
-                                                                            Bonds |
-                                                                            Supreme Court Struck Down Electoral
-                                                                            Bond |
-                                                                            ADR |
-                                                                            Election Commission |</a></h4>
-                                                                    <p>October 22, 2018</p>
 
-                                                                    <p>Here you will find General knowledge,
-                                                                        Current
-                                                                        Affairs,
-                                                                        Science & Technology, History, Polity,
-                                                                        Geography,
-                                                                        Economics, Physics, Chemistry, Biology,
-                                                                        Computer,
-                                                                        Science & Technology, Defense, Space
-                                                                        Technology,
-                                                                        Indian
-                                                                        Map & World Map, Social education video.
-                                                                    </p>
-
-                                                                    <div class="flexbox align-items-center mt-3">
-                                                                        <a class="btn btn-sm btn-bold btn-primary"
-                                                                            href="#">View
-                                                                            More >></a>
-                                                                        <button type="button" class="btn btn-primary"
-                                                                            data-toggle="modal"
-                                                                            data-target="#modal-center">
-                                                                            Raise A Doubt
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="tab-pane" id="subject-2" role="tabpanel">
-                                                <!-- nap pill 2  -->
-                                                <div class="row-element">
-                                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                                        <div class="timeline-item mt-4">
+                                                <div class="tab-pane" id="subject-2" role="tabpanel">
+                                                    <!-- nap pill 2  -->
+                                                    <div class="row-element">
+                                                        <div class="col-md-12 col-lg-12 col-sm-12">
+                                                            <div class="timeline-item mt-4">
 
-                                                            <div class="timeline-event">
-                                                                <h4>Chemistry</h4>
-                                                                <div class="timeline-heading">
-                                                                    <h4 class="timeline-title"><a href="#">Khan
-                                                                            Sir
-                                                                        </a><small>
-                                                                            shared a video</small></h4>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div
-                                                                        class="embed-responsive embed-responsive-16by9">
-                                                                        <iframe width="300" height="200"
-                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
-                                                                            frameborder="0" allowfullscreen></iframe>
+                                                                <div class="timeline-event">
+                                                                    <h4>Chemistry</h4>
+                                                                    <div class="timeline-heading">
+                                                                        <h4 class="timeline-title"><a href="#">Khan
+                                                                                Sir
+                                                                            </a><small>
+                                                                                shared a video</small></h4>
+                                                                    </div>
+                                                                    <div class="timeline-body">
+                                                                        <div
+                                                                            class="embed-responsive embed-responsive-16by9">
+                                                                            <iframe width="300" height="200"
+                                                                                src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                                frameborder="0"
+                                                                                allowfullscreen></iframe>
 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-body">
+                                                                        <h4><a class="hover-primary" href="#">Electoral
+                                                                                Bonds |
+                                                                                Supreme Court Struck Down Electoral
+                                                                                Bond |
+                                                                                ADR |
+                                                                                Election Commission |</a></h4>
+                                                                        <p>October 22, 2018</p>
+
+                                                                        <p>Here you will find General knowledge,
+                                                                            Current
+                                                                            Affairs,
+                                                                            Science & Technology, History, Polity,
+                                                                            Geography,
+                                                                            Economics, Physics, Chemistry, Biology,
+                                                                            Computer,
+                                                                            Science & Technology, Defense, Space
+                                                                            Technology,
+                                                                            Indian
+                                                                            Map & World Map, Social education video.
+                                                                        </p>
+
+                                                                        <div class="flexbox align-items-center mt-3">
+                                                                            <a class="btn btn-sm btn-bold btn-primary"
+                                                                                href="#">View
+                                                                                More >></a>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary"
+                                                                                data-toggle="modal"
+                                                                                data-target="#modal-center">
+                                                                                Raise A Doubt
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="box-body">
-                                                                    <h4><a class="hover-primary" href="#">Electoral
-                                                                            Bonds |
-                                                                            Supreme Court Struck Down Electoral
-                                                                            Bond |
-                                                                            ADR |
-                                                                            Election Commission |</a></h4>
-                                                                    <p>October 22, 2018</p>
 
-                                                                    <p>Here you will find General knowledge,
-                                                                        Current
-                                                                        Affairs,
-                                                                        Science & Technology, History, Polity,
-                                                                        Geography,
-                                                                        Economics, Physics, Chemistry, Biology,
-                                                                        Computer,
-                                                                        Science & Technology, Defense, Space
-                                                                        Technology,
-                                                                        Indian
-                                                                        Map & World Map, Social education video.
-                                                                    </p>
-
-                                                                    <div class="flexbox align-items-center mt-3">
-                                                                        <a class="btn btn-sm btn-bold btn-primary"
-                                                                            href="#">View
-                                                                            More >></a>
-                                                                        <button type="button" class="btn btn-primary"
-                                                                            data-toggle="modal"
-                                                                            data-target="#modal-center">
-                                                                            Raise A Doubt
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="tab-pane" id="subject-3" role="tabpanel">
-                                                <!-- nap pill 3 -->
-                                                <div class="row-element">
-                                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                                        <div class="timeline-item mt-4">
+                                                <div class="tab-pane" id="subject-3" role="tabpanel">
+                                                    <!-- nap pill 3 -->
+                                                    <div class="row-element">
+                                                        <div class="col-md-12 col-lg-12 col-sm-12">
+                                                            <div class="timeline-item mt-4">
 
-                                                            <div class="timeline-event">
-                                                                <h4>English</h4>
-                                                                <div class="timeline-heading">
-                                                                    <h4 class="timeline-title"><a href="#">Khan
-                                                                            Sir
-                                                                        </a><small>
-                                                                            shared a video</small></h4>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div
-                                                                        class="embed-responsive embed-responsive-16by9">
-                                                                        <iframe width="300" height="200"
-                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
-                                                                            frameborder="0" allowfullscreen></iframe>
+                                                                <div class="timeline-event">
+                                                                    <h4>English</h4>
+                                                                    <div class="timeline-heading">
+                                                                        <h4 class="timeline-title"><a href="#">Khan
+                                                                                Sir
+                                                                            </a><small>
+                                                                                shared a video</small></h4>
+                                                                    </div>
+                                                                    <div class="timeline-body">
+                                                                        <div
+                                                                            class="embed-responsive embed-responsive-16by9">
+                                                                            <iframe width="300" height="200"
+                                                                                src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                                frameborder="0"
+                                                                                allowfullscreen></iframe>
 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-body">
+                                                                        <h4><a class="hover-primary" href="#">Electoral
+                                                                                Bonds |
+                                                                                Supreme Court Struck Down Electoral
+                                                                                Bond |
+                                                                                ADR |
+                                                                                Election Commission |</a></h4>
+                                                                        <p>October 22, 2018</p>
+
+                                                                        <p>Here you will find General knowledge,
+                                                                            Current
+                                                                            Affairs,
+                                                                            Science & Technology, History, Polity,
+                                                                            Geography,
+                                                                            Economics, Physics, Chemistry, Biology,
+                                                                            Computer,
+                                                                            Science & Technology, Defense, Space
+                                                                            Technology,
+                                                                            Indian
+                                                                            Map & World Map, Social education video.
+                                                                        </p>
+
+                                                                        <div class="flexbox align-items-center mt-3">
+                                                                            <a class="btn btn-sm btn-bold btn-primary"
+                                                                                href="#">View
+                                                                                More >></a>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary"
+                                                                                data-toggle="modal"
+                                                                                data-target="#modal-center">
+                                                                                Raise A Doubt
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="box-body">
-                                                                    <h4><a class="hover-primary" href="#">Electoral
-                                                                            Bonds |
-                                                                            Supreme Court Struck Down Electoral
-                                                                            Bond |
-                                                                            ADR |
-                                                                            Election Commission |</a></h4>
-                                                                    <p>October 22, 2018</p>
 
-                                                                    <p>Here you will find General knowledge,
-                                                                        Current
-                                                                        Affairs,
-                                                                        Science & Technology, History, Polity,
-                                                                        Geography,
-                                                                        Economics, Physics, Chemistry, Biology,
-                                                                        Computer,
-                                                                        Science & Technology, Defense, Space
-                                                                        Technology,
-                                                                        Indian
-                                                                        Map & World Map, Social education video.
-                                                                    </p>
-
-                                                                    <div class="flexbox align-items-center mt-3">
-                                                                        <a class="btn btn-sm btn-bold btn-primary"
-                                                                            href="#">View
-                                                                            More >></a>
-                                                                        <button type="button" class="btn btn-primary"
-                                                                            data-toggle="modal"
-                                                                            data-target="#modal-center">
-                                                                            Raise A Doubt
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="tab-pane" id="subject-4" role="tabpanel">
-                                                <!-- nap pill 4  -->
-                                                <div class="row-element">
-                                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                                        <div class="timeline-item mt-4">
-                                                            <h4>Maths</h4>
-                                                            <div class="timeline-event">
+                                                <div class="tab-pane" id="subject-4" role="tabpanel">
+                                                    <!-- nap pill 4  -->
+                                                    <div class="row-element">
+                                                        <div class="col-md-12 col-lg-12 col-sm-12">
+                                                            <div class="timeline-item mt-4">
+                                                                <h4>Maths</h4>
+                                                                <div class="timeline-event">
 
-                                                                <div class="timeline-heading">
-                                                                    <h4 class="timeline-title"><a href="#">Khan
-                                                                            Sir
-                                                                        </a><small>
-                                                                            shared a video</small></h4>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div
-                                                                        class="embed-responsive embed-responsive-16by9">
-                                                                        <iframe width="300" height="200"
-                                                                            src="https://www.youtube.com/embed/8Q0NuYOa6B0"
-                                                                            frameborder="0" allowfullscreen></iframe>
+                                                                    <div class="timeline-heading">
+                                                                        <h4 class="timeline-title"><a href="#">Khan
+                                                                                Sir
+                                                                            </a><small>
+                                                                                shared a video</small></h4>
+                                                                    </div>
+                                                                    <div class="timeline-body">
+                                                                        <div
+                                                                            class="embed-responsive embed-responsive-16by9">
+                                                                            <iframe width="300" height="200"
+                                                                                src="https://www.youtube.com/embed/8Q0NuYOa6B0"
+                                                                                frameborder="0"
+                                                                                allowfullscreen></iframe>
 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-body">
+                                                                        <h4><a class="hover-primary" href="#">Electoral
+                                                                                Bonds |
+                                                                                Supreme Court Struck Down Electoral
+                                                                                Bond |
+                                                                                ADR |
+                                                                                Election Commission |</a></h4>
+                                                                        <p>October 22, 2018</p>
+
+                                                                        <p>Here you will find General knowledge,
+                                                                            Current
+                                                                            Affairs,
+                                                                            Science & Technology, History, Polity,
+                                                                            Geography,
+                                                                            Economics, Physics, Chemistry, Biology,
+                                                                            Computer,
+                                                                            Science & Technology, Defense, Space
+                                                                            Technology,
+                                                                            Indian
+                                                                            Map & World Map, Social education video.
+                                                                        </p>
+
+                                                                        <div class="flexbox align-items-center mt-3">
+                                                                            <a class="btn btn-sm btn-bold btn-primary"
+                                                                                href="#">View
+                                                                                More >></a>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary"
+                                                                                data-toggle="modal"
+                                                                                data-target="#modal-center">
+                                                                                Raise A Doubt
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="box-body">
-                                                                    <h4><a class="hover-primary" href="#">Electoral
-                                                                            Bonds |
-                                                                            Supreme Court Struck Down Electoral
-                                                                            Bond |
-                                                                            ADR |
-                                                                            Election Commission |</a></h4>
-                                                                    <p>October 22, 2018</p>
 
-                                                                    <p>Here you will find General knowledge,
-                                                                        Current
-                                                                        Affairs,
-                                                                        Science & Technology, History, Polity,
-                                                                        Geography,
-                                                                        Economics, Physics, Chemistry, Biology,
-                                                                        Computer,
-                                                                        Science & Technology, Defense, Space
-                                                                        Technology,
-                                                                        Indian
-                                                                        Map & World Map, Social education video.
-                                                                    </p>
-
-                                                                    <div class="flexbox align-items-center mt-3">
-                                                                        <a class="btn btn-sm btn-bold btn-primary"
-                                                                            href="#">View
-                                                                            More >></a>
-                                                                        <button type="button" class="btn btn-primary"
-                                                                            data-toggle="modal"
-                                                                            data-target="#modal-center">
-                                                                            Raise A Doubt
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -696,95 +728,95 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="right-div" id="rightDiv">
-                            <!-- <div class=" d-flex flex-wrap "> -->
-                            <div class="tab-content">
-                                <div id="navpills-1" class="tab-pane active">
+                            <div class="right-div" id="rightDiv">
+                                <!-- <div class=" d-flex flex-wrap "> -->
+                                <div class="tab-content">
+                                    <div id="navpills-1" class="tab-pane active">
 
-                                    <div class="btn-light">
-                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
-                                            <h5 class="card-title">Maths Class Videos </h5>
-                                            <button class="btn ml-auto" data-toggle="collapse"
-                                                data-target="#collapseInfo1" aria-expanded="false"
-                                                aria-controls="collapseInfo1">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </button>
+                                        <div class="btn-light">
+                                            <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                                <h5 class="card-title">Maths Class Videos </h5>
+                                                <button class="btn ml-auto" data-toggle="collapse"
+                                                    data-target="#collapseInfo1" aria-expanded="false"
+                                                    aria-controls="collapseInfo1">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </button>
+                                            </div>
+                                            <div id="collapseInfo1" class="collapse"> <!-- Add 'show' class here -->
+                                                <div
+                                                    class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <a href="#">
+                                                            <p><strong>Exploring the transformative power of
+                                                                    education
+                                                                    in shaping
+                                                                    individuals and societies.</strong></p>
+                                                            <h6>individuals and societies</h6>
+                                                            <i class="fa fa-tv"></i> 2 min
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div id="collapseInfo1" class="collapse"> <!-- Add 'show' class here -->
-                                            <div
-                                                class="card-body border-bottom d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <a href="#">
-                                                        <p><strong>Exploring the transformative power of
-                                                                education
-                                                                in shaping
-                                                                individuals and societies.</strong></p>
-                                                        <h6>individuals and societies</h6>
-                                                        <i class="fa fa-tv"></i> 2 min
-                                                    </a>
+                                        <!-- card end  -->
+                                        <div class="btn-light" style="border-radius: 10px;">
+                                            <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                                <h5 class="card-title">Maths Class Videos </h5>
+                                                <button class="btn ml-auto" data-toggle="collapse"
+                                                    data-target="#collapseInfo2" aria-expanded="false"
+                                                    aria-controls="collapseInfo2">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </button>
+                                            </div>
+                                            <div id="collapseInfo2" class="collapse">
+                                                <div
+                                                    class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <a href="#">
+                                                            <p><strong>Exploring the transformative power of
+                                                                    education
+                                                                    in shaping
+                                                                    individuals and societies.</strong></p>
+                                                            <h6>individuals and societies</h6>
+                                                            <i class="fa fa-tv"></i> 2 min
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-
-                                    </div>
-                                    <!-- card end  -->
-                                    <div class="btn-light" style="border-radius: 10px;">
-                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
-                                            <h5 class="card-title">Maths Class Videos </h5>
-                                            <button class="btn ml-auto" data-toggle="collapse"
-                                                data-target="#collapseInfo2" aria-expanded="false"
-                                                aria-controls="collapseInfo2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </button>
-                                        </div>
-                                        <div id="collapseInfo2" class="collapse">
-                                            <div
-                                                class="card-body border-bottom d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <a href="#">
-                                                        <p><strong>Exploring the transformative power of
-                                                                education
-                                                                in shaping
-                                                                individuals and societies.</strong></p>
-                                                        <h6>individuals and societies</h6>
-                                                        <i class="fa fa-tv"></i> 2 min
-                                                    </a>
+                                        <!-- card 2 end  -->
+                                        <div class=" btn-light">
+                                            <div class="card-header-video d-flex align-items-center bg-primary-light">
+                                                <h5 class="card-title">Maths Class Videos </h5>
+                                                <button class="btn ml-auto" data-toggle="collapse"
+                                                    data-target="#collapseInfo3" aria-expanded="false"
+                                                    aria-controls="collapseInfo3">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </button>
+                                            </div>
+                                            <div id="collapseInfo3" class="collapse">
+                                                <div
+                                                    class="card-body border-bottom d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <a href="#">
+                                                            <p><strong>Exploring the transformative power of
+                                                                    education
+                                                                    in shaping
+                                                                    individuals and societies.</strong></p>
+                                                            <h6>individuals and societies</h6>
+                                                            <i class="fa fa-tv"></i> 2 min
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!-- card 2 end  -->
-                                    <div class=" btn-light">
-                                        <div class="card-header-video d-flex align-items-center bg-primary-light">
-                                            <h5 class="card-title">Maths Class Videos </h5>
-                                            <button class="btn ml-auto" data-toggle="collapse"
-                                                data-target="#collapseInfo3" aria-expanded="false"
-                                                aria-controls="collapseInfo3">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </button>
-                                        </div>
-                                        <div id="collapseInfo3" class="collapse">
-                                            <div
-                                                class="card-body border-bottom d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <a href="#">
-                                                        <p><strong>Exploring the transformative power of
-                                                                education
-                                                                in shaping
-                                                                individuals and societies.</strong></p>
-                                                        <h6>individuals and societies</h6>
-                                                        <i class="fa fa-tv"></i> 2 min
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="row"> -->
@@ -1046,7 +1078,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-
         function toggleDivs() {
             var leftDiv = document.getElementById('leftDiv');
             var rightDiv = document.getElementById('rightDiv');
@@ -1063,7 +1094,7 @@
     </script>
 
     <!-- script swal alert  -->
-   
+
     <!-- end  -->
     <script>
         // Add an event listener to the logout link

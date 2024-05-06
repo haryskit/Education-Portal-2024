@@ -189,17 +189,17 @@ $(function() {
                                     show: true
                                 }
                             },
-                            emphasis: {
-                                label: {
-                                    show: true,
-                                    formatter: '{b}' + '\n\n' + '{c}',
-                                    position: 'center',
-                                    textStyle: {
-                                        fontSize: '17',
-                                        fontWeight: '600'
-                                    }
-                                }
-                            }
+                            // emphasis: {
+                            //     label: {
+                            //         show: true,
+                            //         formatter: '{b}' + '\n\n' + '{c}',
+                            //         position: 'center',
+                            //         textStyle: {
+                            //             fontSize: '17',
+                            //             fontWeight: '600'
+                            //         }
+                            //     }
+                            // }
                         },
 
                         data: [

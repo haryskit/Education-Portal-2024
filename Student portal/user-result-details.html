@@ -455,7 +455,7 @@
                     </div>
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-lg-5 col-md-12 col-sm-12"> <!-- Adjusted column width -->
+                            <div class="col-lg-7 col-md-12 col-sm-12"> <!-- Adjusted column width -->
                                 <div class="table-responsive">
                                     <table style="clear: both" class="table table-bordered table-striped" id="user">
                                         <tbody>
@@ -512,11 +512,63 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="col-lg-7 col-md-7 col-sm-10">
+                            <div class="col-lg-5 col-md-5 col-sm-10">
                                 <div class="box">
-                                    <h2 class="text-center">Full Exam Details</h2>
-                                    <div class="box-body analytics-info">
-                                        <div id="basic-doughnut" style="height:300px;"></div>
+                                    <div class="box-header with-border">
+                                        <h5 class="box-title p-3">Course 1</h5>
+                                        <div class="box-tools pull-right">
+                                            <ul class="card-controls">
+                                                <li class="dropdown">
+                                                    <a data-toggle="dropdown" href="#"><i
+                                                            class="ion-android-more-vertical"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item active" href="#">Today</a>
+                                                        <a class="dropdown-item" href="#">Yesterday</a>
+                                                        <a class="dropdown-item" href="#">Last week</a>
+                                                        <a class="dropdown-item" href="#">Last month</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="" class="link card-btn-reload" data-toggle="tooltip"
+                                                        title="" data-original-title="Refresh"><i
+                                                            class="fa fa-circle-thin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-body">
+                                        <div class="text-center p-4">
+                                            <!-- Adjusted fill array to have only 3 colors -->
+                                            <div class="donut" data-peity='{ "fill": ["#ff4c52", "#faa700", "#3e8ef7"], "radius": 78, "innerRadius": 65  }'>9,6,5</div>
+                                        </div>
+
+                                        <ul class="list-inline">
+                                            <li class="flexbox mb-5">
+                                                <div>
+                                                    <span class="badge badge-dot badge-lg mr-1"
+                                                        style="background-color: #ff4c52"></span>
+                                                    <span>PDF</span>
+                                                </div>
+                                                <div>14</div>
+                                            </li>
+
+                                            <li class="flexbox mb-5">
+                                                <div>
+                                                    <span class="badge badge-dot badge-lg mr-1"
+                                                        style="background-color: #faa700"></span>
+                                                    <span>Videos</span>
+                                                </div>
+                                                <div>12</div>
+                                            </li>
+
+                                            <li class="flexbox mb-5">
+                                                <div>
+                                                    <span class="badge badge-dot badge-lg mr-1"
+                                                        style="background-color: #3e8ef7"></span>
+                                                    <span>Tests</span>
+                                                </div>
+                                                <div>8</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
 
@@ -833,12 +885,15 @@
     <!-- Control Sidebar -->
 
     <script src="js/vendors.min.js"></script>
+    <script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+    <script src="assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+    <script src="js/pages/chart-widgets.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
     <script src="assets/vendor_plugins/JqueryPrintArea/demo/jquery.PrintArea.js"></script>
-    <script src="js/template.js"></script>
+     
     <!-- EduAdmin App -->
-    <script src="js/pages/echart-pie-doghnut.js"></script>
-
+    <script src="js/template.js"></script>
+ 
     <!-- script swal alert  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- end  -->

@@ -7,9 +7,9 @@
 
 
 // Make sure jQuery has been loaded
-if (typeof jQuery === 'undefined') {
-throw new Error('template requires jQuery')
-}
+// if (typeof jQuery === 'undefined') {
+// throw new Error('template requires jQuery')
+// }
 
 // Layout()
 
@@ -1187,10 +1187,10 @@ $('.demo-panel-bx').slimScroll({
 
 
 // feather icon
-	$(function () {
-		'use strict'			
-		feather.replace();		
-	}); // End of use strict
+	// $(function () {
+	// 	'use strict'			
+	// 	feather.replace();		
+	// }); // End of use strict
 
 
 
@@ -1552,26 +1552,26 @@ function w3_close() {
 		
 	var loader;
 
-	function loadNow(opacity) {
-		if (opacity <= 0) {
-			displayContent();
-		} else {
-			loader.style.opacity = opacity;
-			window.setTimeout(function() {
-				loadNow(opacity - 0.05);
-			}, 50);
-		}
-	}
+	// function loadNow(opacity) {
+	// 	if (opacity <= 0) {
+	// 		displayContent();
+	// 	} else {
+	// 		loader.style.opacity = opacity;
+	// 		window.setTimeout(function() {
+	// 			loadNow(opacity - 0.05);
+	// 		}, 50);
+	// 	}
+	// }
 
-	function displayContent() {
-		loader.style.display = 'none';
-	}
+	// function displayContent() {
+	// 	loader.style.display = 'none';
+	// }
 
-	document.addEventListener("DOMContentLoaded", function() {
-		loader = document.getElementById('loader');
-		loadNow(1);
-	});
+	// document.addEventListener("DOMContentLoaded", function() {
+	// 	loader = document.getElementById('loader');
+	// 	loadNow(1);
+	// });
 
 
- new PerfectScrollbar(".multinav-scroll");
+//  new PerfectScrollbar(".multinav-scroll");
 

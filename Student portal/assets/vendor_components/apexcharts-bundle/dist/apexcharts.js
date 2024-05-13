@@ -28944,9 +28944,7 @@
             }).catch(function (e) {
               reject(e); // handle error in case no data or element not found
             });
-          } else {
-            reject(new Error('Element not found'));
-          }
+          } 
         });
       }
     }, {
@@ -29590,7 +29588,8 @@
 
         return ret;
       }
-    }, {
+    },
+     {
       key: "merge",
       value: function merge(target, source) {
         return Utils.extend(target, source);

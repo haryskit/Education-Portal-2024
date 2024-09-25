@@ -19555,7 +19555,7 @@ textarea.form-control {
   padding: 0;
   border-radius: 100%;
   vertical-align: middle; }
-  .badge-ring::after {
+  /* .badge-ring::after {
     content: '';
     position: absolute;
     top: 2px;
@@ -19567,7 +19567,7 @@ textarea.form-control {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s;
-    transition: .3s; }
+    transition: .3s; } */
   .badge-ring.badge-sm {
     width: 8px;
     height: 8px; }

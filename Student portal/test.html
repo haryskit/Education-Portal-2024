@@ -1,774 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Setting | EduAdmin</title>
-
-    <!-- Vendors Style-->
-    <link rel="stylesheet" href="css/vendors_css.css">
-
-    <!-- Style-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skin_color.css">
+    <title>Accordion Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .content-wrapper {
-            /* position: relative; */
-            overflow-y: auto;
-            /* Enable vertical scrolling if content overflows */
-            height: 80vh;
-            /* Adjust as needed */
-        }
-
         .box {
-            /* margin-top: 20px; */
-            /* Add some space between header and content */
-            position: relative;
-            z-index: 1;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
-
-        .box-header {
-            position: sticky;
-            top: 0;
-            background-color: #fff;
-            /* Adjust as needed */
-            z-index: 2;
-        }
-
-        .box-body {
-            padding-bottom: 20px;
-            /* Bottom gap for content */
-        }
-
-        /* Add your existing CSS styles here */
     </style>
 </head>
-
-<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
-    <div class="wrapper">
-        <header class="main-header">
-            <div class="d-flex align-items-center logo-box justify-content-start">
-                <a href="#"
-                    class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent"
-                    data-toggle="push-menu" role="button">
-                    <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span
-                            class="path3"></span></span>
-                </a>
-                <!-- Logo -->
-                <a href="index.html" class="logo">
-                    <!-- logo-->
-                    <div class="logo-lg">
-                        <span class="light-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
-                        <span class="dark-logo"><img src="images/logo-light-text.png" alt="logo"></span>
-                    </div>
-                </a>
-            </div>
-            <!-- Header Navbar -->
-            <nav class="navbar navbar-static-top">
-                <!-- Sidebar toggle button-->
-                <div class="app-menu">
-                    <ul class="header-megamenu nav">
-                        <li class="btn-group nav-item d-md-none">
-                            <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu"
-                                role="button">
-                                <span class="icon-Align-left"><span class="path1"></span><span
-                                        class="path2"></span><span class="path3"></span></span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="navbar-custom-menu r-side">
-                    <ul class="nav navbar-nav">
-                        <li class="btn-group nav-item d-lg-inline-flex d-none">
-                            <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
-                                title="Full Screen">
-                                <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                        </li>
-
-                        <!-- Notifications -->
-                        <li class="dropdown notifications-menu">
-                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
-                                title="Notifications">
-                                <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                            <ul class="dropdown-menu animated bounceIn">
-
-                                <li class="header">
-                                    <div class="p-20">
-                                        <div class="flexbox">
-                                            <div>
-                                                <h4 class="mb-0 mt-0">Notifications</h4>
-                                            </div>
-                                            <div>
-                                                <a href="#" class="text-danger">Clear All</a>
-                                            </div>
-                                        </div>
+<body>
+<section>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xl-12 col-12">
+                <div class="box box-shadowed">
+                    <div class="container-fluid" style="position: sticky;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="box-header with-border d-flex justify-content-between align-items-center">
+                                    <h4 class="box-title p-3 mt-2"><strong>Question No.</strong> 1</h4>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge badge-danger ml-2">Your Answer: B</span>
+                                        <span class="badge badge-success ml-2">Correct Answer: A</span>
                                     </div>
-                                </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                <li>
-                                    <ul class="menu sm-scrol">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
-                                                suscipit blandit.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
-                                                sapien elementum, in semper diam posuere.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
-                                                commodo porttitor pretium a erat.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
-                                                nisi
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
-                                                dictum fermentum.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
-                                                interdum, at scelerisque ipsum imperdiet.
-                                            </a>
-                                        </li>
-                                    </ul>
+                    <div class="box-body" style="padding: 20px;">
+                        <div class="question">
+                            <p><strong> What is the capital of France?</strong></p>
+                        </div>
+                        <div class="options">
+                            <p><strong>Answer:</strong></p>
+                            <ul class="option-list">
+                                <li class="option correct text-success">
+                                    <span class="badge badge-success"><i class="fa fa-check-square-o"></i> A.</span>
+                                    Paris
                                 </li>
-                                <li class="footer">
-                                    <a href="#">View all</a>
-                                </li>
+                                <li class="option"><span class="text-black ml-4">B.</span> London</li>
+                                <li class="option"><span class="text-black ml-4">C.</span> Berlin</li>
+                                <li class="option"><span class="text-black ml-4">D.</span> Rome</li>
                             </ul>
-                        </li>
+                        </div>
 
-                        <!-- User Account-->
-                        <li class="dropdown user user-menu">
-                            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown"
-                                title="User">
-                                <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
-                            </a>
-                            <ul class="dropdown-menu animated flipInX">
-                                <li class="user-body">
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#modal-user-profile">
-                                        <i class="ti-user text-muted mr-2"></i> Profile
-                                    </a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#change-password-modal">
-                                        <i class="ti-lock text-muted mr-2"></i> Change Password
-                                    </a>
-                                    <a class="dropdown-item" href="#" id="logout-link">
-                                        <i class="ti-lock text-muted mr-2"></i> Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+                        <!-- Accordion for Answer with Icon -->
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <span>Show Answer Explanation</span>
+                                    </h5>
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <i class="fa fa-plus" id="toggleIcon"></i>
+                                    </button>
+                                </div>
 
-        <aside class="main-sidebar">
-            <!-- sidebar-->
-            <section class="sidebar position-relative">
-                <div class="multinav">
-                    <div class="multinav-scroll" style="height: 100%;">
-                        <!-- sidebar menu-->
-                        <ul class="sidebar-menu" data-widget="tree">
-                            <!-- <li class="header">Dashboard </li> -->
-                            <li>
-                                <a href="index.html">
-                                    <i class="icon-Layout-4-blocks"><span class="path1"></span><span
-                                            class="path2"></span></i>
-                                    <span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="mdi mdi-cards-outline"></i><span class="path1"></span><span
-                                        class="path2"></span></i>
-                                    <span>My Course</span>
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="my-courses.html"><i class="icon-Commit"><span
-                                                    class="path1"></span><span class="path2"></span></i>My Course 1</a>
-                                    </li>
-
-                                    <li><a href="my-course3.html"><i class="icon-Commit"><span
-                                                    class="path1"></span><span class="path2"></span></i>My Course 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="attemped-tests.html">
-                                    <i class="mdi mdi-pencil-box-outline"></i>
-                                    <span>Attempted Tests</span>
-
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="bookmark-ques.html">
-                                    <i class="mdi mdi-bookmark-outline"></i>
-                                    <span>Bookmarked Ques.</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="doubts.html">
-                                    <i class="mdi mdi-comment-question-outline"></i>
-                                    <span>Doubts</span>
-
-                                </a>
-                            </li>
-                            <li class="header">Payment</li>
-                            <li>
-                                <a href="payment-history.html">
-                                    <i class="mdi mdi-credit-card"></i>
-                                    <span>Payment History</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </section>
-            <div class="sidebar-footer">
-                <a href="setting.html" class="link" data-toggle="tooltip" title="" data-original-title="Settings"
-                    aria-describedby="tooltip92529">
-                    <span class="mdi mdi-settings"></span>
-                </a>
-                <a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Email">
-                    <span class="mdi mdi-email-outline"></span>
-                </a>
-                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout">
-                    <span class="mdi mdi-logout"></span>
-                </a>
-
-            </div>
-        </aside>
-        <!-- content here  -->
-        <div class="content-wrapper">
-            <div class="container-full">
-                <section class="content">
-
-                    <nav>
-                        <ol class="breadcrumb" style="background-color: #fafbfd;">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="mdi mdi-home-outline"></i></a>
-                            </li>
-                            <li class="breadcrumb-item" aria-current="page"><a href="doubts.html">Doubts</a></li>
-                            <!-- <li class="breadcrumb-item" aria-current="page"><a href="course-details.html">Course Details</a></li> -->
-                            <li class="breadcrumb-item active" aria-current="page">Chat</li>
-
-                        </ol>
-                    </nav>
-                    <div class="box bg-lightest">
-                        <div class="box-header">
-                            <div class="media align-items-top p-0">
-                                <a class="avatar avatar-lg status-success mx-0" href="#">
-                                    <img src="images/avatar/2.jpg" class="rounded-circle" alt="...">
-                                </a>
-                                <div class="d-lg-flex d-block justify-content-between align-items-center w-p100">
-                                    <div class="media-body mb-lg-0 mb-20">
-                                        <p class="font-size-16">
-                                            <a class="hover-primary" href="#"><strong>Theron
-                                                    Trump</strong></a>
-                                        </p>
-                                        <p class="font-size-12">Last Seen 10:30pm ago</p>
-                                    </div>
-                                    <div>
-                                        <ul class="list-inline mb-0 font-size-18">
-                                            <li class="list-inline-item"><a href="#" class="hover-primary"><i
-                                                        class="fa fa-phone"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" class="hover-primary"><i
-                                                        class="fa fa-video-camera"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" class="hover-primary"><i
-                                                        class="fa fa-ellipsis-h"></i></a></li>
-                                        </ul>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>The capital of France is Paris, known for its art, fashion, and culture. It is also home to famous landmarks such as the Eiffel Tower and the Louvre Museum.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- chat header end  -->
-                        <div class="box-body">
-                            <div class="chat-box-one2">
-                                <div class="card d-inline-block mb-3 float-left mr-2 no-shadow bg-lighter max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small text-muted">09:25</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/1.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16 text-dark">Sarah
-                                                            Kortney</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">What do you think about our
-                                                plans for this product launch?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-left mr-2 no-shadow bg-lighter max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small text-muted">09:28</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/1.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16 text-dark">Sarah
-                                                            Kortney</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">It looks to me like you have
-                                                a lot planned before your deadline. I would suggest you
-                                                push your deadline back so you have time to run a
-                                                successful advertising campaign.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-right mr-2 bg-primary max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small">09:41</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/2.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16">Mimi Carreira</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">I would suggest you discuss
-                                                this further with the advertising team.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-right mr-2 bg-primary max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small">09:41</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/2.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16">Mimi Carreira</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">I am very busy at the moment
-                                                and on top of everything, I forgot my umbrella today.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-left mr-2 no-shadow bg-lighter max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small text-muted">09:25</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/1.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16 text-dark">Sarah
-                                                            Kortney</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">What do you think about our
-                                                plans for this product launch?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-left mr-2 no-shadow bg-lighter max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small text-muted">09:28</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/1.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16 text-dark">Sarah
-                                                            Kortney</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">It looks to me like you have
-                                                a lot planned before your deadline. I would suggest you
-                                                push your deadline back so you have time to run a
-                                                successful advertising campaign.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-right mr-2 bg-primary max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small">09:41</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/2.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16">Mimi Carreira</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">I would suggest you discuss
-                                                this further with the advertising team.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="card d-inline-block mb-3 float-right mr-2 bg-primary max-w-p80">
-                                    <div class="position-absolute pt-1 pr-2 r-0">
-                                        <span class="text-extra-small">09:41</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row pb-2">
-                                            <a class="d-flex" href="#">
-                                                <img alt="Profile" src="images/avatar/2.jpg" class="avatar mr-10">
-                                            </a>
-                                            <div class="d-flex flex-grow-1 min-width-zero">
-                                                <div
-                                                    class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
-                                                    <div class="min-width-zero">
-                                                        <p class="mb-0 font-size-16">Mimi Carreira</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-text-left pl-55">
-                                            <p class="mb-0 text-semi-muted">I am very busy at the moment
-                                                and on top of everything, I forgot my umbrella today.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- End of Accordion -->
                     </div>
-
-                </section>
-            </div>
-        </div>
-        <footer class="main-footer p-0 fixed">
-            <div class="box-footer no-border">
-                <div
-                    class="d-md-flex d-block justify-content-between align-items-center bg-white p-5 rounded20 b-1 overflow-hidden">
-                    <input class="form-control b-0 py-10" type="text" placeholder="Say something...">
-                    <div class="d-flex justify-content-between align-items-center mt-md-0 mt-30">
-                        <button type="button"
-                            class="waves-effect waves-circle btn btn-circle mr-10 btn-outline-secondary">
-                            <i class="mdi mdi-link"></i>
-                        </button>
-                        <button type="button"
-                            class="waves-effect waves-circle btn btn-circle mr-10 btn-outline-secondary">
-                            <i class="mdi mdi-face"></i>
-                        </button>
-                        <button type="button"
-                            class="waves-effect waves-circle btn btn-circle mr-10 btn-outline-secondary">
-                            <i class="mdi mdi-microphone"></i>
-                        </button>
-                        <button type="button" class="waves-effect waves-circle btn btn-circle btn-primary">
-                            <i class="mdi mdi-send"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- profile modal start  -->
-    <div class="modal center-modal fade" id="modal-user-profile" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">User Profile</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="profile-info">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="username">Username:</label>
-                                    <input type="text" id="username" name="username" class="form-control bg-transparent"
-                                        placeholder="Enter your username" required readonly>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email" class="form-control bg-transparent"
-                                        placeholder="Enter your email address" required readonly>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="age">Age:</label>
-                                    <input type="number" id="age" name="age" class="form-control bg-transparent"
-                                        placeholder="Enter your age" required readonly>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="gender">Gender:</label>
-                                    <select id="gender" name="gender" class="form-control bg-transparent" required
-                                        disabled>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="country">Country:</label>
-                                    <input type="text" id="country" name="country" class="form-control bg-transparent"
-                                        placeholder="Enter your country" required readonly>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="occupation">Occupation:</label>
-                                    <input type="text" id="occupation" name="occupation"
-                                        class="form-control bg-transparent" placeholder="Enter your occupation" required
-                                        readonly>
-                                </div>
-                            </div>
-                            <!-- Add more input fields here -->
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-outline-primary" onclick="toggleEditMode()">Edit
-                        Profile</button>
-                    <button id="update-profile-btn" type="button" class="btn btn-outline-success" style="display: none;"
-                        onclick="updateProfile()">Update Profile</button>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- model end  -->
-    <!-- password model start here  -->
-    <div class="modal center-modal fade" id="change-password-modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Change Password</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-                                </div>
-                                <input type="old-password" class="form-control pl-15 bg-transparent"
-                                    placeholder="Enter Your old Password">
-                            </div>
-                        </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-                                </div>
-                                <input type="new-password" class="form-control pl-15 bg-transparent"
-                                    placeholder="Enter your new Password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-                                </div>
-                                <input type="password" class="form-control pl-15 bg-transparent"
-                                    placeholder="Re-enter your Password">
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Change Password</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- model end  -->
-
-
-    <!-- Control Sidebar -->
-
-    <script src="js/vendors.min.js"></script>
-    <!-- EduAdmin App -->
-    <script src="js/template.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- end  -->
-    <script>
-        // Add an event listener to the logout link
-        document.getElementById('logout-link').addEventListener('click', function (event) {
-            // Prevent the default action of the link
-            event.preventDefault();
-
-            // Display a SweetAlert confirmation dialog
-            Swal.fire({
-                title: 'Are you sure you want to logout?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, logout'
-            }).then((result) => {
-                // If the user confirms, redirect to the logout page or perform the logout action
-                if (result.isConfirmed) {
-                    // Redirect to the logout page or perform the logout action here
-                    // For example, window.location.href = 'logout.php';
-                    // Replace 'logout.php' with the actual URL of your logout page
-                }
-            });
-        });
-    </script>
-
-    <!-- profile update  -->
-    <script>
-        // JavaScript function to toggle edit mode
-        function toggleEditMode() {
-            var inputs = document.querySelectorAll('.profile-info input, .profile-info select');
-            for (var i = 0; i < inputs.length; i++) {
-                inputs[i].readOnly = !inputs[i].readOnly;
-            }
-
-            // Show or hide the Update Profile button
-            var updateButton = document.getElementById('update-profile-btn');
-            updateButton.style.display = updateButton.style.display === 'none' ? 'inline-block' : 'none';
-
-            // Enable or disable the gender dropdown
-            var genderDropdown = document.getElementById('gender');
-            genderDropdown.disabled = !genderDropdown.disabled;
-        }
-
-        // JavaScript function to handle profile update
-        function updateProfile() {
-            // You can add your logic here to handle profile update
-            // For example, sending an AJAX request to update the profile data
-
-            // Once the profile is updated, show a Swal alert
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Profile updated successfully.',
-            });
-        }
-    </script>
-    <!-- profile update end  -->
-
-    <!-- save setting alert s  -->
-    <script>
-        // Select the button element
-        const saveButton = document.getElementById('saveButton');
-
-        // Add event listener to the button
-        saveButton.addEventListener('click', () => {
-            // Display SweetAlert
-            Swal.fire({
-                icon: 'success',
-                title: 'Settings Saved!',
-                showConfirmButton: false,
-                timer: 1500 // Close alert after 1.5 seconds
-            });
-        });
-    </script>
-    <!-- save setting alert e  -->
 </body>
-
 </html>

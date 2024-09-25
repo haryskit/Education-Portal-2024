@@ -17,7 +17,25 @@
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin_color.css">
-
+    <style> 
+        .badge-ring {
+            position: absolute;
+            top: 2px; /* Adjust this value to position the badge higher or lower */
+            right: 2px; /* Adjust this value to position the badge left or right */
+            background-color: #0052cc;
+            color: white;
+            border-radius: 50%;
+            width: 15px; /* Adjust the width as needed */
+            height: 15px; /* Adjust the height as needed */
+            font-size: 12px; /* Adjust font size as needed */
+            font-weight: bold;
+            text-align: center;
+            line-height: 24px; /* Should be equal to the height to center the text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
@@ -58,6 +76,14 @@
 
                 <div class="navbar-custom-menu r-side">
                     <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="cart.html" class="waves-effect waves-light dropdown-toggle"  
+                                title=" ">
+                                <i class="mdi mdi-cart-outline"><span class="path1"></span><span
+                                        class="path2"></span></i>
+                                <div class="badge-ring">3</div>
+                            </a>
+                        </li>
                         <li class="btn-group nav-item d-lg-inline-flex d-none">
                             <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen"
                                 title="Full Screen">
@@ -159,6 +185,8 @@
                                 </li>
                             </ul>
                         </li>
+                        <!-- end  -->
+
                     </ul>
                 </div>
             </nav>
@@ -285,11 +313,12 @@
                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                     <div class="box">
                                         <div class="box-header with-border">
-                                            <h5 class="box-title">Course 1</h5>
+                                            <h5 class="box-title p-3">Course 1</h5>
                                             <div class="box-tools pull-right">
                                                 <ul class="card-controls">
                                                     <li class="dropdown">
-                                                        <a data-toggle="dropdown" href="#"><i class="ion-android-more-vertical"></i></a>
+                                                        <a data-toggle="dropdown" href="#"><i
+                                                                class="ion-android-more-vertical"></i></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <a class="dropdown-item active" href="#">Today</a>
                                                             <a class="dropdown-item" href="#">Yesterday</a>
@@ -297,13 +326,16 @@
                                                             <a class="dropdown-item" href="#">Last month</a>
                                                         </div>
                                                     </li>
-                                                    <li><a href="" class="link card-btn-reload" data-toggle="tooltip" title="" data-original-title="Refresh"><i class="fa fa-circle-thin"></i></a></li>
+                                                    <li><a href="" class="link card-btn-reload" data-toggle="tooltip"
+                                                            title="" data-original-title="Refresh"><i
+                                                                class="fa fa-circle-thin"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
     
                                         <div class="box-body">
-                                            <div class="text-center py-20">
+                                            <div class="text-center p-4">
                                                 <!-- Adjusted fill array to have only 3 colors -->
                                                 <div class="donut" data-peity='{ "fill": ["#ff4c52", "#faa700", "#3e8ef7"], "radius": 78, "innerRadius": 65  }'>9,6,5</div>
                                             </div>
@@ -311,7 +343,8 @@
                                             <ul class="list-inline">
                                                 <li class="flexbox mb-5">
                                                     <div>
-                                                        <span class="badge badge-dot badge-lg mr-1" style="background-color: #ff4c52"></span>
+                                                        <span class="badge badge-dot badge-lg mr-1"
+                                                            style="background-color: #ff4c52"></span>
                                                         <span>PDF</span>
                                                     </div>
                                                     <div>14</div>
@@ -319,7 +352,8 @@
     
                                                 <li class="flexbox mb-5">
                                                     <div>
-                                                        <span class="badge badge-dot badge-lg mr-1" style="background-color: #faa700"></span>
+                                                        <span class="badge badge-dot badge-lg mr-1"
+                                                            style="background-color: #faa700"></span>
                                                         <span>Videos</span>
                                                     </div>
                                                     <div>12</div>
@@ -327,7 +361,8 @@
     
                                                 <li class="flexbox mb-5">
                                                     <div>
-                                                        <span class="badge badge-dot badge-lg mr-1" style="background-color: #3e8ef7"></span>
+                                                        <span class="badge badge-dot badge-lg mr-1"
+                                                            style="background-color: #3e8ef7"></span>
                                                         <span>Tests</span>
                                                     </div>
                                                     <div>8</div>
@@ -339,11 +374,12 @@
                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                     <div class="box">
                                         <div class="box-header with-border">
-                                            <h5 class="box-title">Course 2</h5>
+                                            <h5 class="box-title p-3">Course 1</h5>
                                             <div class="box-tools pull-right">
                                                 <ul class="card-controls">
                                                     <li class="dropdown">
-                                                        <a data-toggle="dropdown" href="#"><i class="ion-android-more-vertical"></i></a>
+                                                        <a data-toggle="dropdown" href="#"><i
+                                                                class="ion-android-more-vertical"></i></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <a class="dropdown-item active" href="#">Today</a>
                                                             <a class="dropdown-item" href="#">Yesterday</a>
@@ -351,13 +387,16 @@
                                                             <a class="dropdown-item" href="#">Last month</a>
                                                         </div>
                                                     </li>
-                                                    <li><a href="" class="link card-btn-reload" data-toggle="tooltip" title="" data-original-title="Refresh"><i class="fa fa-circle-thin"></i></a></li>
+                                                    <li><a href="" class="link card-btn-reload" data-toggle="tooltip"
+                                                            title="" data-original-title="Refresh"><i
+                                                                class="fa fa-circle-thin"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
     
                                         <div class="box-body">
-                                            <div class="text-center py-20">
+                                            <div class="text-center p-4">
                                                 <!-- Adjusted fill array to have only 3 colors -->
                                                 <div class="donut" data-peity='{ "fill": ["#ff4c52", "#faa700", "#3e8ef7"], "radius": 78, "innerRadius": 65  }'>9,6,5</div>
                                             </div>
@@ -365,7 +404,8 @@
                                             <ul class="list-inline">
                                                 <li class="flexbox mb-5">
                                                     <div>
-                                                        <span class="badge badge-dot badge-lg mr-1" style="background-color: #ff4c52"></span>
+                                                        <span class="badge badge-dot badge-lg mr-1"
+                                                            style="background-color: #ff4c52"></span>
                                                         <span>PDF</span>
                                                     </div>
                                                     <div>14</div>
@@ -373,7 +413,8 @@
     
                                                 <li class="flexbox mb-5">
                                                     <div>
-                                                        <span class="badge badge-dot badge-lg mr-1" style="background-color: #faa700"></span>
+                                                        <span class="badge badge-dot badge-lg mr-1"
+                                                            style="background-color: #faa700"></span>
                                                         <span>Videos</span>
                                                     </div>
                                                     <div>12</div>
@@ -381,7 +422,8 @@
     
                                                 <li class="flexbox mb-5">
                                                     <div>
-                                                        <span class="badge badge-dot badge-lg mr-1" style="background-color: #3e8ef7"></span>
+                                                        <span class="badge badge-dot badge-lg mr-1"
+                                                            style="background-color: #3e8ef7"></span>
                                                         <span>Tests</span>
                                                     </div>
                                                     <div>8</div>
@@ -691,18 +733,22 @@
                 </section>
             </div>
             <div class="sticky-toolbar">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Course"
+                <!-- <a href="#" data-toggle="tooltip" data-placement="left" title=" Photosynthesis is the biochemical process by which green plants, algae, and some bacteria convert light energy, typically from the sun, into chemical energy stored in glucose molecules. This process occurs in the chloroplasts of plant cells and involves several stages, including light-dependent reactions and light-independent reactions (Calvin cycle)."
                     class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
                     <span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
+                </a> -->
+                <a href="#" class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" data-toggle="modal"
+                    data-target="#modal-right-custom">
+                    <span class="icon-Book"><span class="path1"></span><span class="path2"></span></span>
                 </a>
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Result"
+                <!-- <a href="#" data-toggle="tooltip" data-placement="left" title="Result"
                     class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
                     <span class="icon-Image"></span>
                 </a>
                 <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat"
                     class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
                     <span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -823,6 +869,26 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Change Password</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-right fade" id="modal-right-custom" tabindex="-1">
+        <div class="modal-dialog modal-sm"> <!-- Added 'modal-sm' class here -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Your content comes here</p>
+                </div>
+                <!-- <div class="modal-footer modal-footer-uniform">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary float-right">Save changes</button>
+                </div> -->
             </div>
         </div>
     </div>
